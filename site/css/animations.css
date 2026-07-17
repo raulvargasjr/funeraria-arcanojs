@@ -1,0 +1,205 @@
+/* ============================================
+   FUNERÁRIA ARCANJOS — Animations
+   Keyframes, Scroll Reveals, Transitions
+   ============================================ */
+
+/* === Scroll Reveal Classes === */
+
+.reveal {
+  opacity: 0;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform;
+}
+
+.reveal--up {
+  transform: translateY(30px);
+}
+
+.reveal--left {
+  transform: translateX(-30px);
+}
+
+.reveal--right {
+  transform: translateX(30px);
+}
+
+.reveal--scale {
+  transform: scale(0.95);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+}
+
+/* Staggered children */
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal-stagger.visible > *:nth-child(1) { transition-delay: 0.05s; }
+.reveal-stagger.visible > *:nth-child(2) { transition-delay: 0.1s; }
+.reveal-stagger.visible > *:nth-child(3) { transition-delay: 0.15s; }
+.reveal-stagger.visible > *:nth-child(4) { transition-delay: 0.2s; }
+.reveal-stagger.visible > *:nth-child(5) { transition-delay: 0.25s; }
+.reveal-stagger.visible > *:nth-child(6) { transition-delay: 0.3s; }
+.reveal-stagger.visible > *:nth-child(7) { transition-delay: 0.35s; }
+.reveal-stagger.visible > *:nth-child(8) { transition-delay: 0.4s; }
+
+.reveal-stagger.visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === Gold Line Draw === */
+
+.line-draw {
+  position: relative;
+  display: inline-block;
+}
+
+.line-draw::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gold);
+  transition: width 0.8s ease-out;
+}
+
+.line-draw.visible::after {
+  width: 100%;
+}
+
+/* === Parallax === */
+
+.parallax-bg {
+  will-change: transform;
+  transition: transform 0.1s linear;
+}
+
+/* === Glassmorphism Reveal === */
+
+.glass-reveal {
+  opacity: 0;
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  transition: all 1s ease-out;
+}
+
+.glass-reveal.visible {
+  opacity: 1;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* === Image Reveal === */
+
+.img-reveal {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-reveal::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--cream);
+  z-index: 1;
+  transform-origin: left;
+  transition: transform 0.8s ease-out;
+}
+
+.img-reveal.visible::before {
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+/* === Float Animation === */
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* === Fade In === */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* === Slide Up === */
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === Glow Pulse === */
+
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 var(--gold-glow);
+  }
+  50% {
+    box-shadow: 0 0 0 12px transparent;
+  }
+}
+
+.glow-pulse {
+  animation: glowPulse 2.5s infinite;
+}
+
+/* === Spin (Loading) === */
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+/* === Counter/Number Reveal === */
+
+.count-up {
+  font-variant-numeric: tabular-nums;
+}
+
+/* === Hero Content Entrance === */
+
+.hero-entrance > * {
+  animation: slideUp 0.8s ease-out both;
+}
+
+.hero-entrance > *:nth-child(1) { animation-delay: 0.2s; }
+.hero-entrance > *:nth-child(2) { animation-delay: 0.4s; }
+.hero-entrance > *:nth-child(3) { animation-delay: 0.6s; }
+.hero-entrance > *:nth-child(4) { animation-delay: 0.8s; }
+
+/* === Diagonal Stripe Pattern === */
+
+.stripe-bg {
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--warm-bg),
+    var(--warm-bg) 4px,
+    var(--cream) 4px,
+    var(--cream) 8px
+  );
+}

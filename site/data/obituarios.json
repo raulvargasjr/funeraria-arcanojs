@@ -1,0 +1,32 @@
+[
+  {
+    "id": "demo-1",
+    "nome": "Maria Fernanda Sousa",
+    "ano_nascimento": 1942,
+    "ano_falecimento": 2026,
+    "foto": "",
+    "descricao": "Velório na Capela de Portimão · Funeral dia 11, 15h00.",
+    "pdf": "",
+    "ativo": true
+  },
+  {
+    "id": "demo-2",
+    "nome": "António Carvalho Lima",
+    "ano_nascimento": 1938,
+    "ano_falecimento": 2026,
+    "foto": "",
+    "descricao": "Cerimónia de cremação · Dia 12, 11h00. Homenagem aberta à família.",
+    "pdf": "",
+    "ativo": true
+  },
+  {
+    "id": "demo-3",
+    "nome": "Joaquim Pereira Nunes",
+    "ano_nascimento": 1950,
+    "ano_falecimento": 2026,
+    "foto": "",
+    "descricao": "Velório e missa · Igreja Matriz, dia 10, 18h00.",
+    "pdf": "",
+    "ativo": true
+  }
+]

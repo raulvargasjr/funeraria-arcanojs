@@ -1,0 +1,682 @@
+{
+  "pt": {
+    "topbar": {
+      "phone": "+351 964 945 710",
+      "hours": "Atendimento 24 Horas"
+    },
+    "nav": {
+      "home": "Início",
+      "services": "Serviços",
+      "about": "Quem Somos",
+      "obitos": "Óbitos",
+      "reviews": "Avaliações",
+      "contact": "Contacto"
+    },
+    "cta": {
+      "whatsapp": "Fale Connosco",
+      "services": "Os Nossos Serviços"
+    },
+    "hero": {
+      "title": "Cuidamos de cada detalhe. Onde quer que a <span class=\"hero__highlight\">despedida</span> aconteça.",
+      "subtitle": "Com dignidade, respeito e proximidade, acompanhamos a sua família em cada momento.",
+      "footer": {
+        "c1_title": "Atendimento 24h",
+        "c1_desc": "Sempre que precisar",
+        "c2_title": "Acompanhamento",
+        "c2_desc": "Personalizado",
+        "c3_title": "Dignidade e Respeito",
+        "c3_desc": "Em cada detalhe",
+        "c4_title": "Onde quer que esteja",
+        "c4_desc": "Estamos consigo"
+      }
+    },
+    "solutions": {
+      "label": "O Nosso Compromisso",
+      "title": "Tranquilidade em Cada Escolha",
+      "subtitle": "Garantimos um acompanhamento completo, com o cuidado e a atenção que a sua família merece.",
+      "quote": "A nossa missão é transformar um momento de dor numa despedida digna e serena.",
+      "f1": { "title": "Atendimento 24 Horas", "text": "Sempre disponíveis, a qualquer hora." },
+      "f2": { "title": "Equipa Especializada", "text": "Profissionais com experiência e empatia." },
+      "f3": { "title": "Segurança e Transparência", "text": "Processos claros e confiáveis." },
+      "f4": { "title": "Acolhimento que Conforta", "text": "Cuidamos com carinho e respeito." },
+      "f5": { "title": "Estrutura Completa", "text": "Instalações modernas e confortáveis." },
+      "f6": { "title": "Suporte Internacional", "text": "Repatriação e serviços globais." },
+      "f7": { "title": "Personalização e Detalhes", "text": "Cada cerimónia é única." },
+      "f8": { "title": "Planos Personalizados", "text": "Soluções adaptadas às suas necessidades." }
+    },
+    "humanized": {
+      "title_html": "ATENDIMENTO<br><span>HUMANIZADO</span>",
+      "subtitle": "AO SEU LADO EM CADA ETAPA,<br>COM EMPATIA, RESPEITO E DEDICAÇÃO.",
+      "f1": "EMPATIA E<br>COMPREENSÃO",
+      "f2": "ACOMPANHAMENTO<br>PRÓXIMO",
+      "f3": "SEGURANÇA E<br>TRANQUILIDADE",
+      "f4": "RESPEITO EM<br>CADA DETALHE",
+      "f5": "APOIO COMPLETO<br>À FAMÍLIA",
+      "f6": "CONFIANÇA QUE<br>FAZ A DIFERENÇA",
+      "quote": "“ Acolher é o nosso propósito.<br>Cuidar é o nosso compromisso. ”"
+    },
+    "services": {
+      "label": "OS NOSSOS SERVIÇOS",
+      "title_html": "Tudo tratado com <span>cuidado</span>",
+      "subtitle": "Passe o rato sobre um serviço para o ver em destaque",
+      "cta_button": "Falar sobre um serviço —",
+      "cremation": { "title": "Cremação" },
+      "floral": { "title": "Ornamentação Floral" },
+      "thanato": { "title": "Tanatopraxia" },
+      "life": { "title": "Funeral em Vida" },
+      "international": { "title": "Funeral Internacional" },
+      "items": {
+        "item0": "Funeral Completo",
+        "item1": "Funeral em Vida",
+        "item2": "Planos Funerários",
+        "item3": "Cremação",
+        "item4": "Sepultamento",
+        "item5": "Ornamentação Floral",
+        "item6": "Tanatopraxia",
+        "item7": "Translado Nacional",
+        "item8": "Translado Internacional",
+        "item9": "Cerimónias Personalizadas",
+        "item10": "Assessoria Documental"
+      }
+    },
+    "solucoes": {
+      "title_html": "TRANQUILIDADE<br><span>EM CADA ESCOLHA</span>",
+      "subtitle": "SOLUÇÕES COMPLETAS,<br>COM CUIDADO E EXCELÊNCIA.",
+      "quote_label": "CUIDAMOS DE TUDO PARA QUE<br>POSSA FOCAR NO QUE REALMENTE IMPORTA:",
+      "quote_italic": "lembrar, honrar e seguir em frente.",
+      "f1": { "title": "ATENDIMENTO<br>24 HORAS", "text": "Estamos sempre disponíveis para lhe apoiar." },
+      "f2": { "title": "EQUIPA<br>ESPECIALIZADA", "text": "Profissionais experientes e discretos ao seu lado." },
+      "f3": { "title": "PLANOS<br>PERSONALIZADOS", "text": "Soluções ajustadas às suas necessidades e à sua família." },
+      "f4": { "title": "SEGURANÇA E<br>TRANSPARÊNCIA", "text": "Processos claros, éticos e com total confiança." },
+      "f5": { "title": "ESTRUTURA<br>COMPLETA", "text": "Ambientes acolhedores e preparados para receber com dignidade." },
+      "f6": { "title": "SUPORTE<br>INTERNACIONAL", "text": "Acompanhamento em transladações e funerais internacionais." },
+      "f7": { "title": "PERSONALIZAÇÃO<br>E DETALHES", "text": "Cada homenagem reflete histórias, valores e sentimentos." },
+      "f8": { "title": "ACOLHIMENTO<br>QUE CONFORTA", "text": "Mais do que um serviço, oferecemos presença e apoio humano." }
+    },
+    "about": {
+      "label": "A Nossa História",
+      "title": "Quem Somos",
+      "p1": "A Funerária Arcanjos é sinónimo de excelência no atendimento funerário, com 20 anos de experiência dedicados a prestar apoio e cuidado em momentos delicados.",
+      "p2": "Nascida no Brasil, trouxemos connosco a dedicação e o respeito pela profissão, oferecendo um serviço humanizado e digno.",
+      "p3": "Atuamos com empatia e profissionalismo, garantindo um acompanhamento ágil, respeitoso e próximo das famílias em todas as etapas deste processo.",
+      "p4": "O nosso compromisso é disponibilizar soluções completas e personalizadas, sempre com foco no conforto, tranquilidade e bem-estar dos nossos clientes.",
+      "p5": "Na Funerária Arcanjos, cada detalhe importa, porque acreditamos que um atendimento acolhedor faz toda a diferença."
+    },
+    "values": {
+      "label": "Os Nossos Valores",
+      "item1": "Respeito",
+      "item2": "Transparência",
+      "item3": "Confiança",
+      "item4": "Seriedade",
+      "item5": "Valorização<br>do Ser Humano",
+      "item6": "Segurança"
+    },
+    "team": {
+      "label": "Equipa Responsável",
+      "tatiane": {
+        "role": "Gerência",
+        "specialty": "Atendimento Humanizado e Apoio às Famílias",
+        "bio": "Com 15 anos de atuação no setor funerário, Tatiane lidera a gerência aliando a sua experiência prática à formação em Psicanálise Clínica (Ibterapias). É especialista em atendimento humanizado e acolhimento emocional, oferecendo um porto seguro e suporte compassivo às famílias nos momentos mais delicados."
+      },
+      "marcus": {
+        "role": "Responsável Técnico",
+        "specialty": "Tanatopraxia e Funerais Internacionais",
+        "bio": "Com mais de 20 anos de experiência no setor funerário, Marcus é formado em Tanatopraxia pela Faculdade de Ciências Médicas de Minas Gerais (Brasil). Especialista em reconstrução facial, procedimentos de conservação avançados e transladações internacionais, assegura dignidade, respeito e rigor logístico em cada despedida."
+      }
+    },
+    "obitos": {
+      "label": "Óbitos Recentes",
+      "title_html": "Homenagens e <span>velórios</span>",
+      "all_link": "Ver Todos os Óbitos —",
+      "empty": "Nenhum obituário recente para apresentar."
+    },
+    "reviews": {
+      "label": "O Que Dizem de Nós",
+      "title": "Avaliações de Clientes"
+    },
+    "thanks": {
+      "title_html": "O NOSSO MAIS<br><span>PROFUNDO AGRADECIMENTO</span>",
+      "text1": "A todos que por aqui passaram, o nosso sincero obrigado. A cada família que nos confiou a honra de cuidar de quem amam, o nosso mais profundo respeito e gratidão.",
+      "quote": "Foi um privilégio poder fazer parte de momentos tão importantes.",
+      "text2": "Seguimos com o coração cheio de propósito, honrando cada história e cada vida com o mesmo cuidado, empatia e dignidade que sempre nos guiou.",
+      "closing": "A VOSSA CONFIANÇA É O QUE NOS INSPIRA A SER MELHORES, TODOS OS DIAS.",
+      "v1": "RESPEITO",
+      "v2": "CONFIANÇA",
+      "v3": "CUIDADO",
+      "v4": "DIGNIDADE",
+      "v5": "EXCELÊNCIA",
+      "final1": "O nosso muito obrigado.",
+      "final2": "Estamos e estaremos sempre aqui, por si."
+    },
+    "contact": {
+      "label": "Fale Connosco",
+      "title": "Contacto",
+      "address_label": "Morada",
+      "address": "Rua Diogo Gonçalves, 11<br>8500-622 Portimão, Portugal",
+      "phone_label": "Telefone 24h",
+      "email_label": "Email",
+      "hours_label": "Horário",
+      "hours": "Aberto 24 horas, 7 dias por semana"
+    },
+    "footer": {
+      "desc": "Cuidamos de cada detalhe com dignidade e respeito. Serviço funerário completo em Portugal, disponível 24 horas.",
+      "nav_heading": "Navegação",
+      "services_heading": "Serviços",
+      "contact_heading": "Contacto",
+      "rights": "Todos os direitos reservados"
+    },
+    "whatsapp": {
+      "tooltip": "Precisa de ajuda?"
+    }
+  },
+  "es": {
+    "topbar": {
+      "phone": "+351 964 945 710",
+      "hours": "Atención 24 Horas"
+    },
+    "nav": {
+      "home": "Inicio",
+      "services": "Servicios",
+      "about": "Quiénes Somos",
+      "obitos": "Obituarios",
+      "reviews": "Valoraciones",
+      "contact": "Contacto"
+    },
+    "cta": {
+      "whatsapp": "Contactar",
+      "services": "Nuestros Servicios"
+    },
+    "hero": {
+      "title": "Cuidamos cada detalle. Dondequiera que ocurra la <span class=\"hero__highlight\">despedida</span>.",
+      "subtitle": "Con dignidad, respeto y cercanía, acompañamos a su familia en cada momento.",
+      "footer": {
+        "c1_title": "Atención 24h",
+        "c1_desc": "Cuando lo necesite",
+        "c2_title": "Acompañamiento",
+        "c2_desc": "Personalizado",
+        "c3_title": "Dignidad y Respeto",
+        "c3_desc": "En cada detalle",
+        "c4_title": "Dondequiera que esté",
+        "c4_desc": "Estamos con usted"
+      }
+    },
+    "solutions": {
+      "label": "Nuestro Compromiso",
+      "title": "Tranquilidad en Cada Elección",
+      "subtitle": "Garantizamos un acompañamiento completo, con el cuidado y la atención que su familia merece.",
+      "quote": "Nuestra misión es transformar un momento de dolor en una despedida digna y serena.",
+      "f1": { "title": "Atención 24 Horas", "text": "Siempre disponibles, a cualquier hora." },
+      "f2": { "title": "Equipo Especializado", "text": "Profesionales con experiencia y empatía." },
+      "f3": { "title": "Seguridad y Transparencia", "text": "Procesos claros y confiables." },
+      "f4": { "title": "Acogida que Conforta", "text": "Cuidamos con cariño y respeto." },
+      "f5": { "title": "Estructura Completa", "text": "Instalaciones modernas y confortables." },
+      "f6": { "title": "Soporte Internacional", "text": "Repatriación y servicios globales." },
+      "f7": { "title": "Personalización y Detalles", "text": "Cada ceremonia es única." },
+      "f8": { "title": "Planes Personalizados", "text": "Soluciones adaptadas a sus necesidades." }
+    },
+    "humanized": {
+      "title_html": "ATENCIÓN<br><span>HUMANIZADA</span>",
+      "subtitle": "A SU LADO EN CADA ETAPA,<br>CON EMPATÍA, RESPETO Y DEDICAÇÃO.",
+      "f1": "EMPATÍA Y<br>COMPRENSIÓN",
+      "f2": "ACOMPAÑAMIENTO<br>CERCANO",
+      "f3": "SEGURIDAD Y<br>TRANQUILIDAD",
+      "f4": "RESPETO EN<br>CADA DETALLE",
+      "f5": "APOYO COMPLETO<br>A LA FAMILIA",
+      "f6": "CONFIANZA QUE<br>MARCA LA DIFERENCIA",
+      "quote": "“ Acoger es nuestro propósito.<br>Cuidar es nuestro compromiso. ”"
+    },
+    "services": {
+      "label": "NUESTROS SERVICIOS",
+      "title_html": "Todo tratado con <span>cuidado</span>",
+      "subtitle": "Pase el ratón sobre un servicio para verlo en detalle",
+      "cta_button": "Hablar sobre un servicio —",
+      "cremation": { "title": "Cremación" },
+      "floral": { "title": "Ornamentación Floral" },
+      "thanato": { "title": "Tanatopraxia" },
+      "life": { "title": "Funeral en Vida" },
+      "international": { "title": "Funeral Internacional" },
+      "items": {
+        "item0": "Funeral Completo",
+        "item1": "Funeral en Vida",
+        "item2": "Planes Funerarios",
+        "item3": "Cremación",
+        "item4": "Sepelio",
+        "item5": "Ornamentación Floral",
+        "item6": "Tanatopraxia",
+        "item7": "Traslado Nacional",
+        "item8": "Traslado Internacional",
+        "item9": "Ceremonias Personalizadas",
+        "item10": "Asesoría Documental"
+      }
+    },
+    "solucoes": {
+      "title_html": "TRANQUILIDAD<br><span>EN CADA ELECCIÓN</span>",
+      "subtitle": "SOLUCIONES COMPLETAS,<br>CON CUIDADO Y EXCELENCIA.",
+      "quote_label": "CUIDAMOS DE TODO PARA QUE<br>PUEDA ENFOCARSE EN LO QUE REALMENTE IMPORTA:",
+      "quote_italic": "recordar, honrar y seguir adelante.",
+      "f1": { "title": "ATENCIÓN<br>24 HORAS", "text": "Estamos siempre disponibles para apoyarle." },
+      "f2": { "title": "EQUIPO<br>ESPECIALIZADO", "text": "Profesionales experimentados y discretos a su lado." },
+      "f3": { "title": "PLANES<br>PERSONALIZADOS", "text": "Soluciones ajustadas a sus necesidades y a su familia." },
+      "f4": { "title": "SEGURIDAD Y<br>TRANSPARENCIA", "text": "Procesos claros, éticos y con total confianza." },
+      "f5": { "title": "ESTRUCTURA<br>COMPLETA", "text": "Ambientes acogedores y preparados para recibir con dignidad." },
+      "f6": { "title": "SOPORTE<br>INTERNACIONAL", "text": "Acompañamiento en traslados y funerales internacionales." },
+      "f7": { "title": "PERSONALIZACIÓN<br>Y DETALLES", "text": "Cada homenaje refleja historias, valores y sentimientos." },
+      "f8": { "title": "ACOGIDA<br>QUE CONFORTA", "text": "Más que un servicio, ofrecemos presencia y apoyo humano." }
+    },
+    "about": {
+      "label": "Nuestra Historia",
+      "title": "Quiénes Somos",
+      "p1": "La Funeraria Arcanjos es sinónimo de excelencia en el servicio funerario, con 20 años de experiencia dedicados a brindar apoyo y cuidado en momentos delicados.",
+      "p2": "Nacidos en Brasil, trajimos con nosotros la dedicación y el respeto por la profesión, ofreciendo un servicio humanizado y digno.",
+      "p3": "Actuamos con empatía y profesionalismo, garantizando un acompañamiento ágil, respetuoso y cercano a las familias en todas las etapas de este proceso.",
+      "p4": "Nuestro compromiso es ofrecer soluciones completas y personalizadas, siempre con enfoque en el confort, tranquilidad y bienestar de nuestros clientes.",
+      "p5": "En la Funeraria Arcanjos, cada detalle importa, porque creemos que una atención acogedora marca la diferencia."
+    },
+    "values": {
+      "label": "Nuestros Valores",
+      "item1": "Respeto",
+      "item2": "Transparencia",
+      "item3": "Confianza",
+      "item4": "Seriedad",
+      "item5": "Valoración<br>del Ser Humano",
+      "item6": "Seguridad"
+    },
+    "team": {
+      "label": "Equipo Responsable",
+      "tatiane": {
+        "role": "Gerencia",
+        "specialty": "Atención Humanizada y Apoyo a las Familias",
+        "bio": "Con 15 años de experiencia en el sector funerario, Tatiane lidera la gerencia combinando su experiencia práctica con su formación en Psicoanálisis Clínico (Ibterapias). Es especialista en atención humanizada y acogimiento emocional, ofreciendo un puerto seguro y un apoyo compasivo a las familias en los momentos más difíciles."
+      },
+      "marcus": {
+        "role": "Responsable Técnico",
+        "specialty": "Tanatopraxia y Funerales Internacionales",
+        "bio": "Con más de 20 años de trayectoria en el ámbito funerario, Marcus es graduado en Tanatopraxia por la Facultad de Ciencias Médicas de Minas Gerais (Brasil). Especializado en reconstrucción facial, métodos avanzados de conservación y traslados internacionales, garantiza dignidad, respeto y rigor logístico en cada despedida."
+      }
+    },
+    "obitos": {
+      "label": "Defunciones Recientes",
+      "title_html": "Homenajes y <span>velatorios</span>",
+      "all_link": "Ver Todas las Defunciones —",
+      "empty": "No hay obituarios recientes para mostrar."
+    },
+    "reviews": {
+      "label": "Lo Que Dicen de Nosotros",
+      "title": "Valoraciones de Clientes"
+    },
+    "thanks": {
+      "title_html": "NUESTRO MÁS<br><span>PROFUNDO AGRADECIMIENTO</span>",
+      "text1": "A todos los que pasaron por aquí, nuestro sincero agradecimiento. A cada familia que nos confió el honor de cuidar de sus seres queridos, nuestro más profundo respeto y gratitud.",
+      "quote": "Fue un privilegio poder formar parte de momentos tan importantes.",
+      "text2": "Seguimos con el corazón lleno de propósito, honrando cada historia y cada vida con el mismo cuidado, empatía y dignidad que siempre nos ha guía.",
+      "closing": "SU CONFIANZA ES LO QUE NOS INSPIRA A SER MEJORES, TODOS LOS DÍAS.",
+      "v1": "RESPETO",
+      "v2": "CONFIANZA",
+      "v3": "CUIDADO",
+      "v4": "DIGNIDAD",
+      "v5": "EXCELENCIA",
+      "final1": "Muchas gracias.",
+      "final2": "Estamos y estaremos siempre aquí, por usted."
+    },
+    "contact": {
+      "label": "Hable Con Nosotros",
+      "title": "Contacto",
+      "address_label": "Dirección",
+      "address": "Rua Diogo Gonçalves, 11<br>8500-622 Portimão, Portugal",
+      "phone_label": "Teléfono 24h",
+      "email_label": "Email",
+      "hours_label": "Horario",
+      "hours": "Abierto 24 horas, 7 días a la semana"
+    },
+    "footer": {
+      "desc": "Cuidamos cada detalle con dignidad y respeto. Servicio funerario completo en Portugal, disponible 24 horas.",
+      "nav_heading": "Navegación",
+      "services_heading": "Servicios",
+      "contact_heading": "Contacto",
+      "rights": "Todos los derechos reservados"
+    },
+    "whatsapp": {
+      "tooltip": "¿Necesita ayuda?"
+    }
+  },
+  "en": {
+    "topbar": {
+      "phone": "+351 964 945 710",
+      "hours": "24h Support"
+    },
+    "nav": {
+      "home": "Home",
+      "services": "Services",
+      "about": "About Us",
+      "obitos": "Obituaries",
+      "reviews": "Reviews",
+      "contact": "Contact"
+    },
+    "cta": {
+      "whatsapp": "Contact Us",
+      "services": "Our Services"
+    },
+    "hero": {
+      "title": "We take care of every detail. Wherever the <span class=\"hero__highlight\">farewell</span> takes place.",
+      "subtitle": "With dignity, respect and closeness, we support your family at every moment.",
+      "footer": {
+        "c1_title": "24h Support",
+        "c1_desc": "Whenever you need",
+        "c2_title": "Support",
+        "c2_desc": "Personalized",
+        "c3_title": "Dignity and Respect",
+        "c3_desc": "In every detail",
+        "c4_title": "Wherever you are",
+        "c4_desc": "We are with you"
+      }
+    },
+    "solutions": {
+      "label": "Our Commitment",
+      "title": "Peace of Mind in Every Choice",
+      "subtitle": "We guarantee complete support, with the care and attention that your family deserves.",
+      "quote": "Our mission is to transform a moment of pain into a dignified and peaceful farewell.",
+      "f1": { "title": "24-Hour Service", "text": "Always available, at any time." },
+      "f2": { "title": "Specialized Team", "text": "Professionals with experience and empathy." },
+      "f3": { "title": "Security & Transparency", "text": "Clear and reliable processes." },
+      "f4": { "title": "Comforting Welcome", "text": "We care with affection and respect." },
+      "f5": { "title": "Complete Structure", "text": "Modern and comfortable facilities." },
+      "f6": { "title": "International Support", "text": "Repatriation and global services." },
+      "f7": { "title": "Personalization & Details", "text": "Each ceremony is unique." },
+      "f8": { "title": "Customized Plans", "text": "Solutions tailored to your needs." }
+    },
+    "humanized": {
+      "title_html": "HUMANIZED<br><span>SUPPORT</span>",
+      "subtitle": "BY YOUR SIDE AT EVERY STAGE,<br>WITH EMPATHY, RESPECT AND DEDICATION.",
+      "f1": "EMPATHY AND<br>UNDERSTANDING",
+      "f2": "CLOSE<br>SUPPORT",
+      "f3": "SECURITY AND<br>PEACE OF MIND",
+      "f4": "RESPECT IN<br>EVERY DETAIL",
+      "f5": "FULL SUPPORT<br>TO THE FAMILY",
+      "f6": "TRUST THAT MAKES<br>A DIFFERENCE",
+      "quote": "“ Caring is our purpose.<br>Supporting is our commitment. ”"
+    },
+    "services": {
+      "label": "OUR SERVICES",
+      "title_html": "Everything handled with <span>care</span>",
+      "subtitle": "Hover the mouse over a service to highlight it",
+      "cta_button": "Talk about a service —",
+      "cremation": { "title": "Cremation" },
+      "floral": { "title": "Floral Arrangements" },
+      "thanato": { "title": "Thanatopraxy" },
+      "life": { "title": "Pre-Planned Funeral" },
+      "international": { "title": "International Funeral" },
+      "items": {
+        "item0": "Complete Funeral",
+        "item1": "Pre-Planned Funeral",
+        "item2": "Funeral Plans",
+        "item3": "Cremation",
+        "item4": "Burial",
+        "item5": "Floral Arrangements",
+        "item6": "Thanatopraxy",
+        "item7": "National Repatriation",
+        "item8": "International Repatriation",
+        "item9": "Custom Ceremonies",
+        "item10": "Documentary Assistance"
+      }
+    },
+    "solucoes": {
+      "title_html": "PEACE OF MIND<br><span>IN EVERY CHOICE</span>",
+      "subtitle": "COMPLETE SOLUTIONS,<br>WITH CARE AND EXCELLENCE.",
+      "quote_label": "WE TAKE CARE OF EVERYTHING SO YOU<br>CAN FOCUS ON WHAT REALLY MATTERS:",
+      "quote_italic": "remembering, honoring and moving forward.",
+      "f1": { "title": "24-HOUR<br>SERVICE", "text": "We are always available to support you." },
+      "f2": { "title": "SPECIALIZED<br>TEAM", "text": "Experienced and discreet professionals by your side." },
+      "f3": { "title": "PERSONALIZED<br>PLANS", "text": "Solutions adjusted to your needs and your family." },
+      "f4": { "title": "SECURITY &<br>TRANSPARENCY", "text": "Clear, ethical processes with total trust." },
+      "f5": { "title": "COMPLETE<br>STRUCTURE", "text": "Welcoming environments prepared to receive with dignity." },
+      "f6": { "title": "INTERNATIONAL<br>SUPPORT", "text": "Assistance with repatriation and international funerals." },
+      "f7": { "title": "PERSONALIZATION<br>AND DETAILS", "text": "Each tribute reflects stories, values and feelings." },
+      "f8": { "title": "COMFORTING<br>WELCOME", "text": "More than a service, we offer presence and human support." }
+    },
+    "about": {
+      "label": "Our History",
+      "title": "About Us",
+      "p1": "Funerária Arcanjos is synonymous with excellence in funeral services, with 20 years of experience dedicated to providing support and care in delicate moments.",
+      "p2": "Born in Brazil, we brought with us dedication and respect for the profession, offering a humanized and dignified service.",
+      "p3": "We act with empathy and professionalism, guaranteeing agile, respectful and close support to families in all stages of this process.",
+      "p4": "Our commitment is to provide complete and customized solutions, always focused on the comfort, peace of mind and well-being of our clients.",
+      "p5": "At Funerária Arcanjos, every detail matters, because we believe that welcoming support makes all the difference."
+    },
+    "values": {
+      "label": "Our Values",
+      "item1": "Respect",
+      "item2": "Transparency",
+      "item3": "Trust",
+      "item4": "Seriousness",
+      "item5": "Human<br>Appreciation",
+      "item6": "Security"
+    },
+    "team": {
+      "label": "Responsable Team",
+      "tatiane": {
+        "role": "Management",
+        "specialty": "Humanized Care and Family Support",
+        "bio": "With 15 years of experience in the funeral sector, Tatiane leads the management combining her practical experience with training in Clinical Psychoanalysis (Ibterapias). She is a specialist in humanized care and emotional support, offering a safe haven and compassionate assistance to families in the most difficult moments."
+      },
+      "marcus": {
+        "role": "Technical Director",
+        "specialty": "Thanatopraxy and International Funerals",
+        "bio": "With over 20 years of experience in the funeral industry, Marcus holds a degree in Thanatopraxy from the Faculty of Medical Sciences of Minas Gerais (Brazil). Specialized in facial reconstruction, advanced conservation methods and international transfers, he ensures dignity, respect and logistical rigor in every farewell."
+      }
+    },
+    "obitos": {
+      "label": "Recent Deaths",
+      "title_html": "Tributes and <span>funerals</span>",
+      "all_link": "View All Obituaries —",
+      "empty": "No recent obituaries to present."
+    },
+    "reviews": {
+      "label": "What They Say About Us",
+      "title": "Client Reviews"
+    },
+    "thanks": {
+      "title_html": "OUR DEEPEST<br><span>GRATITUDE</span>",
+      "text1": "To everyone who passed through here, our sincere thanks. To each family who entrusted us with the honor of caring for those they love, our deepest respect and gratitude.",
+      "quote": "It was a privilege to be able to be part of such important moments.",
+      "text2": "We continue with a heart full of purpose, honoring each story and each life with the same care, empathy and dignity that has always guided us.",
+      "closing": "YOUR TRUST IS WHAT INSPIRES US TO BE BETTER, EVERY DAY.",
+      "v1": "RESPECT",
+      "v2": "TRUST",
+      "v3": "CARE",
+      "v4": "DIGNITY",
+      "v5": "EXCELLENCE",
+      "final1": "Thank you very much.",
+      "final2": "We are and will always be here, for you."
+    },
+    "contact": {
+      "label": "Contact Us",
+      "title": "Contact",
+      "address_label": "Address",
+      "address": "Rua Diogo Gonçalves, 11<br>8500-622 Portimão, Portugal",
+      "phone_label": "24h Phone",
+      "email_label": "Email",
+      "hours_label": "Working Hours",
+      "hours": "Open 24 hours, 7 days a week"
+    },
+    "footer": {
+      "desc": "We take care of every detail with dignity and respect. Complete funeral service in Portugal, available 24 hours.",
+      "nav_heading": "Navigation",
+      "services_heading": "Services",
+      "contact_heading": "Contact",
+      "rights": "All rights reserved"
+    },
+    "whatsapp": {
+      "tooltip": "Need help?"
+    }
+  },
+  "fr": {
+    "topbar": {
+      "phone": "+351 964 945 710",
+      "hours": "Support 24h"
+    },
+    "nav": {
+      "home": "Accueil",
+      "services": "Services",
+      "about": "Qui Sommes-Nous",
+      "obitos": "Décès",
+      "reviews": "Avis",
+      "contact": "Contact"
+    },
+    "cta": {
+      "whatsapp": "Contactez-Nous",
+      "services": "Nos Services"
+    },
+    "hero": {
+      "title": "Nous prenons soin de chaque détail. Où que se déroule l' <span class=\"hero__highlight\">adieu</span>.",
+      "subtitle": "Avec dignité, respect et proximité, nous accompagnons votre famille à chaque instant.",
+      "footer": {
+        "c1_title": "Service 24h/24",
+        "c1_desc": "Quand vous en avez besoin",
+        "c2_title": "Accompagnement",
+        "c2_desc": "Personnalisé",
+        "c3_title": "Dignité et Respect",
+        "c3_desc": "Dans les moindres détails",
+        "c4_title": "Où que vous soyez",
+        "c4_desc": "Nous sommes avec vous"
+      }
+    },
+    "solutions": {
+      "label": "Notre Engagement",
+      "title": "La tranquillité d'esprit dans chaque choix",
+      "subtitle": "Nous garantissons un accompagnement complet, avec le soin et l'attention que votre famille mérite.",
+      "quote": "Notre mission é transformateur un moment de douleur en un adieu digne et serein.",
+      "f1": { "title": "Service 24h/24", "text": "Toujours disponible, à tout moment." },
+      "f2": { "title": "Équipe Spécialisée", "text": "Professionnels avec expérience et empathie." },
+      "f3": { "title": "Sécurité et Transparence", "text": "Processus clairs et fiables." },
+      "f4": { "title": "Accueil Réconfortant", "text": "Nous soignons avec affection et respect." },
+      "f5": { "title": "Structure Completa", "text": "Installations modernes et confortables." },
+      "f6": { "title": "Soutien International", "text": "Rapatriement et services mondiaux." },
+      "f7": { "title": "Personnalisation & Détails", "text": "Chaque cérémonie est unique." },
+      "f8": { "title": "Plans Personnalisés", "text": "Solutions adaptées à vos besoins." }
+    },
+    "humanized": {
+      "title_html": "ACCOMPAGNEMENT<br><span>HUMANISÉ</span>",
+      "subtitle": "À VOS CÔTÉS À CHAQUE ÉTAPE,<br>AVEC EMPATHIE, RESPECT ET DÉVOUEMENT.",
+      "f1": "EMPATHIE ET<br>COMPRÉHENSION",
+      "f2": "ACCOMPAGNEMENT<br>PROCHE",
+      "f3": "SÉCURITÉ ET<br>TRANQUILITÉ",
+      "f4": "RESPECT DANS<br>CHAQUE DÉTAIL",
+      "f5": "SOUTIEN COMPLET<br>À LA FAMILLE",
+      "f6": "CONFIANÇA QUE FAIT<br>LA DIFFÉRENCE",
+      "quote": "“ Accueillir est notre but.<br>Soigner est notre engagement. ”"
+    },
+    "services": {
+      "label": "NOS SERVICES",
+      "title_html": "Tout traité avec <span>soin</span>",
+      "subtitle": "Passez la souris sur un service pour le voir en détail",
+      "cta_button": "Parler d'un service —",
+      "cremation": { "title": "Crémation" },
+      "floral": { "title": "Art Floral" },
+      "thanato": { "title": "Thanatopraxie" },
+      "life": { "title": "Prévoyance Obsèques" },
+      "international": { "title": "Obsèques Internationales" },
+      "items": {
+        "item0": "Obsèques Complètes",
+        "item1": "Prévoyance Obsèques",
+        "item2": "Contrats Obsèques",
+        "item3": "Crémation",
+        "item4": "Inhumation",
+        "item5": "Art Floral",
+        "item6": "Thanatopraxie",
+        "item7": "Rapatriement National",
+        "item8": "Rapatriement International",
+        "item9": "Cérémonies Personnalisées",
+        "item10": "Assistance Documentaire"
+      }
+    },
+    "solucoes": {
+      "title_html": "TRANQUILITÉ D'ESPRIT<br><span>DANS CHAQUE CHOIX</span>",
+      "subtitle": "SOLUTIONS COMPLÈTES,<br>AVEC SOIN ET EXCELLENCE.",
+      "quote_label": "NOUS PRENONS SOIN DE TOUT POUR QUE VOUS<br>PUISSIEZ VOUS CONCENTRER SUR L'ESSENTIEL :",
+      "quote_italic": "se souvenir, honorer et aller de l'avant.",
+      "f1": { "title": "SERVICE<br>24h/24", "text": "Nous sommes toujours disponibles pour vous soutenir." },
+      "f2": { "title": "ÉQUIPE<br>SPÉCIALISÉE", "text": "Professionnels expérimentés et discrets à vos côtés." },
+      "f3": { "title": "PLANS<br>PERSONNALISÉS", "text": "Solutions adaptées à vos besoins et à votre famille." },
+      "f4": { "title": "SÉCURITÉ &<br>TRANSPARENCE", "text": "Processus clairs, éthiques et en toute confiance." },
+      "f5": { "title": "STRUCTURE<br>COMPLÈTE", "text": "Des environnements chaleureux préparés pour recevoir avec dignité." },
+      "f6": { "title": "SUPPORT<br>INTERNATIONAL", "text": "Assistance aux rapatriements et obsèques internationales." },
+      "f7": { "title": "PERSONNALISATION<br>ET DÉTAILS", "text": "Chaque hommage reflète des histoires, des valeurs et des sentiments." },
+      "f8": { "title": "ACCUEIL<br>RÉCONFORTANT", "text": "Plus qu'un service, nous offrons présence et soutien humain." }
+    },
+    "about": {
+      "label": "Notre Histoire",
+      "title": "Qui Sommes-Nous",
+      "p1": "Funerária Arcanjos est synonyme d'excellence dans les services funéraires, avec 20 ans d'expérience dédiés à apporter soutien et attention dans les moments délicats.",
+      "p2": "Nés au Brésil, nous avons apporté avec nous le dévouement et le respect de la profession, en offrant un service humanisé et digne.",
+      "p3": "Nous agissons avec empathie et professionnalisme, garantissant un accompagnement agile, respectueux et proche des familles à toutes les étapes de ce processus.",
+      "p4": "Notre engagement est de fournir des solutions complètes et personnalisées, toujours axées sur le confort, la tranquillité d'esprit et le bien-être de nos clients.",
+      "p5": "Chez Funerária Arcanjos, chaque détail compte, car nous pensons qu'un accueil chaleureux fait toute la différence."
+    },
+    "values": {
+      "label": "Nos Valeurs",
+      "item1": "Respect",
+      "item2": "Transparence",
+      "item3": "Confiance",
+      "item4": "Sérieux",
+      "item5": "Valorisation<br>de l'Humain",
+      "item6": "Sécurité"
+    },
+    "team": {
+      "label": "Équipe Responsable",
+      "tatiane": {
+        "role": "Direction",
+        "specialty": "Accompagnement Humanisé et Soutien aux Familles",
+        "bio": "Forte de 15 ans d'expérience dans le secteur funéraire, Tatiane dirige l'agence en associant son expérience pratique à une formation en psychanalyse clinique (Ibterapias). Spécialiste de la prise en charge humanisée et du soutien émotionnel, elle offre un refuge sûr et une écoute compatissante aux familles dans les moments les plus douloureux."
+      },
+      "marcus": {
+        "role": "Responsable Technique",
+        "specialty": "Thanatopraxie et Obsèques Internationales",
+        "bio": "Avec plus de 20 ans de carrière dans le secteur funéraire, Marcus est diplômé en thanatopraxie de la Faculté des sciences médicales de Minas Gerais (Brésil). Spécialisé en reconstruction faciale, méthodes de conservation avancées et transferts internationaux, il garantit dignité, respect et rigueur logistique pour chaque adieu."
+      }
+    },
+    "obitos": {
+      "label": "Décès Récents",
+      "title_html": "Hommages et <span>veillées</span>",
+      "all_link": "Voir Tous les Décès —",
+      "empty": "Aucun avis de décès récent à afficher."
+    },
+    "reviews": {
+      "label": "Ce Qu'on Dit de Nous",
+      "title": "Avis de Nos Clients"
+    },
+    "thanks": {
+      "title_html": "NOTRE PLUS<br><span>PROFOND REMERCIEMENT</span>",
+      "text1": "À tous ceux qui sont passés par ici, nos sincères remerciements. À chaque famille qui nous a confié l'honneur de prendre soin de leurs proches, notre plus profond respect et notre gratitude.",
+      "quote": "Ce fut un privilège de pouvoir faire partie de moments aussi importants.",
+      "text2": "Nous continuons avec un cœur plein de sens, honorant chaque histoire et chaque vie avec le même soin, la même empathie et la même dignité qui nous ont toujours guidés.",
+      "closing": "VOTRE CONFIANÇA EST CE QUI NOUS INSPIRE À ÊTRE MEILLEURS, CHAQUE JOUR.",
+      "v1": "RESPECT",
+      "v2": "CONFIANCE",
+      "v3": "SOIN",
+      "v4": "DIGNITÉ",
+      "v5": "EXCELLENCE",
+      "final1": "Merci beaucoup.",
+      "final2": "Nous sommes et serons toujours là, pour vous."
+    },
+    "contact": {
+      "label": "Contactez-Nous",
+      "title": "Contact",
+      "address_label": "Adresse",
+      "address": "Rua Diogo Gonçalves, 11<br>8500-622 Portimão, Portugal",
+      "phone_label": "Téléphone 24h",
+      "email_label": "Email",
+      "hours_label": "Horaires",
+      "hours": "Ouvert 24 heures sur 24, 7 jours sur 7"
+    },
+    "footer": {
+      "desc": "Nous prenons soin de chaque détail avec dignité et respect. Service funéraire complet au Portugal, disponible 24 heures sur 24.",
+      "nav_heading": "Navigation",
+      "services_heading": "Services",
+      "contact_heading": "Contact",
+      "rights": "Tous droits réservés"
+    },
+    "whatsapp": {
+      "tooltip": "Besoin d'aide ?"
+    }
+  }
+}

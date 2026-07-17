@@ -1,0 +1,51 @@
+{
+  "generated_at": "2026-05-20T19:36:00Z",
+  "project_root": "C:/Users/comun/.gemini/antigravity-ide/scratch/the-secret-post-platform",
+  "languages": [
+    { "name": "PHP", "extensions": [".php"], "file_count": 18 },
+    { "name": "CSS", "extensions": [".css"], "file_count": 2 },
+    { "name": "JavaScript", "extensions": [".js"], "file_count": 1 }
+  ],
+  "primary_language": "PHP",
+  "frameworks": [
+    { "name": "WordPress Plugin", "version": "latest", "source": "the-secret-post-platform.php" },
+    { "name": "WooCommerce", "version": "latest", "source": "the-secret-post-platform.php" }
+  ],
+  "package_manager": null,
+  "entry_points": [
+    { "path": "the-secret-post-platform.php", "type": "plugin_entry" }
+  ],
+  "config_files": [],
+  "ci_cd": [],
+  "docker": {},
+  "database_hints": [
+    { "path": "includes/class-tsp-schema.php", "type": "db_schema" }
+  ],
+  "test_framework": null,
+  "test_file_count": 0,
+  "modules": [
+    "admin-dashboard",
+    "audio-engine",
+    "bulk-importer",
+    "checkout",
+    "dunning-bot",
+    "member-dashboard",
+    "payment-tracker",
+    "reminder-bot",
+    "rollback",
+    "schema",
+    "telemetry"
+  ],
+  "total_files": 21,
+  "organization_suggestion": {
+    "granularity": "feature",
+    "rationale": "A estrutura física segue o padrão de plugins WordPress (arquivos lógicos em includes/ e visualizações em templates/). A organização por features é a mais indicada para separar os domínios de Checkout, Área de Membros, Dunning e Configurações Core.",
+    "signals": [],
+    "features": [
+      "Core & Schema",
+      "Checkout & Payments",
+      "Members & Audio Content",
+      "Dunning & Admin Operations"
+    ]
+  }
+}

@@ -1,0 +1,451 @@
+{
+  "generated_at": "2026-05-20T16:45:00-03:00",
+  "modules": [
+    {
+      "name": "core_and_schema",
+      "path": "includes/class-tsp-schema.php",
+      "purpose": "Core plugin initialization, custom database schema declaration, idempotent updates, database rollback mechanism, and audio telemetry API.",
+      "primary_files": [
+        "the-secret-post-platform.php",
+        "includes/class-tsp-schema.php",
+        "includes/class-tsp-rollback.php",
+        "includes/class-tsp-telemetry.php"
+      ],
+      "functions": [
+        {
+          "name": "get_instance",
+          "file": "the-secret-post-platform.php",
+          "params": [],
+          "returns": "TSP_Platform",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "init_modules",
+          "file": "the-secret-post-platform.php",
+          "params": [],
+          "returns": "void",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "install",
+          "file": "includes/class-tsp-schema.php",
+          "params": [],
+          "returns": "void",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "backfill_from_legacy",
+          "file": "includes/class-tsp-schema.php",
+          "params": [],
+          "returns": "int",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "detect_series_from_subscription",
+          "file": "includes/class-tsp-schema.php",
+          "params": ["subscription: WC_Subscription"],
+          "returns": "string",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "is_legacy_mode",
+          "file": "includes/class-tsp-rollback.php",
+          "params": [],
+          "returns": "bool",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "handle_telemetry",
+          "file": "includes/class-tsp-telemetry.php",
+          "params": ["request: WP_REST_Request"],
+          "returns": "WP_REST_Response|WP_Error",
+          "confidence": "confirmed"
+        }
+      ],
+      "entities": [
+        {
+          "name": "tsp_letter_tracking",
+          "fields": [
+            { "name": "id", "type": "bigint(20) unsigned", "required": true },
+            { "name": "user_id", "type": "bigint(20) unsigned", "required": true },
+            { "name": "subscription_id", "type": "bigint(20) unsigned", "required": true },
+            { "name": "letter_number", "type": "int(10) unsigned", "required": true },
+            { "name": "series", "type": "varchar(100)", "required": true },
+            { "name": "status", "type": "varchar(30)", "required": true },
+            { "name": "due_date", "type": "datetime", "required": false },
+            { "name": "pack_date", "type": "datetime", "required": false },
+            { "name": "send_date", "type": "datetime", "required": false },
+            { "name": "packed_by", "type": "bigint(20) unsigned", "required": false },
+            { "name": "sent_by", "type": "bigint(20) unsigned", "required": false },
+            { "name": "is_gift", "type": "tinyint(1)", "required": true },
+            { "name": "gift_recipient_name", "type": "varchar(255)", "required": false },
+            { "name": "shipping_snapshot", "type": "text", "required": false },
+            { "name": "hold_reason", "type": "varchar(100)", "required": false },
+            { "name": "manual_override", "type": "tinyint(1)", "required": true },
+            { "name": "notes", "type": "text", "required": false },
+            { "name": "status_history", "type": "text", "required": false },
+            { "name": "created_at", "type": "datetime", "required": true },
+            { "name": "updated_at", "type": "datetime", "required": true }
+          ],
+          "confidence": "confirmed"
+        },
+        {
+          "name": "tsp_payment_events",
+          "fields": [
+            { "name": "id", "type": "bigint(20) unsigned", "required": true },
+            { "name": "user_id", "type": "bigint(20) unsigned", "required": true },
+            { "name": "subscription_id", "type": "bigint(20) unsigned", "required": true },
+            { "name": "order_id", "type": "bigint(20) unsigned", "required": true },
+            { "name": "event_type", "type": "varchar(30)", "required": true },
+            { "name": "order_type", "type": "varchar(30)", "required": true },
+            { "name": "is_refund", "type": "tinyint(1)", "required": true },
+            { "name": "amount", "type": "decimal(10,2)", "required": true },
+            { "name": "currency", "type": "varchar(3)", "required": true },
+            { "name": "status", "type": "varchar(30)", "required": true },
+            { "name": "decline_reason", "type": "varchar(255)", "required": false },
+            { "name": "decline_code", "type": "varchar(50)", "required": false },
+            { "name": "gateway", "type": "varchar(50)", "required": false },
+            { "name": "event_date", "type": "datetime", "required": true },
+            { "name": "retry_count", "type": "int(10) unsigned", "required": true },
+            { "name": "resolved", "type": "tinyint(1)", "required": true },
+            { "name": "resolved_at", "type": "datetime", "required": false },
+            { "name": "notes", "type": "text", "required": false },
+            { "name": "created_at", "type": "datetime", "required": true }
+          ],
+          "confidence": "confirmed"
+        }
+      ],
+      "business_rules": [
+        {
+          "description": "Interval between physical letters is fixed at 15 days.",
+          "location": "the-secret-post-platform.php:21",
+          "confidence": "confirmed"
+        },
+        {
+          "description": "Defined series closed enum constraints (love_in_wartime with 25 letters and black_rose with 24 letters).",
+          "location": "the-secret-post-platform.php:24-27",
+          "confidence": "confirmed"
+        },
+        {
+          "description": "Legacy mode constant override or option value redirects payment and letter tracking entirely to legacy mechanisms.",
+          "location": "includes/class-tsp-rollback.php:36-44",
+          "confidence": "confirmed"
+        }
+      ],
+      "dependencies": ["WooCommerce"],
+      "algorithms": [
+        {
+          "name": "Database Schema Safe dbDelta Migration",
+          "description": "Idempotently updates tables using standard WordPress upgrade routines.",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "Legacy Metadata Data Migration (Backfill)",
+          "description": "Migrates user meta arrays to relational database entries, calculating correct start and due dates per active subscription and preventing older meta overlaps.",
+          "confidence": "confirmed"
+        }
+      ],
+      "complexity": "medium"
+    },
+    {
+      "name": "checkout_and_payments",
+      "path": "includes/class-tsp-checkout.php",
+      "purpose": "Single-page WooCommerce checkout links interception, CartFlows custom step checkout resolver, dynamic checkout gift inputs with high-performance storage, passive payment event tracking, and subscription-driven letter hold/reactivation mechanisms.",
+      "primary_files": [
+        "includes/class-tsp-checkout.php",
+        "includes/class-tsp-payment-tracker.php"
+      ],
+      "functions": [
+        {
+          "name": "enqueue_mini_cart_link_guard",
+          "file": "includes/class-tsp-checkout.php",
+          "params": [],
+          "returns": "void",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "resolve_cartflows_checkout_url",
+          "file": "includes/class-tsp-checkout.php",
+          "params": [],
+          "returns": "string",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "add_gift_fields",
+          "file": "includes/class-tsp-checkout.php",
+          "params": ["checkout: object|null"],
+          "returns": "void",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "save_gift_fields_hpos",
+          "file": "includes/class-tsp-checkout.php",
+          "params": ["order: WC_Order", "data: array"],
+          "returns": "void",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "on_payment_complete",
+          "file": "includes/class-tsp-payment-tracker.php",
+          "params": ["subscription: WC_Subscription"],
+          "returns": "void",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "on_payment_failed",
+          "file": "includes/class-tsp-payment-tracker.php",
+          "params": ["subscription: WC_Subscription", "last_order: WC_Order"],
+          "returns": "void",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "on_status_updated",
+          "file": "includes/class-tsp-payment-tracker.php",
+          "params": ["subscription: WC_Subscription", "new_status: string", "old_status: string"],
+          "returns": "void",
+          "confidence": "confirmed"
+        }
+      ],
+      "entities": [],
+      "business_rules": [
+        {
+          "description": "Intercept mini-cart, footer, and widget links to redirect directly to single-page CartFlows checkout, preventing standard WooCommerce cart pages.",
+          "location": "includes/class-tsp-checkout.php:56-144",
+          "confidence": "confirmed"
+        },
+        {
+          "description": "Store checkout gift choices into HPOS orders using standard meta keys _tsp_is_gift and _tsp_gift_message.",
+          "location": "includes/class-tsp-checkout.php:469-478",
+          "confidence": "confirmed"
+        },
+        {
+          "description": "If a subscription goes on-hold/failed, mark pending dispatches as payment_hold with hold_reason payment_failed.",
+          "location": "includes/class-tsp-payment-tracker.php:86-108",
+          "confidence": "confirmed"
+        },
+        {
+          "description": "If a subscription goes cancelled/expired, stop all pending/packed/held letters entirely by marking them stopped.",
+          "location": "includes/class-tsp-payment-tracker.php:110-127",
+          "confidence": "confirmed"
+        },
+        {
+          "description": "Subscription reactivation restores held letters to pending and drops hold_reason constraints.",
+          "location": "includes/class-tsp-payment-tracker.php:269-290",
+          "confidence": "confirmed"
+        }
+      ],
+      "dependencies": ["WooCommerce", "WooCommerce Subscriptions"],
+      "algorithms": [
+        {
+          "name": "CartFlows Step URL Resolution",
+          "description": "Dynamically matches active cart product name/type/slug with standard CartFlows custom steps or database title query scores to resolve checkout URLs.",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "High-Performance JSON Status History Append",
+          "description": "Performs fast MySQL raw-query JSON updates using CONCAT and SUBSTRING string slicing to avoid round-trip PHP memory loads.",
+          "confidence": "confirmed"
+        }
+      ],
+      "complexity": "high"
+    },
+    {
+      "name": "members_and_audio_content",
+      "path": "includes/class-tsp-member-dashboard.php",
+      "purpose": "WooCommerce My Account dashboard customization for elderly visual aesthetics, secure streaming time-limited URL generator, secure streaming partial content engine, and Audio custom post type registration.",
+      "primary_files": [
+        "includes/class-tsp-member-dashboard.php",
+        "includes/class-tsp-audio-engine.php",
+        "includes/class-tsp-audio-cpt.php"
+      ],
+      "functions": [
+        {
+          "name": "custom_menu_items",
+          "file": "includes/class-tsp-member-dashboard.php",
+          "params": ["items: array"],
+          "returns": "array",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "get_unlocked_stories",
+          "file": "includes/class-tsp-member-dashboard.php",
+          "params": ["user_id: int"],
+          "returns": "array",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "generate_signed_url",
+          "file": "includes/class-tsp-audio-engine.php",
+          "params": ["file_id: string", "expiration_minutes: int"],
+          "returns": "string|false",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "serve_secure_audio",
+          "file": "includes/class-tsp-audio-engine.php",
+          "params": [],
+          "returns": "void",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "stream_audio_file",
+          "file": "includes/class-tsp-audio-engine.php",
+          "params": ["file: string"],
+          "returns": "void",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "register_cpt",
+          "file": "includes/class-tsp-audio-cpt.php",
+          "params": [],
+          "returns": "void",
+          "confidence": "confirmed"
+        }
+      ],
+      "entities": [],
+      "business_rules": [
+        {
+          "description": "Simplify My Account menu to My Products, My Subscription, Listen to My Letters, and Account Details (Elderly UX).",
+          "location": "includes/class-tsp-member-dashboard.php:45-57",
+          "confidence": "confirmed"
+        },
+        {
+          "description": "1 letter unlocks immediately at day 0, then 1 new letter unlocks every 15 days.",
+          "location": "includes/class-tsp-member-dashboard.php:144-145",
+          "confidence": "confirmed"
+        },
+        {
+          "description": "Freeze unlock timeline progress if subscription is on-hold, cancelled, expired, or failed, pinning the now timestamp to modified or next_payment timestamps.",
+          "location": "includes/class-tsp-member-dashboard.php:127-136",
+          "confidence": "confirmed"
+        },
+        {
+          "description": "Active administrator role gets absolute access to all letters (God Mode, sequence count = 9999).",
+          "location": "includes/class-tsp-member-dashboard.php:147-156",
+          "confidence": "confirmed"
+        },
+        {
+          "description": "Streaming URLs are signed using site AUTH_SALT hash_hmac SHA256 and expire exactly 120 minutes after creation.",
+          "location": "includes/class-tsp-audio-engine.php:41-61",
+          "confidence": "confirmed"
+        },
+        {
+          "description": "Serve streaming files exclusively using HTTP 206 Partial Content bytes seeks to reduce server load and support mobile media scrubbers.",
+          "location": "includes/class-tsp-audio-engine.php:148-212",
+          "confidence": "confirmed"
+        }
+      ],
+      "dependencies": ["WooCommerce", "WooCommerce Subscriptions"],
+      "algorithms": [
+        {
+          "name": "Bi-weekly Letter Timeline Progression Unlock",
+          "description": "Computes time elapsed since active subscription start date, matching locks and billing freeze offsets.",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "Time-limited signed HMAC Streaming Link",
+          "description": "Generates and validates query signature links to protect physical media file systems.",
+          "confidence": "confirmed"
+        }
+      ],
+      "complexity": "high"
+    },
+    {
+      "name": "dunning_and_admin_operations",
+      "path": "includes/class-tsp-admin-dashboard.php",
+      "purpose": "Automated payment chasing (Dunning) daily bot, dynamic daily unlock drip emails, bulk audio importer parsing directory files, and advanced Logistics Admin Dashboard with AJAX search, print styles, and Kanban boards.",
+      "primary_files": [
+        "includes/class-tsp-dunning-bot.php",
+        "includes/class-tsp-reminder-bot.php",
+        "includes/class-tsp-bulk-importer.php",
+        "includes/class-tsp-admin-dashboard.php"
+      ],
+      "functions": [
+        {
+          "name": "start_hold_clock",
+          "file": "includes/class-tsp-dunning-bot.php",
+          "params": ["subscription: WC_Subscription|int"],
+          "returns": "void",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "process_reminders",
+          "file": "includes/class-tsp-dunning-bot.php",
+          "params": [],
+          "returns": "void",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "process_reminders",
+          "file": "includes/class-tsp-reminder-bot.php",
+          "params": [],
+          "returns": "void",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "handle_import_request",
+          "file": "includes/class-tsp-bulk-importer.php",
+          "params": [],
+          "returns": "void",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "get_active_subscribers_data",
+          "file": "includes/class-tsp-admin-dashboard.php",
+          "params": [],
+          "returns": "array",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "ajax_mark_letter_sent",
+          "file": "includes/class-tsp-admin-dashboard.php",
+          "params": [],
+          "returns": "void",
+          "confidence": "confirmed"
+        }
+      ],
+      "entities": [],
+      "business_rules": [
+        {
+          "description": "Failed payment Dunning chasing schedule: Day 1 (immediate email notice), Day 4 (reminder email), Day 7 (official suspension email and progress freeze).",
+          "location": "includes/class-tsp-dunning-bot.php:3-11",
+          "confidence": "confirmed"
+        },
+        {
+          "description": "Daily drip unlock check runs every morning at 9:00 AM for active subscriptions, sending HTML notifications when a new letter unlocks.",
+          "location": "includes/class-tsp-reminder-bot.php:23-26",
+          "confidence": "confirmed"
+        },
+        {
+          "description": "Drip emails must record a baseline metadata check _tsp_audio_unlock_email_baseline_set on first deployment to prevent spamming older users retroactively.",
+          "location": "includes/class-tsp-reminder-bot.php:54-58",
+          "confidence": "confirmed"
+        },
+        {
+          "description": "Logistics Dashboard restricts page views to manage_woocommerce (Admins and Shop Managers).",
+          "location": "includes/class-tsp-admin-dashboard.php:68",
+          "confidence": "confirmed"
+        },
+        {
+          "description": "Fulfillment mark-as-sent AJAX action captures current shipping metadata snapshots and appends status_history changes directly in relational tracking tables.",
+          "location": "includes/class-tsp-admin-dashboard.php:1028-1142",
+          "confidence": "confirmed"
+        }
+      ],
+      "dependencies": ["WooCommerce", "WooCommerce Subscriptions"],
+      "algorithms": [
+        {
+          "name": "Real-time Anti-cache AJAX Live Search",
+          "description": "Bypasses caching layers (e.g. WP Rocket) by using instant jQuery DOM filtering on billing names and emails, complete with match counts and empty state transitions.",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "Logistics Pick List Formatting",
+          "description": "Outputs clean, print-friendly grid sheets with custom styling to allow warehouse workers to check off packed and dispatched postal orders physically.",
+          "confidence": "confirmed"
+        }
+      ],
+      "complexity": "high"
+    }
+  ]
+}

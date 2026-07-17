@@ -1,0 +1,264 @@
+/* ============================================
+   FUNERÁRIA ARCANJOS — Responsive
+   Mobile-first media queries
+   ============================================ */
+
+/* === Tablet & Below (≤1024px) === */
+@media (max-width: 1024px) {
+  h1, .hero__title { font-size: 2.75rem; }
+  h2, .section-title { font-size: 2rem; }
+
+  .grid--4 { grid-template-columns: repeat(2, 1fr); }
+  .grid--2x4 { grid-template-columns: repeat(2, 1fr); }
+
+  .split { grid-template-columns: 1fr; gap: var(--space-2xl); }
+  .split--reverse { direction: ltr; }
+  .split__image { order: -1; max-height: 400px; }
+
+  .contact-grid { grid-template-columns: 1fr; }
+  .footer__grid { grid-template-columns: repeat(2, 1fr); }
+
+  .hero--video { height: 100vh; }
+
+  .hero__footer-inner { grid-template-columns: repeat(2, 1fr); gap: var(--space-md); }
+  .hero__footer-item { padding: var(--space-sm) var(--space-md); }
+
+  /* Atendimento Humanizado Tablet */
+  .section--atendimento::before {
+    background: rgba(250, 247, 242, 0.90);
+  }
+  .atendimento__content {
+    margin: 0 auto;
+    max-width: 600px;
+  }
+  .container--atendimento {
+    justify-content: center;
+  }
+
+  /* Soluções Completas Tablet */
+  .section--solucoes::before {
+    background: linear-gradient(90deg, rgba(250, 247, 242, 0.95) 0%, rgba(250, 247, 242, 0.92) 50%, rgba(250, 247, 242, 0.55) 75%, rgba(250, 247, 242, 0.1) 100%);
+  }
+  .solucoes__content {
+    margin: 0 auto;
+    max-width: 640px;
+  }
+  .container--solucoes {
+    justify-content: center;
+  }
+  .solucoes__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Óbitos Recentes Tablet */
+  .obitos-track {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+}
+
+/* === Mobile & Below (≤768px) === */
+@media (max-width: 768px) {
+  :root {
+    --header-height: 68px;
+    --header-height-scrolled: 56px;
+  }
+
+  body { font-size: 1rem; }
+
+  h1, .hero__title { font-size: 2.25rem; }
+  h2, .section-title { font-size: 1.75rem; }
+  h3 { font-size: 1.25rem; }
+
+  .section { padding: var(--space-3xl) 0; }
+  .container { padding: 0 var(--space-lg); }
+
+  /* Nav */
+  .nav__list { display: none; }
+  .menu-toggle { display: flex; }
+  .header__actions { display: none; }
+
+  /* Topbar */
+  .topbar__info { gap: var(--space-md); font-size: 0.75rem; }
+  .topbar__item:not(:first-child) { display: none; }
+
+  /* Grid */
+  .grid--2 { grid-template-columns: 1fr; }
+  .grid--3 { grid-template-columns: 1fr; }
+  .grid--4 { grid-template-columns: 1fr; }
+  .grid--2x4 { grid-template-columns: repeat(2, 1fr); gap: var(--space-md); }
+  .values-grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-md); margin-bottom: var(--space-2xl); }
+  .value-item { padding: var(--space-lg) var(--space-sm); }
+  .value-icon svg { width: 32px; height: 32px; }
+
+  /* Hero */
+  .hero--video { height: 100vh; }
+  .hero__content { padding: 0 var(--space-md); }
+  .hero__logo-box { display: none; }
+  .hero__title { font-size: 2.25rem; max-width: 100%; }
+  .hero__subtitle { font-size: 1rem; max-width: 100%; margin-bottom: var(--space-lg); }
+  .hero__actions { flex-direction: column; margin-bottom: var(--space-lg); }
+  .hero__actions .btn { width: 100%; justify-content: center; }
+
+  /* Hero Footer Responsive */
+  .hero__footer { bottom: var(--space-md); }
+  .hero__footer-inner { grid-template-columns: repeat(2, 1fr); gap: var(--space-sm); }
+  .hero__footer-item { padding: 8px var(--space-sm); gap: var(--space-sm); }
+  .hero__footer-icon svg { width: 22px; height: 22px; }
+  .hero__footer-title { font-size: 0.75rem; }
+  .hero__footer-desc { display: none; }
+
+  /* Footer */
+  .footer__grid { grid-template-columns: 1fr; gap: var(--space-2xl); }
+  .footer__bottom { flex-direction: column; text-align: center; }
+
+  /* Service cards */
+  .service-card__image { height: 240px; }
+  .service-card__cta { opacity: 1; transform: none; }
+
+  /* Reviews */
+  .review-card { min-width: 280px; }
+
+  /* Quote */
+  .quote { font-size: 1.125rem; padding-left: var(--space-lg); }
+  .quote::before { font-size: 3rem; }
+
+  /* Obito cards Mobile */
+  .obitos-track {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+  .obito-card__actions {
+    flex-direction: column;
+  }
+  .obito-card__actions .btn, 
+  .obito-card__actions .obito-card__btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Frosted panel */
+  .frosted-panel { padding: var(--space-xl); }
+
+  /* Team */
+  .team-card__photo { width: 120px; height: 120px; }
+
+  /* WhatsApp float */
+  .whatsapp-float__tooltip { display: none; }
+  .whatsapp-float { bottom: 16px; right: 16px; }
+  .whatsapp-float__btn { width: 54px; height: 54px; }
+  .whatsapp-float__btn svg { width: 26px; height: 26px; }
+
+  /* Atendimento Humanizado Mobile */
+  .section--atendimento {
+    padding: var(--space-4xl) 0;
+    background-position: center center;
+  }
+  .section--atendimento::before {
+    background: rgba(250, 247, 242, 0.93);
+  }
+  .atendimento__title {
+    font-size: 2.25rem;
+  }
+  .atendimento__subtitle {
+    font-size: 0.75rem;
+    margin-bottom: var(--space-lg);
+  }
+  .atendimento__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg) 0;
+  }
+  .atendimento__grid-item.border-left {
+    border-left: none;
+  }
+  .atendimento__grid-item:nth-child(even) {
+    border-left: 1px solid rgba(197, 165, 90, 0.25);
+  }
+  .atendimento__grid-icon svg {
+    width: 50px;
+    height: 50px;
+    stroke-width: 0.8;
+  }
+  .atendimento__grid-title {
+    font-size: 0.75rem;
+  }
+  .atendimento__quote {
+    font-size: 1.125rem;
+  }
+
+  /* Soluções Completas Mobile */
+  .section--solucoes {
+    padding: var(--space-4xl) 0;
+    background-position: center center;
+  }
+  .section--solucoes::before {
+    background: rgba(250, 247, 242, 0.95);
+  }
+  .solucoes__title {
+    font-size: 2rem;
+  }
+  .solucoes__subtitle {
+    font-size: 0.6875rem;
+    margin-bottom: var(--space-lg);
+  }
+  /* Switch to 2x4 on mobile */
+  .solucoes__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md) 0;
+  }
+  .solucoes__grid-item:not(:first-child):not(:nth-child(5)) {
+    border-left-color: transparent;
+  }
+  .solucoes__grid-item:nth-child(even) {
+    border-left: 1px solid rgba(197, 165, 90, 0.25) !important;
+  }
+  .solucoes__grid-item:nth-child(n+3) {
+    padding-top: var(--space-sm);
+    border-top: 1px solid rgba(197, 165, 90, 0.15);
+  }
+  .solucoes__grid-icon svg {
+    width: 38px;
+    height: 38px;
+  }
+  .solucoes__quote-box {
+    padding: var(--space-sm) var(--space-md);
+  }
+}
+
+/* === Small Mobile (≤480px) === */
+@media (max-width: 480px) {
+  h1, .hero__title { font-size: 1.875rem; }
+  h2, .section-title { font-size: 1.5rem; }
+
+  .grid--2x4 { grid-template-columns: 1fr 1fr; gap: var(--space-sm); }
+
+  .feature-box { padding: var(--space-md); }
+  .feature-box__icon { width: 40px; height: 40px; }
+  .feature-box__title { font-size: 0.6875rem; }
+
+  .team-card { padding: var(--space-xl); }
+
+  .btn { padding: 12px 24px; font-size: 0.875rem; }
+  .btn--lg { padding: 14px 28px; font-size: 1rem; }
+
+  .mobile-nav { width: 100%; }
+}
+
+/* === Print === */
+@media print {
+  .topbar,
+  .header,
+  .whatsapp-float,
+  .mobile-nav,
+  .mobile-nav__overlay {
+    display: none !important;
+  }
+
+  body {
+    color: #000;
+    background: #fff;
+    font-size: 12pt;
+  }
+
+  .section { padding: 2rem 0; }
+}

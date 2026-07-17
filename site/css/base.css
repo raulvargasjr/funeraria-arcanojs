@@ -1,0 +1,283 @@
+/* ============================================
+   FUNERÁRIA ARCANJOS — Base Styles
+   Reset, Typography, Utilities
+   ============================================ */
+
+/* === Reset === */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--text-body);
+  background-color: var(--white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--gold);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--gold-light);
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* === Typography === */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  color: var(--charcoal);
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 2.625rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--text-body);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* === Section Label (Small caps gold) === */
+.section-label {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  margin-bottom: var(--space-md);
+  display: block;
+}
+
+/* === Section Title === */
+.section-title {
+  font-family: var(--font-serif);
+  font-size: 2.625rem;
+  font-weight: 600;
+  color: var(--charcoal);
+  margin-bottom: var(--space-lg);
+  line-height: 1.2;
+}
+
+/* === Section Subtitle === */
+.section-subtitle {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  max-width: 640px;
+  line-height: 1.7;
+}
+
+/* === Decorative Quote === */
+.quote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.375rem;
+  color: var(--gold-dark);
+  line-height: 1.6;
+  position: relative;
+  padding-left: var(--space-xl);
+}
+
+.quote::before {
+  content: '\201C';
+  font-size: 4rem;
+  color: var(--gold);
+  position: absolute;
+  left: -0.1em;
+  top: -0.3em;
+  opacity: 0.5;
+  font-family: var(--font-serif);
+}
+
+/* === Gold Decorative Line === */
+.gold-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  margin: var(--space-xl) 0;
+}
+
+.gold-line::before,
+.gold-line::after {
+  content: '';
+  height: 1px;
+  width: 60px;
+  background: var(--gold);
+  opacity: 0.5;
+}
+
+.gold-line .diamond {
+  color: var(--gold);
+  font-size: 0.625rem;
+}
+
+/* === Container === */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--space-xl);
+}
+
+.container--narrow {
+  max-width: var(--container-narrow);
+}
+
+/* === Section Spacing === */
+.section {
+  padding: var(--space-5xl) 0;
+  position: relative;
+}
+
+.section--cream {
+  background-color: var(--cream);
+}
+
+.section--warm {
+  background-color: var(--warm-bg);
+}
+
+.section--dark {
+  background-color: var(--black);
+  color: var(--cream);
+}
+
+.section--dark h2,
+.section--dark h3,
+.section--dark h4 {
+  color: var(--cream);
+}
+
+.section--dark p {
+  color: var(--text-light);
+}
+
+/* === Frosted Glass Panel === */
+.frosted-panel {
+  background: var(--warm-overlay);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-2xl);
+}
+
+.frosted-panel--strong {
+  background: var(--warm-overlay-strong);
+}
+
+/* === Visually Hidden (a11y) === */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* === Text Utilities === */
+.text-center { text-align: center; }
+.text-gold { color: var(--gold); }
+.text-gold-dark { color: var(--gold-dark); }
+.text-muted { color: var(--text-muted); }
+.text-white { color: var(--cream); }
+
+/* === Selection === */
+::selection {
+  background-color: var(--gold);
+  color: var(--white);
+}
+
+/* === Focus Styles (a11y) === */
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* === Scrollbar === */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gold);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-dark);
+}
