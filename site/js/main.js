@@ -346,7 +346,7 @@ function initCoverflow() {
     { key: 'item8', title: 'Funerais Internacionais', url: 'funerais-internacionais.html', img: 'img/funerais-internacionais-carrossel.webp' },
     { key: 'item9', title: 'Cerimónias Personalizadas', url: 'cerimonias-personalizadas.html', img: 'img/cerimonias-personalizadas-carrossel.webp' },
     { key: 'item10', title: 'Assessoria Documental', url: 'assessoria-documental.html', img: 'img/assessoria-documental-carrossel.webp' },
-    { key: 'item12', title: 'Tanatoestética', url: 'tanatoestetica.html' }
+    { key: 'item12', title: 'Tanatoestética', url: 'tanatoestetica.html', img: 'img/tanatoestetica-carrossel.webp' }
   ];
 
   const n = services.length;
