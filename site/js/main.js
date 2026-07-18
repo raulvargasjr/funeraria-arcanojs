@@ -335,18 +335,18 @@ function initCoverflow() {
   if (!stage) return;
 
   const services = [
-    { title: 'Funerais', url: 'funerais.html' },
-    { title: 'Funeral em Vida', url: 'funeral-em-vida.html' },
-    { title: 'Planos Funerários', url: 'planos-funerarios.html' },
-    { title: 'Cremação', url: 'cremacao.html' },
-    { title: 'Tanatoplastia (Reconstrução Facial)', url: 'tanatoplastia.html' },
-    { title: 'Ornamentação Floral', url: 'ornamentacao-floral.html', img: 'img/ornamentacao-carrossel.webp' },
-    { title: 'Tanatopraxia', url: 'tanatopraxia.html' },
-    { title: 'Transladações', url: 'transladacoes.html' },
-    { title: 'Funerais Internacionais', url: 'funerais-internacionais.html' },
-    { title: 'Cerimónias Personalizadas', url: 'cerimonias-personalizadas.html' },
-    { title: 'Assessoria Documental', url: 'assessoria-documental.html' },
-    { title: 'Tanatoestética', url: 'tanatoestetica.html' }
+    { key: 'item0', title: 'Funerais', url: 'funerais.html', img: 'img/funerais-carrossel.webp' },
+    { key: 'item1', title: 'Funeral em Vida', url: 'funeral-em-vida.html', img: 'img/funeral-em-vida-carrossel.webp' },
+    { key: 'item2', title: 'Planos Funerários', url: 'planos-funerarios.html', img: 'img/planos-funerarios-carrossel.webp' },
+    { key: 'item3', title: 'Cremação', url: 'cremacao.html', img: 'img/cremacao-carrossel.webp' },
+    { key: 'item4', title: 'Tanatoplastia (Reconstrução Facial)', url: 'tanatoplastia.html', img: 'img/tanatoplastia-carrossel.webp' },
+    { key: 'item5', title: 'Ornamentação Floral', url: 'ornamentacao-floral.html', img: 'img/ORNAMENTACAO-CARROSSEL-SERVICOS.webp' },
+    { key: 'item6', title: 'Tanatopraxia', url: 'tanatopraxia.html', img: 'img/tanatopraxia-carrossel.webp' },
+    { key: 'item7', title: 'Transladações', url: 'transladacoes.html', img: 'img/transladacoes-carrossel.webp' },
+    { key: 'item8', title: 'Funerais Internacionais', url: 'funerais-internacionais.html', img: 'img/funerais-internacionais-carrossel.webp' },
+    { key: 'item9', title: 'Cerimónias Personalizadas', url: 'cerimonias-personalizadas.html', img: 'img/cerimonias-personalizadas-carrossel.webp' },
+    { key: 'item10', title: 'Assessoria Documental', url: 'assessoria-documental.html', img: 'img/assessoria-documental-carrossel.webp' },
+    { key: 'item12', title: 'Tanatoestética', url: 'tanatoestetica.html' }
   ];
 
   const n = services.length;
@@ -369,7 +369,7 @@ function initCoverflow() {
       photoHtml +
       '<div class="cf-scrim"></div>' +
       '<div class="cf-caption"><div class="cf-rule"></div>' +
-      '<div class="cf-title" data-i18n="services.items.item' + i + '">' + s.title + '</div></div>';
+      '<div class="cf-title" data-i18n="services.items.' + s.key + '">' + s.title + '</div></div>';
       
     el.addEventListener('mouseenter', () => { 
       hovered = i; 
