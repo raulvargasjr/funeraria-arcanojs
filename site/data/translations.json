@@ -77,7 +77,8 @@
         "item8": "Funerais Internacionais",
         "item9": "Cerimónias Personalizadas",
         "item10": "Assessoria Documental",
-        "item11": "Tanatoestética"
+        "item11": "Tanatoplastia (Reconstrução Facial)",
+        "item12": "Tanatoestética"
       }
     },
     "solucoes": {
@@ -99,7 +100,7 @@
       "title": "Quem Somos",
       "p1": "A Funerária Arcanjos é sinónimo de excelência no atendimento funerário, com 20 anos de experiência dedicados a prestar apoio e cuidado em momentos delicados.",
       "p2": "Nascida no Brasil, trouxemos connosco a dedicação e o respeito pela profissão, oferecendo um serviço humanizado e digno.",
-      "p3": "Atuamos com empatia e profissionalismo, garantindo um acompanhamento ágil, respeitoso e próximo das famílias em todas as etapas deste processo.",
+      "p3": "Atuamos com empatia e profissionalismo, garantindo um acompanhamento ágil, respetuoso e próximo das famílias em todas as etapas deste processo.",
       "p4": "O nosso compromisso é disponibilizar soluções completas e personalizadas, sempre com foco no conforto, tranquilidade e bem-estar dos nossos clientes.",
       "p5": "Na Funerária Arcanjos, cada detalhe importa, porque acreditamos que um atendimento acolhedor faz toda a diferença."
     },
@@ -148,6 +149,19 @@
       "v5": "EXCELÊNCIA",
       "final1": "O nosso muito obrigado.",
       "final2": "Estamos e estaremos sempre aqui, por si."
+    },
+    "internacional": {
+      "label": "Serviço Especializado",
+      "title": "Funerais Internacionais & Repatriação",
+      "badge": "Transladações Globais",
+      "text": "Com total segurança e rigor legal, coordenamos o transporte de entes queridos de qualquer parte do mundo para Portugal, ou de Portugal para o país de destino. Cuidamos de todo o processo burocrático e consular para proporcionar o conforto que a sua família merece.",
+      "f1_title": "Trâmites Consulares e Diplomáticos",
+      "f1_desc": "Coordenação ágil com embaixadas e consulados.",
+      "f2_title": "Logística Integrada 24h",
+      "f2_desc": "Acompanhamento completo por via aérea ou terrestre.",
+      "f3_title": "Atendimento Multilingue",
+      "f3_desc": "Suporte técnico especializado em múltiplos idiomas.",
+      "cta": "Saber mais sobre este serviço —"
     },
     "contact": {
       "label": "Fale Connosco",
@@ -334,7 +348,7 @@
         "f4_title": "RIGOR CIENTÍFICO",
         "f4_desc": "Técnicas de ponta que restauram com respeito.",
         "quote": "Reconstrução facial com sensibilidade e respeito, garantindo uma despedida com toda a dignidade.",
-        "poetic_desc": "Na nossa funerária, disponibilizamos o serviço de reconstrução facial, um cuidado especializado que devolve serenidade e dignidade à imagem do ente querido. Com técnicas avançadas e sensibilidade humana, trabalhamos para restaurar a fisionomia em situações delicadas, permitindo uma despedida mais tranquila, respeitosa e harmoniosa. Este processo ajuda a preservar a memória visual da pessoa, refletindo a sua essência e história de vida. O nosso diferencial está na união entre técnica, cuidado e humanidade: cada reconstrução é realizada como um gesto de respeito, honra e consideração, para que a última recordação seja marcada pela serenidade e dignidade."
+        "poetic_desc": "Na nossa funerária, disponibilizamos o serviço de reconstrução facial, um cuidado especializado que devolve serenidade e dignidade à imagem do ente querido. Com técnicas avançadas e sensibilidade humana, trabalhamos para restaurar a fisionomia em situações delicadas, permitindo uma despedida mais tranquila, respeitosa e harmoniosa. Este processo ajuda a preservar a memória visual da pessoa, refletindo a sua essência e história de vida. O nosso diferencial está na união entre técnica, cuidado e humanidade: cada reconstrução é realizada como um gesto de respeito, honra e consideração, para que la última recordação seja marcada pela serenidade e dignidade."
       },
       "tanatoestetica": {
         "title": "Tanatoestética",
@@ -448,12 +462,13 @@
         "item8": "Funerales Internacionales",
         "item9": "Ceremonias Personalizadas",
         "item10": "Asesoría Documental",
-        "item11": "Tanatoestética"
+        "item11": "Tanatoplastia (Reconstrucción Facial)",
+        "item12": "Tanatoestética"
       }
     },
     "solucoes": {
       "title_html": "TRANQUILIDAD<br><span>EN CADA ELECCIÓN</span>",
-      "subtitle": "SOLUCIONES COMPLETAS,<br>CON CUIDADO Y EXCELENCIA.",
+      "subtitle": "SOLUÇÕES COMPLETAS,<br>CON CUIDADO Y EXCELENCIA.",
       "quote_label": "CUIDAMOS DE TODO PARA QUE<br>PUEDA ENFOCARSE EN LO QUE REALMENTE IMPORTA:",
       "quote_italic": "recordar, honrar y seguir adelante.",
       "f1": { "title": "ATENCIÓN<br>24 HORAS", "text": "Estamos siempre disponibles para apoyarle." },
@@ -520,6 +535,19 @@
       "final1": "Muchas gracias.",
       "final2": "Estamos y estaremos siempre aquí, por usted."
     },
+    "internacional": {
+      "label": "Servicio Especializado",
+      "title": "Funerales Internacionales & Repatriación",
+      "badge": "Traslados Globales",
+      "text": "Con total seguridad y rigor legal, coordinamos el traslado de seres queridos desde cualquier parte del mundo hacia Portugal, o desde Portugal al país de destino. Nos encargamos de todo el trámite burocrático y consular para brindar el confort que su familia merece.",
+      "f1_title": "Trámites Consulares y Diplomáticos",
+      "f1_desc": "Coordinación ágil con embajadas y consulados.",
+      "f2_title": "Logística Integrada 24h",
+      "f2_desc": "Acompañamiento completo por vía aérea o terrestre.",
+      "f3_title": "Atención Multilingüe",
+      "f3_desc": "Soporte técnico especializado en múltiples idiomas.",
+      "cta": "Saber más sobre este servicio —"
+    },
     "contact": {
       "label": "Hable Con Nosotros",
       "title": "Contacto",
@@ -556,7 +584,7 @@
         "f1_desc": "Nos encargamos de toda la formalización y registros legales.",
         "f2_title": "APOYO CONSULAR",
         "f2_desc": "Asistencia completa en repatriaciones y visados.",
-        "f3_title": "SEGURIDAD JURÍDICA",
+        "f3_title": "SEGURANÇA JURÍDICA",
         "f3_desc": "Garantía de cumplimiento técnico absoluto.",
         "f4_title": "RAPIDEZ E EFICACIA",
         "f4_desc": "Agilidad en la obtención de guías y certificados.",
@@ -616,7 +644,7 @@
         "title_line1": "Servicio de",
         "title_line2": "Cremación",
         "intro": "Una opción moderna, serena y ecológica para la despedida.",
-        "f1_title": "OPCIÓN ECOLÓGICA",
+        "f1_title": "OPÇÃO ECOLOGICA",
         "f1_desc": "Un proceso moderno, sereno y de bajo impacto.",
         "f2_title": "URNAS CINERARIAS",
         "f2_desc": "Gran variedad de urnas y relicarios.",
@@ -624,7 +652,7 @@
         "f3_desc": "Apoyo en el resguardo, columbario o dispersão.",
         "f4_title": "CEREMONIA PREVIA",
         "f4_desc": "Momentos de homenaje antes de la cremación.",
-        "quote": "Una alternativa moderna, serena y ecológica para eternizar la memoria de quien parte.",
+        "quote": "Una alternativa moderna, serena y ecológica para eternizar a memoria de quien parte.",
         "poetic_desc": "La cremación es un proceso limpio y respetuoso que ofrece total libertad para decidir el destino final de las cinzas. Apoyamos a su familia en la selección de la urna cineraria y en la preparación del acto de despedida. Ya sea para el resguardo en un panteón familiar, un columbario o la dispersión en un lugar con significado afectivo, cuidamos cada detalle con la mayor dignidad."
       },
       "cerimonias_personalizadas": {
@@ -657,7 +685,7 @@
         "f4_title": "TRANSPARENCIA",
         "f4_desc": "Condiciones claras y sin cargos ocultos.",
         "quote": "Garantice la protección y la estabilidad de su familia en los momentos más difíciles.",
-        "poetic_desc": "Nuestros planes aseguran que la asistencia funeraria esté completamente resuelta de antemano, protegiéndole de futuros incrementos de costes. Ofrecemos opciones contractuales flexibles adaptadas a cada necesidad familiar. Una inversión que aporta estabilidad, transparencia en las condiciones y la garantía de un servicio con el sello de excelencia de la Funerária Arcanjos."
+        "poetic_desc": "Nuestros planes aseguran que la asistencia funeraria esté completamente resuelta de antemano, protegiéndole de futuros incrementos de costes. Ofrecemos opciones contractuales flexibles adaptadas a cada necesidad familiar. Una inversión que aporta estabilidad, tranquilidad en las condiciones y la garantía de un servicio con el sello de excelencia de la Funerária Arcanjos."
       },
       "ornamentacao_floral": {
         "title": "Ornamentación Floral",
@@ -666,7 +694,7 @@
         "intro": "Un homenaje delicado y lleno de significado a través de las flores.",
         "f1_title": "ARREGLOS CUSTOM",
         "f1_desc": "Coronas y arreglos diseñados con flores naturales.",
-        "f2_title": "SIMBOLOGÍA Y AMOR",
+        "f2_title": "SIMBOLOGIA Y AMOR",
         "f2_desc": "Expresión de afecto, amor, cariño y nostalgia.",
         "f3_title": "CALIDAD MÁXIMA",
         "f3_desc": "Flores frescas y seleccionadas a diario.",
@@ -812,14 +840,15 @@
         "item1": "Funeral in Life",
         "item2": "Funeral Plans",
         "item3": "Cremation",
-        "item4": "Thanatoplasty (Facial Reconstruction)",
+        "item4": "Thanatoplastia (Facial Reconstruction)",
         "item5": "Floral Arrangements",
         "item6": "Thanatopraxy",
         "item7": "Repatriation & Transfers",
         "item8": "International Funerals",
         "item9": "Custom Ceremonies",
         "item10": "Documentary Assistance",
-        "item11": "Thanato-Aesthetics"
+        "item11": "Thanatoplastia (Facial Reconstruction)",
+        "item12": "Thanato-Aesthetics"
       }
     },
     "solucoes": {
@@ -891,6 +920,19 @@
       "final1": "Thank you very much.",
       "final2": "We are and will always be here, for you."
     },
+    "internacional": {
+      "label": "Specialized Service",
+      "title": "International Funerals & Repatriation",
+      "badge": "Global Transfers",
+      "text": "With complete security and legal compliance, we coordinate the transfer of loved ones from anywhere in the world to Portugal, or from Portugal to the destination country. We handle all bureaucratic and consular procedures to provide the comfort your family deserves.",
+      "f1_title": "Consular and Diplomatic Procedures",
+      "f1_desc": "Swift coordination with embassies and consulates.",
+      "f2_title": "24h Integrated Logistics",
+      "f2_desc": "Full support by air or land transport.",
+      "f3_title": "Multilingual Support",
+      "f3_desc": "Specialized technical support in multiple languages.",
+      "cta": "Learn more about this service —"
+    },
     "contact": {
       "label": "Contact Us",
       "title": "Contact",
@@ -961,7 +1003,7 @@
         "f2_desc": "Direct coordination with embassies and consulates.",
         "f3_title": "LANGUAGES SUPPORT",
         "f3_desc": "Bilingual support to welcome and comfort the family.",
-        "f4_title": "SPEED AND RIGOR",
+        "f4_title": "RAPIDEZ Y RIGOR",
         "f4_desc": "Priority sanitary and document processing.",
         "quote": "We ensure the dignified return of your loved ones, managing all worldwide formalities.",
         "poetic_desc": "We responsibly handle the entire funeral process to the destination country, ensuring all bureaucratic formalities and necessary documentation to provide peace of mind and comfort to the relatives. We offer comprehensive advice in multiple languages to welcome and comfort families, taking care of the technical rigor and the respect that the process demands."
@@ -1152,7 +1194,7 @@
       "f2": { "title": "Équipe Spécialisée", "text": "Professionnels avec expérience et empathie." },
       "f3": { "title": "Sécurité et Transparence", "text": "Processus clairs et fiables." },
       "f4": { "title": "Accueil Réconfortant", "text": "Nous soignons avec affection et respect." },
-      "f5": { "title": "Structure Complète", "text": "Installations modernes et confortables." },
+      "f5": { "title": "Structure Completa", "text": "Installations modernes et confortables." },
       "f6": { "title": "Soutien International", "text": "Rapatriement et services mondiaux." },
       "f7": { "title": "Personnalisation & Détails", "text": "Chaque cérémonie est unique." },
       "f8": { "title": "Plans Personnalisés", "text": "Solutions adaptées à vos besoins." }
@@ -1190,7 +1232,8 @@
         "item8": "Obsèques Internationales",
         "item9": "Cérémonies Personnalisées",
         "item10": "Assistance Documentaire",
-        "item11": "Thanatopraxie Esthétique"
+        "item11": "Thanatoplastie (Reconstruction Faciale)",
+        "item12": "Thanatopraxie Esthétique"
       }
     },
     "solucoes": {
@@ -1245,7 +1288,7 @@
       "empty": "Aucun avis de décès à afficher."
     },
     "reviews": {
-      "label": "Ce Qu'on Dit de Nous",
+      "label": "Ce Qu'on Dit de Nós",
       "title": "Avis de Nos Clients"
     },
     "thanks": {
@@ -1253,7 +1296,7 @@
       "text1": "À tous ceux qui sont passés par ici, nos sincères remerciements. À chaque famille qui nous a confié l'honneur de prendre soin de leurs proches, notre plus profond respect et notre gratitude.",
       "quote": "Ce fut un privilège de pouvoir faire partie de moments aussi importants.",
       "text2": "Nous continuons avec un cœur plein de sens, honorant chaque histoire et chaque vie avec le même soin, la même empathie et la même dignité qui nous ont toujours guidés.",
-      "closing": "VOTRE CONFIANCE EST CE QUI NOUS INSPIRE À ÊTRE MEILLEURS, CHAQUE JOUR.",
+      "closing": "VOTRE CONFIANÇE EST CE QUI NOUS INSPIRE À ÊTRE MEILLEURS, CHAQUE JOUR.",
       "v1": "RESPECT",
       "v2": "CONFIANCE",
       "v3": "SOIN",
@@ -1261,6 +1304,19 @@
       "v5": "EXCELLENCE",
       "final1": "Merci beaucoup.",
       "final2": "Nous sommes et serons toujours là, pour vous."
+    },
+    "internacional": {
+      "label": "Service Spécialisé",
+      "title": "Obsèques Internationales & Rapatriement",
+      "badge": "Transferts Globaux",
+      "text": "En toute sécurité et conformité légale, nous coordonnons le transfert de proches depuis n'importe quel pays vers le Portugal, ou du Portugal vers le pays de destination. Nous gérons toutes les démarches administratives et consulaires pour vous apporter la sérénité que votre famille mérite.",
+      "f1_title": "Formalités Consulaires et Diplomatiques",
+      "f1_desc": "Coordination rapide avec les ambassades et consulats.",
+      "f2_title": "Logistique Intégrée 24h/24",
+      "f2_desc": "Accompagnement complet par transport aérien ou terrestre.",
+      "f3_title": "Support Multilingue",
+      "f3_desc": "Assistance technique spécialisée en plusieurs langues.",
+      "cta": "En savoir plus sur ce service —"
     },
     "contact": {
       "label": "Contactez-Nous",
@@ -1308,7 +1364,7 @@
       "funerais": {
         "title": "Obsèques",
         "title_line1": "Obsèques",
-        "title_line2": "Complètes",
+        "title_line2": "Obsèques",
         "intro": "Des hommages dignes, respectueux et adaptés à chaque croyance et tradition.",
         "f1_title": "ACCOMPAGNEMENT TOTAL",
         "f1_desc": "Du transport jusqu'à la dernière étape de l'inhumation.",
@@ -1399,7 +1455,7 @@
         "f4_title": "TRANSPARENCE",
         "f4_desc": "Conditions claires et sans frais cachés.",
         "quote": "Garantissez la protection et la stabilité de votre famille dans les moments difficiles.",
-        "poetic_desc": "Nos contrats garantissent que l'assistance funéraire soit entièrement planifiée à l'avance, évitant ainsi l'impact des hausses de coûts futures. Nous proposons des options souples et adaptées aux besoins de chaque foyer. Un investissement qui apporte de la stabilité, de la transparence dans les conditions et la garantie d'un service portant le label d'excellence de la Funerária Arcanjos."
+        "poetic_desc": "Nos contrats garantissent que l'assistance funéraire soit entièrement planifiée à l'avance, évitant ainsi l'impact des hausses de coûts futures. Nous proposons des options souples et adaptées aux besoins de chaque foyer. Un investment qui apporte de la stabilité, de la transparence dans les conditions et la garantie d'un service portant le label d'excellence de la Funerária Arcanjos."
       },
       "ornamentacao_floral": {
         "title": "Art Floral",
@@ -1415,10 +1471,10 @@
         "f4_title": "BEAUTÉ & RESPECT",
         "f4_desc": "Des compositions adaptées qui apaisent l'atmosphère.",
         "quote": "Les fleurs parlent quand les mots manquent.",
-        "poetic_desc": "L'ornementation florale à l'intérieur du cercueil é un geste délicat et respectueux pour honorer le défunt. Les fleurs symbolisent l'amour, le souvenir et l'éternité, apportant du réconfort aux proches et aux amis. Chez Funerária Arcanjos, nous concevons des arrangements floraux sur mesure, préparés avec soin pour refléter les sentiments et la singularité de chaque adieu. Cette touche particulière contribue à transformer des instants difficiles en un hommage mémorable et chargé de sens."
+        "poetic_desc": "L'ornementation florale à l'intérieur du cercueil é un geste délicat et respectueux pour honorer le défunt. Les fleurs symbolisent l'amour, le souvenir et l'éternité, apportant du réconfort aux proches et aux amis. Chez Funerária Arcanjos, nous concevons des arrangements floraux sur mesure, préparés avec soin pour refléter les sentiments et la singularité de cada adieu. Cette touche particulière contribue à transformer des instants difficiles en un hommage mémorable et chargé de sens."
       },
       "tanatopraxia": {
-        "title": "Thanatopraxie",
+        "title": "Soins de Thanatopraxie",
         "title_line1": "Soins de",
         "title_line2": "Thanatopraxie",
         "intro": "Techniques de conservation avancées pour offrir une présentation sereine et sécurisée.",
@@ -1435,7 +1491,7 @@
       },
       "tanatoplastia": {
         "title": "Thanatoplastie (Reconstruction Faciale)",
-        "title_line1": "Thanatoplastie",
+        "title_line1": "Thanatoplastia",
         "title_line2": "Reconstruction Faciale",
         "intro": "Innovation et soins spécialisés pour restituer sérénité et dignité.",
         "f1_title": "RESTORATION TOTALE",
@@ -1447,7 +1503,7 @@
         "f4_title": "RIGUEUR TECHNIQUE",
         "f4_desc": "Techniques de pointe qui restaurent avec dignité.",
         "quote": "Reconstruction faciale avec sensibilité et respect, garantissant un dernier adieu digne.",
-        "poetic_desc": "Au sein de notre agence, nous proposons un service de reconstruction faciale, un soin hautement qualifié qui redonne sérénité et dignité à l'image du défunt. En alliant techniques de pointe et sensibilité humaine, nous œuvrons à restaurer la physionomie lors de situations complexes, favorisant un adieu plus serein, respectueux et harmonieux. Ce procédé permet de préserver le souvenir visuel de la personne, témoignant de son essence et de son parcours. Notre force réside dans la synergie entre technicité, soin et humanité : chaque reconstruction est pensée comme un hommage de respect, d'honneur et de considération, afin que le dernier souvenir reste paisible et digne."
+        "poetic_desc": "Au sein de notre agence, nous proposons un service de reconstruction faciale, un soin hautement qualifié qui redonne sérénité et dignité à l'image du défunt. En alliant techniques de pointe et sensibilité humaine, nous œuvrons à restaurer la physionomie lors de situations complexes, favorisant un adieu mais serein, respectueux et harmonieux. Ce procédé permet de préserver le souvenir visuel de la personne, témoignant de son essence et de son parcours. Notre force réside dans la synergie entre technicité, soin et humanité : chaque reconstruction est pensée comme un hommage de respect, d'honneur et de considération, afin que le dernier souvenir reste paisible et digne."
       },
       "tanatoestetica": {
         "title": "Thanato-Aesthetics",

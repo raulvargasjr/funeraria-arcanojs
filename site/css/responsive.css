@@ -55,6 +55,16 @@
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-md);
   }
+
+  /* Funerais Internacionais Tablet */
+  .internacional__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+  .internacional__image-box {
+    height: 380px;
+    order: 2;
+  }
 }
 
 /* === Mobile & Below (≤768px) === */
@@ -223,6 +233,19 @@
   .solucoes__quote-box {
     padding: var(--space-sm) var(--space-md);
   }
+
+  /* Funerais Internacionais Mobile */
+  .internacional__image-box {
+    height: 320px;
+  }
+  .internacional__text {
+    font-size: 0.9375rem;
+  }
+  .internacional__content .btn {
+    align-self: stretch;
+    text-align: center;
+    justify-content: center;
+  }
 }
 
 /* === Small Mobile (≤480px) === */
@@ -246,6 +269,19 @@
   .btn--lg { padding: 14px 28px; font-size: 1rem; }
 
   .mobile-nav { width: 100%; }
+
+  /* Funerais Internacionais Small Mobile */
+  .internacional__image-box {
+    height: 260px;
+  }
+  .internacional__image-badge {
+    bottom: 16px;
+    left: 16px;
+    padding: var(--space-xs) var(--space-sm);
+  }
+  .internacional__image-badge span {
+    font-size: 0.6875rem;
+  }
 }
 
 /* === Print === */

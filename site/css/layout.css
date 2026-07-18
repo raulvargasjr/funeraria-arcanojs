@@ -1452,3 +1452,151 @@
   font-size: 1.25rem; /* Aumentado de 1.125rem */
   color: var(--gold-light);
 }
+
+/* === SECTION: FUNERAIS INTERNACIONAIS (HOME) === */
+.section--internacional {
+  background: var(--white); /* Padrão clean da home */
+  padding: var(--space-5xl) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Adiciona um efeito sutil de brilho/glow dourado de fundo no canto */
+.section--internacional::after {
+  content: '';
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(197, 165, 90, 0.04) 0%, transparent 70%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.container--internacional {
+  position: relative;
+  z-index: 2;
+}
+
+.internacional__grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr; /* Duas colunas equilibradas */
+  gap: var(--space-4xl);
+  align-items: center;
+}
+
+/* Caixa da Imagem */
+.internacional__image-box {
+  position: relative;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg); /* Sombra suave padrão */
+  border: 1px solid var(--gold-border);
+  height: 480px;
+}
+
+.internacional__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.internacional__image-box:hover .internacional__image {
+  transform: scale(1.03);
+}
+
+/* Badge flutuante premium na imagem (Glassmorphism claro) */
+.internacional__image-badge {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  background: rgba(255, 253, 249, 0.85); /* Fundo sutilmente leitoso e claro */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(197, 165, 90, 0.35);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--border-radius-sm);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  color: var(--charcoal);
+  box-shadow: var(--shadow-md);
+  z-index: 3;
+}
+
+.internacional__badge-icon {
+  width: 18px;
+  height: 18px;
+  color: var(--gold-dark);
+}
+
+.internacional__image-badge span {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Bloco de Conteúdo */
+.internacional__content {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.internacional__text {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--text-body); /* Cor padrão de parágrafo */
+  margin-bottom: var(--space-xl);
+}
+
+/* Lista de Características */
+.internacional__features {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-2xl);
+}
+
+.internacional__feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+}
+
+.internacional__feature-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--gold-dark);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.internacional__feature-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.internacional__feature-text strong {
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--charcoal); /* Cor escura padrão */
+  letter-spacing: 0.02em;
+}
+
+.internacional__feature-text span {
+  font-size: 0.875rem;
+  color: var(--text-muted); /* Cor cinza-escura suave */
+  line-height: 1.4;
+}
+
+/* Botão de Ação */
+.internacional__content .btn {
+  align-self: flex-start;
+}
