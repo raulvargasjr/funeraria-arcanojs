@@ -183,7 +183,18 @@ function initMobileMenu() {
 
   // Close on link click
   nav.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', closeMenu);
+    link.addEventListener('click', (e) => {
+      if (link.classList.contains('mobile-nav__link--dropdown')) {
+        e.preventDefault();
+        const dropdown = link.nextElementSibling;
+        if (dropdown) {
+          dropdown.classList.toggle('active');
+          link.classList.toggle('active');
+        }
+      } else {
+        closeMenu();
+      }
+    });
   });
 
   // Close on Escape
@@ -324,17 +335,18 @@ function initCoverflow() {
   if (!stage) return;
 
   const services = [
-    { title: 'Funeral Completo' },
-    { title: 'Funeral em Vida' },
-    { title: 'Planos Funerários' },
-    { title: 'Cremação' },
-    { title: 'Sepultamento' },
-    { title: 'Ornamentação Floral' },
-    { title: 'Tanatopraxia' },
-    { title: 'Translado Nacional' },
-    { title: 'Translado Internacional' },
-    { title: 'Cerimónias Personalizadas' },
-    { title: 'Assessoria Documental' },
+    { title: 'Funerais', url: 'funerais.html' },
+    { title: 'Funeral em Vida', url: 'funeral-em-vida.html' },
+    { title: 'Planos Funerários', url: 'planos-funerarios.html' },
+    { title: 'Cremação', url: 'cremacao.html' },
+    { title: 'Tanatoplastia (Reconstrução Facial)', url: 'tanatoplastia.html' },
+    { title: 'Ornamentação Floral', url: 'ornamentacao-floral.html' },
+    { title: 'Tanatopraxia', url: 'tanatopraxia.html' },
+    { title: 'Transladações', url: 'transladacoes.html' },
+    { title: 'Funerais Internacionais', url: 'funerais-internacionais.html' },
+    { title: 'Cerimónias Personalizadas', url: 'cerimonias-personalizadas.html' },
+    { title: 'Assessoria Documental', url: 'assessoria-documental.html' },
+    { title: 'Tanatoestética', url: 'tanatoestetica.html' }
   ];
 
   const n = services.length;
@@ -369,9 +381,14 @@ function initCoverflow() {
     });
 
     el.addEventListener('click', () => {
-      rot = i; // Center the clicked card (supports click & touch navigation)
-      layout();
-      startAutoplay(); // Reset autoplay timer
+      const r = ((rot % n) + n) % n;
+      if (r === i) {
+        window.location.href = s.url;
+      } else {
+        rot = i; // Center the clicked card (supports click & touch navigation)
+        layout();
+        startAutoplay(); // Reset autoplay timer
+      }
     });
     
     stage.appendChild(el);
@@ -517,7 +534,9 @@ window.translateDOM = function(container = document) {
     const key = el.getAttribute('data-i18n');
     let text = getNestedValue(translations[currentLang], key);
     if (text !== undefined && text !== null) {
-      if (text.indexOf('<') !== -1 || key.endsWith('_html')) {
+      if (el.tagName.toLowerCase() === 'meta') {
+        el.setAttribute('content', text);
+      } else if (text.indexOf('<') !== -1 || key.endsWith('_html')) {
         el.innerHTML = text;
       } else {
         el.textContent = text;

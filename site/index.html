@@ -34,12 +34,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Mulish:wght@600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/animations.css">
-  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/variables.css?v=1.1">
+  <link rel="stylesheet" href="css/base.css?v=1.1">
+  <link rel="stylesheet" href="css/components.css?v=1.1">
+  <link rel="stylesheet" href="css/layout.css?v=1.1">
+  <link rel="stylesheet" href="css/animations.css?v=1.1">
+  <link rel="stylesheet" href="css/responsive.css?v=1.1">
 
   <!-- Schema.org -->
   <script type="application/ld+json">
@@ -111,9 +111,25 @@
 
       <nav class="nav" id="mainNav">
         <ul class="nav__list">
-          <li><a href="#inicio" class="nav__link active" data-i18n="nav.home">Início</a></li>
-          <li><a href="#servicos" class="nav__link" data-i18n="nav.services">Serviços</a></li>
-          <li><a href="#sobre" class="nav__link" data-i18n="nav.about">Quem Somos</a></li>
+          <li><a href="/#inicio" class="nav__link active" data-i18n="nav.home">Início</a></li>
+          <li class="nav__item--has-dropdown">
+            <a href="/#servicos" class="nav__link" data-i18n="nav.services">Serviços <svg class="nav__arrow" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></a>
+            <ul class="nav__dropdown">
+              <li><a href="assessoria-documental.html" data-i18n="services.items.item10">Assessoria Documental</a></li>
+              <li><a href="funerais.html" data-i18n="services.items.item0">Funerais</a></li>
+              <li><a href="funerais-internacionais.html" data-i18n="services.items.item8">Funerais Internacionais</a></li>
+              <li><a href="funeral-em-vida.html" data-i18n="services.items.item1">Funeral em Vida</a></li>
+              <li><a href="cremacao.html" data-i18n="services.items.item3">Cremação</a></li>
+              <li><a href="cerimonias-personalizadas.html" data-i18n="services.items.item9">Cerimónias Personalizadas</a></li>
+              <li><a href="planos-funerarios.html" data-i18n="services.items.item2">Planos Funerários</a></li>
+              <li><a href="ornamentacao-floral.html" data-i18n="services.items.item5">Ornamentação Floral</a></li>
+              <li><a href="tanatopraxia.html" data-i18n="services.items.item6">Tanatopraxia</a></li>
+              <li><a href="tanatoplastia.html" data-i18n="services.items.item11">Tanatoplastia (Reconstrução Facial)</a></li>
+              <li><a href="tanatoestetica.html" data-i18n="services.items.item12">Tanatoestética</a></li>
+              <li><a href="transladacoes.html" data-i18n="services.items.item7">Transladações</a></li>
+            </ul>
+          </li>
+          <li><a href="/#sobre" class="nav__link" data-i18n="nav.about">Quem Somos</a></li>
           <li><a href="obitos.html" class="nav__link" data-i18n="nav.obitos">Óbitos</a></li>
           <li><a href="#avaliacoes" class="nav__link" data-i18n="nav.reviews">Avaliações</a></li>
           <li><a href="#contacto" class="nav__link" data-i18n="nav.contact">Contacto</a></li>
@@ -139,9 +155,25 @@
   <div class="mobile-nav__overlay" id="mobileOverlay"></div>
   <nav class="mobile-nav" id="mobileNav">
     <ul class="mobile-nav__list">
-      <li><a href="#inicio" class="mobile-nav__link active" data-i18n="nav.home">Início</a></li>
-      <li><a href="#servicos" class="mobile-nav__link" data-i18n="nav.services">Serviços</a></li>
-      <li><a href="#sobre" class="mobile-nav__link" data-i18n="nav.about">Quem Somos</a></li>
+      <li><a href="/#inicio" class="mobile-nav__link active" data-i18n="nav.home">Início</a></li>
+      <li class="mobile-nav__item--has-dropdown">
+        <a href="#" class="mobile-nav__link mobile-nav__link--dropdown" data-i18n="nav.services">Serviços <svg class="mobile-nav__arrow" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></a>
+        <ul class="mobile-nav__dropdown">
+          <li><a href="assessoria-documental.html" data-i18n="services.items.item10">Assessoria Documental</a></li>
+          <li><a href="funerais.html" data-i18n="services.items.item0">Funerais</a></li>
+          <li><a href="funerais-internacionais.html" data-i18n="services.items.item8">Funerais Internacionais</a></li>
+          <li><a href="funeral-em-vida.html" data-i18n="services.items.item1">Funeral em Vida</a></li>
+          <li><a href="cremacao.html" data-i18n="services.items.item3">Cremação</a></li>
+          <li><a href="cerimonias-personalizadas.html" data-i18n="services.items.item9">Cerimónias Personalizadas</a></li>
+          <li><a href="planos-funerarios.html" data-i18n="services.items.item2">Planos Funerários</a></li>
+          <li><a href="ornamentacao-floral.html" data-i18n="services.items.item5">Ornamentação Floral</a></li>
+          <li><a href="tanatopraxia.html" data-i18n="services.items.item6">Tanatopraxia</a></li>
+          <li><a href="tanatoplastia.html" data-i18n="services.items.item11">Tanatoplastia (Reconstrução Facial)</a></li>
+          <li><a href="tanatoestetica.html" data-i18n="services.items.item12">Tanatoestética</a></li>
+          <li><a href="transladacoes.html" data-i18n="services.items.item7">Transladações</a></li>
+        </ul>
+      </li>
+      <li><a href="/#sobre" class="mobile-nav__link" data-i18n="nav.about">Quem Somos</a></li>
       <li><a href="obitos.html" class="mobile-nav__link" data-i18n="nav.obitos">Óbitos</a></li>
       <li><a href="#avaliacoes" class="mobile-nav__link" data-i18n="nav.reviews">Avaliações</a></li>
       <li><a href="#contacto" class="mobile-nav__link" data-i18n="nav.contact">Contacto</a></li>
@@ -931,7 +963,7 @@
   </div>
 
   <!-- JS -->
-  <script src="js/obituarios.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/obituarios.js?v=1.1"></script>
+  <script src="js/main.js?v=1.1"></script>
 </body>
 </html>

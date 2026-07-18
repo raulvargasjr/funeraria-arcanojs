@@ -1091,5 +1091,282 @@
   }
 }
 
+/* ==========================================================================
+   SERVICE LANDING PAGE (MOCKUP ACCURACY)
+   ========================================================================== */
+
+.service-landing {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: calc(var(--header-height) + var(--space-3xl)) 0 var(--space-3xl);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+/* Overlay escuro à esquerda para legibilidade e fusão */
+.service-landing::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, 
+    rgba(27, 23, 18, 0.97) 0%, 
+    rgba(27, 23, 18, 0.88) 45%, 
+    rgba(27, 23, 18, 0.45) 75%, 
+    rgba(27, 23, 18, 0.15) 100%
+  );
+  z-index: 1;
+}
+
+.service-landing__inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+/* Grid de duas colunas: conteúdo à esquerda e quote box à direita */
+.service-landing__grid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: var(--space-3xl);
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .service-landing {
+    min-height: auto;
+  }
+  .service-landing::before {
+    background: rgba(27, 23, 18, 0.94);
+  }
+  .service-landing__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+}
+
+/* Bloco de Conteúdo (Esquerda) */
+.service-info {
+  color: var(--white);
+  text-align: left;
+  max-width: 650px;
+}
+
+.service-info__symbol {
+  display: flex;
+  margin-bottom: var(--space-md);
+  color: var(--gold);
+}
+
+.service-info__symbol img {
+  filter: brightness(0) saturate(100%) invert(67%) sepia(37%) saturate(632%) hue-rotate(11deg) brightness(91%) contrast(85%); /* Alinha a logo com a cor do ouro */
+}
+
+.service-info__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+  margin-bottom: var(--space-xs);
+  text-transform: uppercase;
+}
+
+.service-info__title span {
+  color: var(--gold);
+  display: block;
+}
+
+.service-info__sub {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  margin-bottom: var(--space-xl);
+  border-bottom: 1px solid rgba(184, 146, 63, 0.2);
+  padding-bottom: var(--space-md);
+  display: inline-block;
+  width: 100%;
+}
+
+/* Grid de Diferenciais (2x2) */
+.service-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-xl) var(--space-2xl);
+  margin-bottom: var(--space-2xl);
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  text-align: left;
+}
+
+.feature-item__icon {
+  color: var(--gold);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  margin-top: 2px;
+}
+
+.feature-item__icon svg {
+  width: 100%;
+  height: 100%;
+  stroke: var(--gold);
+  fill: none;
+}
+
+.feature-item__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-item__title {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gold-light);
+  margin-bottom: 2px;
+}
+
+.feature-item__desc {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.4;
+}
+
+@media (max-width: 600px) {
+  .service-features {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+}
+
+/* Descrição poética inferior */
+.service-info__divider {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: var(--space-lg) 0;
+}
+
+.service-info__divider::before {
+  content: '♦';
+  color: var(--gold);
+  font-size: 0.75rem;
+  margin-right: var(--space-sm);
+}
+
+.service-info__divider::after {
+  content: '';
+  flex-grow: 0.2;
+  height: 1px;
+  background: linear-gradient(to right, var(--gold), transparent);
+}
+
+.service-info__poetic {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: var(--space-xl);
+  font-style: normal;
+  max-width: 580px;
+}
+
+.service-info__signature {
+  width: 120px;
+  opacity: 0.75;
+  margin-top: var(--space-md);
+}
+
+/* Quote Box (Direita) */
+.service-quote-box {
+  background: rgba(27, 23, 18, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(184, 146, 63, 0.25);
+  border-radius: var(--border-radius);
+  padding: var(--space-2xl);
+  color: var(--white);
+  text-align: center;
+  position: relative;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+.service-quote-box__quotes {
+  color: var(--gold);
+  font-family: var(--font-display);
+  font-size: 4.5rem;
+  line-height: 0.1;
+  margin-bottom: var(--space-md);
+  display: block;
+}
+
+.service-quote-box__text {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  color: var(--gold-light);
+  line-height: 1.5;
+  margin-bottom: var(--space-xl);
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+
+.service-quote-box__divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: var(--space-md) 0;
+  width: 100%;
+}
+
+.service-quote-box__divider::before,
+.service-quote-box__divider::after {
+  content: '';
+  flex-grow: 1;
+  height: 1px;
+  background: rgba(184, 146, 63, 0.3);
+}
+
+.service-quote-box__divider span {
+  margin: 0 var(--space-sm);
+  color: var(--gold);
+  font-size: 0.625rem;
+}
+
+.service-quote-box__actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.service-quote-box__btn {
+  width: 100%;
+  justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  .service-quote-box {
+    margin-top: var(--space-xl);
+    align-self: center;
+  }
+}
+
 
 
