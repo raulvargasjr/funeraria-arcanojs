@@ -340,7 +340,7 @@ function initCoverflow() {
     { title: 'Planos Funerários', url: 'planos-funerarios.html' },
     { title: 'Cremação', url: 'cremacao.html' },
     { title: 'Tanatoplastia (Reconstrução Facial)', url: 'tanatoplastia.html' },
-    { title: 'Ornamentação Floral', url: 'ornamentacao-floral.html' },
+    { title: 'Ornamentação Floral', url: 'ornamentacao-floral.html', img: 'img/ornamentacao-carrossel.webp' },
     { title: 'Tanatopraxia', url: 'tanatopraxia.html' },
     { title: 'Transladações', url: 'transladacoes.html' },
     { title: 'Funerais Internacionais', url: 'funerais-internacionais.html' },
@@ -359,8 +359,11 @@ function initCoverflow() {
     const el = document.createElement('div');
     el.className = 'cf-card';
     
-    // Always use the stripe pattern background as shown in reference design
-    const photoHtml = '<div class="cf-photo"><span>foto · ' + s.title + '</span></div>';
+    // Use real image if defined, otherwise fall back to stripe pattern decoration
+    let photoHtml = '<div class="cf-photo"><span>foto · ' + s.title + '</span></div>';
+    if (s.img) {
+      photoHtml = '<div class="cf-photo-img-wrapper"><img src="' + s.img + '" alt="' + s.title + '" class="cf-photo-img" loading="lazy" decoding="async"></div>';
+    }
     
     el.innerHTML =
       photoHtml +

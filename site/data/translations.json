@@ -104,6 +104,16 @@
       "p4": "O nosso compromisso é disponibilizar soluções completas e personalizadas, sempre com foco no conforto, tranquilidade e bem-estar dos nossos clientes.",
       "p5": "Na Funerária Arcanjos, cada detalhe importa, porque acreditamos que um atendimento acolhedor faz toda a diferença."
     },
+    "experience": {
+      "title": "EXPERIÊNCIA",
+      "subtitle": "DUAS DÉCADAS DE HISTÓRIAS, CUIDADO E RESPEITO.",
+      "text": "Há mais de 20 anos, a Funerária Arcanjos caminha ao lado de milhares de famílias, transformando despedidas em memórias de amor e gratidão.",
+      "card_label_1": "JÁ ATENDEMOS MAIS DE",
+      "card_number": "22 MIL",
+      "card_label_2": "ÓBITOS",
+      "card_label_3": "COM TOTAL EXPERIÊNCIA",
+      "poetic_footer": "Cada vida importa. Cada história permanece."
+    },
     "values": {
       "label": "Os Nossos Valores",
       "item1": "Respeto",
@@ -488,6 +498,16 @@
       "p3": "Actuamos con empatía y profesionalismo, garantizando un acompañamiento ágil, respetuoso y cercano a las familias en todas las etapas de este proceso.",
       "p4": "Nuestro compromiso es ofrecer soluciones completas y personalizadas, siempre con enfoque en el confort, tranquilidad y bienestar de nuestros clientes.",
       "p5": "En la Funeraria Arcanjos, cada detalle importa, porque creemos que una atención acogedora marca la diferencia."
+    },
+    "experience": {
+      "title": "EXPERIENCIA",
+      "subtitle": "DOS DÉCADAS DE HISTORIAS, CUIDADO Y RESPETO.",
+      "text": "Desde hace más de 20 años, la Funerária Arcanjos camina al lado de miles de familias, transformando las despedidas en recuerdos de amor y gratitud.",
+      "card_label_1": "YA HEMOS ATENDIDO A MÁS DE",
+      "card_number": "22 MIL",
+      "card_label_2": "DEFUNCIONES",
+      "card_label_3": "CON TOTAL EXPERIENCIA",
+      "poetic_footer": "Cada vida importa. Cada historia permanece."
     },
     "values": {
       "label": "Nuestros Valores",
@@ -874,6 +894,16 @@
       "p4": "Our commitment is to provide complete and customized solutions, always focused on the comfort, peace of mind and well-being of our clients.",
       "p5": "At Funerária Arcanjos, every detail matters, because we believe that welcoming support makes all the difference."
     },
+    "experience": {
+      "title": "EXPERIENCE",
+      "subtitle": "TWO DECADES OF STORIES, CARE AND RESPECT.",
+      "text": "For over 20 years, Funerária Arcanjos has walked alongside thousands of families, transforming farewells into memories of love and gratitude.",
+      "card_label_1": "WE HAVE SERVED MORE THAN",
+      "card_number": "22 THOUSAND",
+      "card_label_2": "FUNERALS",
+      "card_label_3": "WITH TOTAL EXPERIENCE",
+      "poetic_footer": "Every life matters. Every story remains."
+    },
     "values": {
       "label": "Our Values",
       "item1": "Respect",
@@ -1258,6 +1288,16 @@
       "p3": "Nous agissons avec empathie et professionnalisme, garantissant un accompagnement agile, respectueux et proche des familles à toutes les étapes de ce processus.",
       "p4": "Notre engagement est de fournir des solutions complètes et personnalisées, toujours axées sur le confort, la tranquillité d'esprit et le bien-être de nos clients.",
       "p5": "Chez Funerária Arcanjos, chaque détail compte, car nous pensons qu'un accueil chaleureux fait toute la différence."
+    },
+    "experience": {
+      "title": "EXPÉRIENCE",
+      "subtitle": "DEUX DÉCENNIES D'HISTOIRES, DE SOIN ET DE RESPECT.",
+      "text": "Depuis plus de 20 ans, la Funerária Arcanjos accompagne des familles, transformant les adieux en souvenirs d'amour et de gratitude.",
+      "card_label_1": "NOUS AVONS ACCOMPAGNÉ PLUS DE",
+      "card_number": "22 MILLE",
+      "card_label_2": "DÉCÈS",
+      "card_label_3": "AVEC UNE EXPÉRIENCE TOTALE",
+      "poetic_footer": "Chaque vie compte. Chaque histoire demeure."
     },
     "values": {
       "label": "Nos Valeurs",

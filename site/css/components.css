@@ -883,6 +883,24 @@
   border-radius: 3px;
 }
 
+.cf-photo-img-wrapper {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+.cf-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.cf-card:hover .cf-photo-img {
+  transform: scale(1.05);
+}
+
 .cf-scrim {
   position: absolute;
   inset: 0;

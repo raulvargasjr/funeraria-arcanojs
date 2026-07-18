@@ -65,6 +65,19 @@
     height: 380px;
     order: 2;
   }
+
+  /* Nossa Experiência Tablet */
+  .experiencia__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+  .experiencia__image-box {
+    height: 400px;
+    order: 2;
+  }
+  .experiencia__stats-card {
+    max-width: 100%;
+  }
 }
 
 /* === Mobile & Below (≤768px) === */
@@ -246,6 +259,17 @@
     text-align: center;
     justify-content: center;
   }
+
+  /* Nossa Experiência Mobile */
+  .experiencia__image-box {
+    height: 320px;
+  }
+  .experiencia__stats-number {
+    font-size: 2.75rem;
+  }
+  .experiencia__stats-card {
+    padding: var(--space-lg);
+  }
 }
 
 /* === Small Mobile (≤480px) === */
@@ -281,6 +305,20 @@
   }
   .internacional__image-badge span {
     font-size: 0.6875rem;
+  }
+
+  /* Nossa Experiência Small Mobile */
+  .experiencia__image-box {
+    height: 260px;
+  }
+  .experiencia__stats-card {
+    padding: var(--space-md) var(--space-sm);
+  }
+  .experiencia__stats-number {
+    font-size: 2.25rem;
+  }
+  .experiencia__stats-label-big {
+    font-size: 0.9375rem;
   }
 }
 
