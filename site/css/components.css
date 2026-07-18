@@ -1154,22 +1154,35 @@
 /* Bloco de Conteúdo (Esquerda) */
 .service-info {
   color: var(--white);
-  text-align: left;
-  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  max-width: 680px;
+}
+
+.service-info__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: var(--space-xl);
+  width: 100%;
 }
 
 .service-info__symbol {
   display: flex;
+  justify-content: center;
   margin-bottom: var(--space-md);
   color: var(--gold);
 }
 
 .service-info__symbol img {
+  width: 48px;
+  height: 56px;
   filter: brightness(0) saturate(100%) invert(67%) sepia(37%) saturate(632%) hue-rotate(11deg) brightness(91%) contrast(85%); /* Alinha a logo com a cor do ouro */
 }
 
 .service-info__title {
-  font-family: var(--font-display);
+  font-family: var(--font-serif);
   font-size: clamp(2.25rem, 5vw, 3.5rem);
   font-weight: 400;
   line-height: 1.1;
@@ -1178,9 +1191,23 @@
   text-transform: uppercase;
 }
 
-.service-info__title span {
-  color: var(--gold);
+.service-info__title .line-1 {
+  color: #FFFFFF;
   display: block;
+}
+
+.service-info__title .line-2 {
+  color: #d4b96e;
+  font-family: var(--font-serif);
+  font-style: italic;
+  text-transform: none; /* Mantém a capitalização estilosa da tradução (ex: Floral) */
+  display: block;
+  margin-top: 4px;
+}
+
+.service-info__header .gold-line {
+  margin: var(--space-md) 0 var(--space-lg);
+  width: 100%;
 }
 
 .service-info__sub {
@@ -1189,11 +1216,12 @@
   color: var(--gold-light);
   text-transform: uppercase;
   letter-spacing: 0.18em;
-  margin-bottom: var(--space-xl);
-  border-bottom: 1px solid rgba(184, 146, 63, 0.2);
-  padding-bottom: var(--space-md);
-  display: inline-block;
-  width: 100%;
+  padding-bottom: 0;
+  border-bottom: none;
+  display: block;
+  width: auto;
+  max-width: 600px;
+  line-height: 1.6;
 }
 
 /* Grid de Diferenciais (2x2) */
@@ -1267,40 +1295,21 @@
 }
 
 /* Descrição poética inferior */
-.service-info__divider {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  margin: var(--space-lg) 0;
-}
-
-.service-info__divider::before {
-  content: '♦';
-  color: var(--gold);
-  font-size: 0.75rem;
-  margin-right: var(--space-sm);
-}
-
-.service-info__divider::after {
-  content: '';
-  flex-grow: 0.2;
-  height: 1px;
-  background: linear-gradient(to right, var(--gold), transparent);
-}
-
 .service-info__poetic {
   font-size: 1.125rem;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.9);
-  margin-bottom: var(--space-xl);
+  margin: 0 auto var(--space-xl);
   font-style: normal;
   max-width: 580px;
+  text-align: center;
 }
 
 .service-info__signature {
   width: 120px;
   opacity: 0.75;
-  margin-top: var(--space-md);
+  margin: var(--space-md) auto 0;
+  display: block;
 }
 
 /* Quote Box (Direita) */
