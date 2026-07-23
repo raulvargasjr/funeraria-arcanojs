@@ -1,0 +1,494 @@
+<?php
+ob_start();
+session_start();
+if (!isset($_SESSION['arcanjos_admin']) || $_SESSION['arcanjos_admin'] !== true) {
+    header('Location: /admin/gate.php');
+    exit;
+}
+?>
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <script>window.ARCANJOS_PHP_AUTH = true;</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Painel Admin — Funerária Arcanjos</title>
+  <link rel="icon" type="image/png" href="../img/symbol-arcanjo.png">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     LOGIN SCREEN
+═══════════════════════════════════════════ -->
+<div id="login-screen" style="display:none !important;">
+  <div class="login-box">
+    <div class="login-logo"><img src="../img/symbol-arcanjo.png" alt="Logo" style="height:30px;vertical-align:middle;margin-right:6px;"><span>ARCANJOS</span></div>
+    <div class="login-subtitle">Painel Administrativo</div>
+
+    <div class="login-divider">acesso restrito</div>
+
+    <form id="loginForm" autocomplete="off" novalidate>
+      <div class="login-field">
+        <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+        <input type="password" id="loginPwd" placeholder="Senha de acesso" autocomplete="current-password" required autofocus>
+      </div>
+      <button type="submit" class="btn-login">Entrar</button>
+      <div class="login-error" id="loginError"></div>
+    </form>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     APP (após login)
+═══════════════════════════════════════════ -->
+<div id="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar__brand">
+      <div class="sidebar__brand-name" style="display:flex;align-items:center;gap:8px;"><img src="../img/symbol-arcanjo.png" alt="Logo" style="height:26px;"><span>ARCANJOS</span></div>
+      <div class="sidebar__brand-tag">Painel Admin</div>
+    </div>
+
+    <nav class="sidebar__nav">
+      <div class="sidebar__nav-item active" data-section="list">
+        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        Óbitos
+      </div>
+      <div class="sidebar__nav-item" data-section="condolencias">
+        <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        Condolências
+        <span class="sidebar__badge" id="condBadge">0</span>
+      </div>
+      <div class="sidebar__nav-item" data-section="testemunhos">
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        Testemunhos
+      </div>
+
+    <div class="sidebar__footer">
+      <div class="sidebar__logout" id="btnLogout">
+        <svg viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+        Sair
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- TOPBAR -->
+    <div class="main__topbar">
+      <button id="btnMenuToggle" class="btn btn-ghost btn-sm" style="display:none;" aria-label="Menu">
+        <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <span class="main__topbar-title" id="sectionTitle">Gestão de Óbitos</span>
+    </div>
+
+    <div class="main__content">
+
+      <!-- ─────────────────────────────────────
+           SEÇÃO: LISTA DE ÓBITOS
+      ───────────────────────────────────────── -->
+      <section class="main__section" id="section-list">
+
+        <div class="list-topbar">
+          <button class="btn btn-primary" id="btnNewObito">
+            <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            Novo Óbito
+          </button>
+
+          <div class="search-bar">
+            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" id="searchInput" placeholder="Pesquisar por nome ou local…" autocomplete="off">
+          </div>
+
+          <button class="btn btn-secondary" id="btnExport">
+            <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Exportar JSON
+          </button>
+
+          <label class="btn btn-ghost" title="Importar obituarios.json existente">
+            <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            Importar
+            <input type="file" id="fileImportJson" accept=".json" style="display:none;">
+          </label>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs">
+          <button class="tab-btn active" data-list-tab="publicados">
+            Publicados <span class="tab-count" id="tabCountPublicados">0</span>
+          </button>
+          <button class="tab-btn" data-list-tab="rascunhos">
+            Rascunhos <span class="tab-count" id="tabCountRascunhos">0</span>
+          </button>
+        </div>
+
+        <!-- Lista -->
+        <div class="obito-list" id="obitosList"></div>
+
+        <!-- Empty state -->
+        <div class="empty-state" id="listEmpty" style="display:none;">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          <h3>Nenhum óbito encontrado</h3>
+          <p>Clique em "Novo Óbito" para adicionar o primeiro registo.</p>
+          <button class="btn btn-primary" onclick="document.getElementById('btnNewObito').click()">
+            <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            Novo Óbito
+          </button>
+        </div>
+
+        <!-- Export info bar -->
+        <div class="export-bar">
+          <div class="export-bar__text">
+            <div class="export-bar__title">📥 Exportar e publicar no site</div>
+            <div class="export-bar__desc">Após guardar, clique em "Exportar JSON" e faça upload do ficheiro para <code style="color:var(--gold);font-size:0.72rem;">site/data/obituarios.json</code> via FTP ou cPanel.</div>
+          </div>
+          <button class="btn btn-secondary" id="btnExport2" onclick="exportJSON()">
+            <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Exportar JSON
+          </button>
+        </div>
+
+      </section>
+
+      <!-- ─────────────────────────────────────
+           SEÇÃO: FORMULÁRIO (novo / editar)
+      ───────────────────────────────────────── -->
+      <section class="main__section" id="section-form" style="display:none;">
+
+        <div class="form-layout">
+
+          <!-- CAMPOS -->
+          <div class="form-layout__fields">
+
+            <!-- IDENTIDADE -->
+            <div class="form-section">
+              <div class="form-section__title">Identidade</div>
+              <div class="field" style="margin-bottom:1rem;">
+                <label for="fNome">Nome completo <span class="req">*</span></label>
+                <input type="text" id="fNome" placeholder="ex: Maria Fernanda Sousa" autocomplete="off">
+              </div>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="fNascimento">Data de nascimento <span class="req">*</span></label>
+                  <input type="date" id="fNascimento">
+                </div>
+                <div class="field">
+                  <label for="fFalecimento">Data de falecimento <span class="req">*</span></label>
+                  <input type="date" id="fFalecimento">
+                </div>
+              </div>
+            </div>
+
+            <!-- CERIMÓNIA -->
+            <div class="form-section">
+              <div class="form-section__title">Cerimónia</div>
+
+              <div class="field" style="margin-bottom:1rem;">
+                <label>Tipo de cerimónia <span class="req">*</span></label>
+                <div class="radio-group">
+                  <label class="radio-option selected" data-name="tipoCerimonia" data-value="velorio">
+                    <input type="radio" name="tipoCerimonia" value="velorio" checked> 🕯️ Velório
+                  </label>
+                  <label class="radio-option" data-name="tipoCerimonia" data-value="cremacao">
+                    <input type="radio" name="tipoCerimonia" value="cremacao"> 🔥 Cremação
+                  </label>
+                  <label class="radio-option" data-name="tipoCerimonia" data-value="missa">
+                    <input type="radio" name="tipoCerimonia" value="missa"> ⛪ Missa
+                  </label>
+                  <label class="radio-option" data-name="tipoCerimonia" data-value="privado">
+                    <input type="radio" name="tipoCerimonia" value="privado"> 🔒 Privado
+                  </label>
+                </div>
+              </div>
+
+              <div class="field" style="margin-bottom:1rem;">
+                <label for="fLocal">Local do velório / funeral <span class="req">*</span></label>
+                <input type="text" id="fLocal" placeholder="ex: Capela de São Pedro, Portimão" autocomplete="off">
+              </div>
+
+              <div class="field">
+                <label for="fHorario">Horário <span class="req">*</span></label>
+                <input type="text" id="fHorario" placeholder="ex: Dia 11 de Julho, às 15h00" autocomplete="off">
+                <span class="field-hint">Escreva de forma legível para as famílias.</span>
+              </div>
+            </div>
+
+            <!-- MEDIA -->
+            <div class="form-section">
+              <div class="form-section__title">Foto e PDF</div>
+
+              <!-- UPLOAD IMAGEM -->
+              <div class="field" style="margin-bottom:1.25rem;">
+                <label>Foto / Arte A4 <span class="req">*</span></label>
+
+                <div class="upload-zone" id="imgUploadZone">
+                  <input type="file" id="fileImagem" accept="image/jpeg,image/png,image/webp">
+                  <div class="upload-zone__icon">
+                    <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                  </div>
+                  <div class="upload-zone__title">Clique ou arraste a foto aqui</div>
+                  <div class="upload-zone__hint">JPG, PNG ou WebP · máx. <strong>5 MB</strong></div>
+                </div>
+
+                <div class="upload-preview" id="imgPreview">
+                  <img id="imgPreviewEl" class="upload-preview__img" src="" alt="Preview">
+                  <button class="upload-preview__remove" id="btnRemoveImg" title="Remover imagem">✕</button>
+                </div>
+
+                <div class="field" style="margin-top:0.75rem;">
+                  <label for="fFotoPath" style="font-weight:400;color:var(--text-muted);font-size:0.75rem;">Ou indique o caminho no servidor (após upload por FTP)</label>
+                  <input type="text" id="fFotoPath" placeholder="obitos/imagens/nome-falecido.jpg" style="font-size:0.8rem;">
+                </div>
+              </div>
+
+              <!-- UPLOAD PDF -->
+              <div class="field">
+                <label>PDF para download pelos visitantes</label>
+
+                <div class="upload-zone" id="pdfUploadZone">
+                  <input type="file" id="filePdf" accept="application/pdf">
+                  <div class="upload-zone__icon">
+                    <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                  </div>
+                  <div class="upload-zone__title">Clique ou arraste o PDF aqui</div>
+                  <div class="upload-zone__hint">PDF · máx. <strong>10 MB</strong> · este é o ficheiro que os visitantes irão descarregar</div>
+                </div>
+
+                <div class="upload-preview" id="pdfPreview">
+                  <div class="upload-preview__pdf-bar">
+                    <div class="upload-preview__pdf-icon">
+                      <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    </div>
+                    <div class="upload-preview__pdf-info">
+                      <div class="upload-preview__pdf-name" id="pdfPreviewName">documento.pdf</div>
+                      <div class="upload-preview__pdf-size" id="pdfPreviewSize"></div>
+                    </div>
+                    <button class="btn btn-ghost btn-sm" id="btnDownloadPdfPreview" title="Pré-visualizar PDF">
+                      <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                      Descarregar
+                    </button>
+                  </div>
+                  <button class="upload-preview__remove" id="btnRemovePdf" title="Remover PDF">✕</button>
+                </div>
+
+                <div class="field" style="margin-top:0.75rem;">
+                  <label for="fPdfPath" style="font-weight:400;color:var(--text-muted);font-size:0.75rem;">Ou indique o caminho no servidor (após upload por FTP)</label>
+                  <input type="text" id="fPdfPath" placeholder="obitos/pdfs/nome-falecido.pdf" style="font-size:0.8rem;">
+                </div>
+              </div>
+            </div>
+
+            <!-- OPÇÕES -->
+            <div class="form-section">
+              <div class="form-section__title">Opções de Publicação</div>
+              <div class="toggle-group">
+                <label class="toggle-item checked" id="toggleAtivo">
+                  <input type="checkbox" checked>
+                  <div class="toggle-track"></div>
+                  <div class="toggle-label">
+                    Publicado
+                    <small>Visível no site para os visitantes</small>
+                  </div>
+                </label>
+                <label class="toggle-item" id="toggleDestaque">
+                  <input type="checkbox">
+                  <div class="toggle-track"></div>
+                  <div class="toggle-label">
+                    Em destaque
+                    <small>Aparece primeiro na listagem</small>
+                  </div>
+                </label>
+                <label class="toggle-item checked" id="toggleCondolencias">
+                  <input type="checkbox" checked>
+                  <div class="toggle-track"></div>
+                  <div class="toggle-label">
+                    Condolências abertas
+                    <small>Permite que visitantes deixem mensagens</small>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- OBSERVAÇÕES -->
+            <div class="form-section">
+              <div class="form-section__title">Observações Internas</div>
+              <div class="field">
+                <label for="fObservacoes">Notas internas (não publicadas)</label>
+                <textarea id="fObservacoes" rows="3" placeholder="Informações internas, contactos da família, notas de serviço…"></textarea>
+              </div>
+            </div>
+
+            <!-- AÇÕES -->
+            <div class="form-actions">
+              <button class="btn btn-ghost" id="btnCancelForm">
+                <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+                Voltar
+              </button>
+              <button class="btn btn-secondary" id="btnSaveDraft">
+                <svg viewBox="0 0 24 24"><path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+                Guardar Rascunho
+              </button>
+              <button class="btn btn-primary" id="btnPublish">
+                <svg viewBox="0 0 24 24"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg>
+                Publicar
+              </button>
+            </div>
+
+          </div><!-- /form-layout__fields -->
+
+          <!-- PREVIEW SIDEBAR -->
+          <div class="form-layout__preview">
+            <div class="preview-panel">
+              <div class="preview-panel__label">
+                <span></span>
+                Pré-visualização
+              </div>
+              <div class="preview-card">
+                <div class="preview-card__img-wrap" id="prevImgWrap">
+                  <div class="preview-card__img-placeholder">
+                    <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                    Carregue uma foto
+                  </div>
+                </div>
+                <div class="preview-card__body">
+                  <div class="preview-card__divider">◆</div>
+                  <div class="preview-card__name" id="prevName">Nome do(a) Falecido(a)</div>
+                  <div class="preview-card__dates" id="prevDates">✦ ???? — ????</div>
+                  <div class="preview-card__location" id="prevLocal">
+                    <svg viewBox="0 0 24 24" style="width:13px;height:13px;stroke:var(--gold);fill:none;stroke-width:2;flex-shrink:0;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span>Local do velório</span>
+                  </div>
+                  <div class="preview-card__location" id="prevHora">
+                    <svg viewBox="0 0 24 24" style="width:13px;height:13px;stroke:var(--gold);fill:none;stroke-width:2;flex-shrink:0;"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    <span>Horário</span>
+                  </div>
+                  <div class="preview-card__actions" style="margin-top:0.875rem;">
+                    <div class="preview-card__btn preview-card__btn--gold" id="prevPdfBtn" style="display:flex;align-items:center;justify-content:center;gap:0.3rem;font-size:0.72rem;">
+                      <svg viewBox="0 0 24 24" style="width:13px;height:13px;stroke:#fff;fill:none;stroke-width:2;"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                      Descarregar PDF
+                    </div>
+                    <div class="preview-card__btn preview-card__btn--outline" style="font-size:0.72rem;">💬 Condolências</div>
+                  </div>
+                </div>
+              </div>
+              <p style="font-size:0.72rem;color:var(--text-muted);margin-top:0.75rem;text-align:center;line-height:1.4;">Esta pré-visualização atualiza em tempo real conforme preenche o formulário.</p>
+            </div>
+          </div>
+
+        </div><!-- /form-layout -->
+      </section>
+
+      <!-- ─────────────────────────────────────
+           SEÇÃO: CONDOLÊNCIAS
+      ───────────────────────────────────────── -->
+      <section class="main__section" id="section-condolencias" style="display:none;">
+
+        <div class="tabs">
+          <button class="tab-btn active" data-cond-tab="pendentes">
+            ⏳ Pendentes <span class="tab-count" id="condTabPendentes">0</span>
+          </button>
+          <button class="tab-btn" data-cond-tab="aprovadas">
+            ✅ Aprovadas <span class="tab-count" id="condTabAprovadas">0</span>
+          </button>
+          <button class="tab-btn" data-cond-tab="rejeitadas">
+            ❌ Rejeitadas <span class="tab-count" id="condTabRejeitadas">0</span>
+          </button>
+        </div>
+
+        <div id="condList"></div>
+
+      </section>
+
+      <!-- ─────────────────────────────────────
+           SEÇÃO: TESTEMUNHOS
+      ───────────────────────────────────────── -->
+      <section class="main__section" id="section-testemunhos" style="display:none;">
+
+        <div class="section-header">
+          <h2 class="section-header__title">Testemunhos</h2>
+          <button class="btn btn-primary" id="btnNovoTest">
+            <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            Novo Testemunho
+          </button>
+        </div>
+
+        <!-- Formulário de testemunho -->
+        <div class="form-card" id="testForm" style="display:none;">
+          <h3 class="form-card__title" id="testFormTitle">Novo Testemunho</h3>
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label" for="testNome">Nome</label>
+              <input type="text" id="testNome" class="form-input" placeholder="Nome do cliente">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="testAvaliacao">Avaliação</label>
+              <select id="testAvaliacao" class="form-input">
+                <option value="5">★★★★★ — 5 estrelas</option>
+                <option value="4">★★★★☆ — 4 estrelas</option>
+                <option value="3">★★★☆☆ — 3 estrelas</option>
+                <option value="2">★★☆☆☆ — 2 estrelas</option>
+                <option value="1">★☆☆☆☆ — 1 estrela</option>
+              </select>
+            </div>
+            <div class="form-group form-group--full">
+              <label class="form-label" for="testTexto">Testemunho</label>
+              <textarea id="testTexto" class="form-textarea" rows="4" placeholder="Texto do testemunho do cliente..."></textarea>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="testAtivo">Estado</label>
+              <select id="testAtivo" class="form-input">
+                <option value="true">✅ Publicado</option>
+                <option value="false">⏸ Rascunho</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-ghost" id="btnCancelarTest">Cancelar</button>
+            <button class="btn btn-primary" id="btnSalvarTest">Guardar Testemunho</button>
+          </div>
+        </div>
+
+        <!-- Lista de testemunhos -->
+        <div id="testList"></div>
+
+        <!-- Botão de exportar -->
+        <div style="margin-top: var(--space-xl); padding-top: var(--space-xl); border-top: 1px solid var(--border)">
+          <button class="btn btn-outline" id="btnExportTest">
+            <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Exportar testemunhos.json
+          </button>
+          <p class="form-hint" style="margin-top: 8px;">Faça download e substitua <code>data/testemunhos.json</code> no servidor via FTP.</p>
+        </div>
+
+      </section>
+
+    </div><!-- /main__content -->
+  </main>
+</div><!-- /app -->
+
+<!-- ─────────────────────────────────────────────
+     MODAL DE CONFIRMAÇÃO
+───────────────────────────────────────────── -->
+<div class="confirm-overlay" id="confirmOverlay">
+  <div class="confirm-box">
+    <div class="confirm-box__icon">⚠️</div>
+    <div class="confirm-box__title" id="confirmTitle">Tem a certeza?</div>
+    <div class="confirm-box__text" id="confirmText"></div>
+    <div class="confirm-box__actions">
+      <button class="btn btn-ghost" id="confirmCancel">Cancelar</button>
+      <button class="btn btn-danger" id="confirmOk">Confirmar</button>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST CONTAINER -->
+<div class="toast-container" id="toastContainer"></div>
+
+<script src="admin.js"></script>
+</body>
+</html>

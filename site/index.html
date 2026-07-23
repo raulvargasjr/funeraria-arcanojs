@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Funerária Arcanjos | Agência Funerária em Portugal — Serviço 24h</title>
-  <meta name="description" content="Funerária Arcanjos — serviço funerário completo em Portugal. Cremação, ornamentação floral, tanatopraxia, funeral internacional. Atendimento 24 horas com dignidade e respeito.">
+  <meta name="description" content="Funerária Arcanjos — Serviço funerário completo em Portugal. Cremação, ornamentação floral, tanatopraxia, funeral internacional. Atendimento 24 horas com dignidade e respeito.">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <meta name="theme-color" content="#1b1712">
-  <link rel="canonical" href="https://funerariaarcanjos.pt/">
+  <link rel="canonical" href="https://arcanjos.pt/">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="img/symbol-arcanjo.png">
@@ -17,51 +17,116 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Funerária Arcanjos | Agência Funerária em Portugal">
   <meta property="og:description" content="Cuidamos de cada detalhe. Onde quer que a despedida aconteça. Serviço funerário completo com dignidade e respeito.">
-  <meta property="og:url" content="https://funerariaarcanjos.pt/">
+  <meta property="og:url" content="https://arcanjos.pt/">
   <meta property="og:site_name" content="Funerária Arcanjos">
-  <meta property="og:image" content="https://funerariaarcanjos.pt/img/banner%20home.jpg">
-  <meta property="og:image:alt" content="Funerária Arcanjos">
+  <meta property="og:image" content="https://arcanjos.pt/img/og-arcanjos.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Funerária Arcanjos — Agência Funerária em Portugal">
   <meta property="og:locale" content="pt_PT">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Funerária Arcanjos | Agência Funerária em Portugal">
   <meta name="twitter:description" content="Serviço funerário completo em Portugal com atendimento 24 horas, dignidade e respeito.">
-  <meta name="twitter:image" content="https://funerariaarcanjos.pt/img/banner%20home.jpg">
+  <meta name="twitter:image" content="https://arcanjos.pt/img/og-arcanjos.png">
 
-  <!-- Fonts -->
+  <!-- Fonts (preload + async loading) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Mulish:wght@600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet"></noscript>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/variables.css?v=1.1">
-  <link rel="stylesheet" href="css/base.css?v=1.1">
-  <link rel="stylesheet" href="css/components.css?v=1.1">
-  <link rel="stylesheet" href="css/layout.css?v=1.1">
-  <link rel="stylesheet" href="css/animations.css?v=1.1">
-  <link rel="stylesheet" href="css/responsive.css?v=1.1">
+  <!-- Critical CSS (inline — eliminates render-blocking request) -->
+  <style>
+  :root{--gold:#C5A55A;--gold-light:#D4B96E;--gold-dark:#A88B3D;--gold-glow:rgba(197,165,90,.15);--gold-border:rgba(197,165,90,.25);--gold-subtle:rgba(197,165,90,.08);--black:#1A1A1A;--charcoal:#2D2D2D;--text-body:#4A4440;--text-muted:#8A8478;--text-light:#B0A89E;--text-medium:#6B6560;--white:#FFFDF9;--cream:#FAF7F2;--warm-bg:#F5F0EB;--warm-bg-alt:#EDE7DF;--warm-overlay:rgba(250,247,242,.85);--warm-overlay-strong:rgba(250,247,242,.92);--sunset-gradient:linear-gradient(135deg,#FAF7F2 0%,#F0E6D3 50%,#E8D5B5 100%);--hero-overlay:linear-gradient(180deg,rgba(26,26,26,.45) 0%,rgba(26,26,26,.75) 100%);--gold-gradient:linear-gradient(135deg,#C5A55A 0%,#D4B96E 50%,#C5A55A 100%);--card-gradient:linear-gradient(180deg,transparent 0%,rgba(26,26,26,.02) 100%);--shadow-sm:0 2px 8px rgba(197,165,90,.06);--shadow-md:0 4px 16px rgba(197,165,90,.08);--shadow-lg:0 8px 32px rgba(197,165,90,.10);--shadow-xl:0 16px 48px rgba(197,165,90,.12);--shadow-glow:0 0 20px rgba(197,165,90,.2);--font-serif:'Playfair Display',Georgia,'Times New Roman',serif;--font-sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;--font-display:'Playfair Display',Georgia,serif;--space-xs:.25rem;--space-sm:.5rem;--space-md:1rem;--space-lg:1.5rem;--space-xl:2rem;--space-2xl:3rem;--space-3xl:4rem;--space-4xl:6rem;--space-5xl:8rem;--container-max:1200px;--container-wide:1440px;--container-narrow:900px;--header-height:80px;--header-height-scrolled:64px;--border-radius:12px;--border-radius-sm:8px;--border-radius-lg:20px;--border-radius-xl:28px;--transition-fast:.2s ease;--transition:.3s ease;--transition-slow:.6s ease;--transition-spring:.4s cubic-bezier(.34,1.56,.64,1);--z-base:1;--z-header:100;--z-modal:200;--z-whatsapp:150;--z-tooltip:300}
+  </style>
 
-  <!-- Schema.org -->
+  <!-- Core CSS (render-blocking — needed for above-the-fold) -->
+  <link rel="stylesheet" href="css/base.css?v=1.2">
+  <link rel="stylesheet" href="css/components.css?v=1.2">
+  <link rel="stylesheet" href="css/layout.css?v=1.2">
+
+  <!-- Non-critical CSS (deferred — loads after paint) -->
+  <!-- WHY: responsive.css MUST be render-blocking on mobile — it contains
+       all media queries that control layout. Deferring it causes CLS because
+       browser renders desktop layout first, then shifts to mobile. -->
+  <link rel="stylesheet" href="css/responsive.css?v=1.2">
+
+  <!-- Non-critical CSS (deferred — only visual effects, no layout) -->
+  <link rel="stylesheet" href="css/animations.css?v=1.2" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="css/animations.css?v=1.2">
+  </noscript>
+
+  <!-- Schema.org (FuneralHome + ServiceCatalog — GEO optimized) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "FuneralHome",
-    "@id": "https://funerariaarcanjos.pt/#business",
+    "@id": "https://arcanjos.pt/#business",
     "name": "Funerária Arcanjos",
-    "description": "Agência funerária em Portugal. Serviço funerário completo com cremação, ornamentação floral, tanatopraxia e funeral internacional.",
-    "url": "https://funerariaarcanjos.pt/",
+    "alternateName": "Arcanjos Funerária",
+    "description": "Agência funerária em Portimão, Portugal. Serviço funerário completo com cremação, ornamentação floral, tanatopraxia, tanatoplastia, tanatoestética, funerais internacionais, transladações e assessoria documental. Atendimento 24 horas, 7 dias por semana.",
+    "url": "https://arcanjos.pt/",
     "telephone": "+351 964 945 710",
     "email": "geral@arcanjos.pt",
+    "foundingDate": "2024",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Rua Diogo Gonçalves, 11",
       "addressLocality": "Portimão",
+      "addressRegion": "Faro",
       "postalCode": "8500-622",
       "addressCountry": "PT"
     },
-    "openingHours": "Mo-Su 00:00-23:59",
-    "image": "https://funerariaarcanjos.pt/img/banner%20home.jpg",
-    "priceRange": "$$"
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 37.1357,
+      "longitude": -8.5387
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    "image": "https://arcanjos.pt/img/og-arcanjos.png",
+    "logo": "https://arcanjos.pt/img/logo-funeraria-arcanjo.png",
+    "priceRange": "$$",
+    "currenciesAccepted": "EUR",
+    "paymentAccepted": "Cash, Credit Card, Bank Transfer",
+    "areaServed": [
+      { "@type": "City", "name": "Portimão" },
+      { "@type": "AdministrativeArea", "name": "Algarve" },
+      { "@type": "Country", "name": "Portugal" }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=61556403003480",
+      "https://www.instagram.com/arcanjosfuneraria"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Serviços Funerários",
+      "itemListElement": [
+        { "@type": "OfferCatalog", "name": "Funerais", "url": "https://arcanjos.pt/funerais.html" },
+        { "@type": "OfferCatalog", "name": "Cremação", "url": "https://arcanjos.pt/cremacao.html" },
+        { "@type": "OfferCatalog", "name": "Ornamentação Floral", "url": "https://arcanjos.pt/ornamentacao-floral.html" },
+        { "@type": "OfferCatalog", "name": "Tanatopraxia", "url": "https://arcanjos.pt/tanatopraxia.html" },
+        { "@type": "OfferCatalog", "name": "Tanatoplastia", "url": "https://arcanjos.pt/tanatoplastia.html" },
+        { "@type": "OfferCatalog", "name": "Tanatoestética", "url": "https://arcanjos.pt/tanatoestetica.html" },
+        { "@type": "OfferCatalog", "name": "Funerais Internacionais e Repatriação", "url": "https://arcanjos.pt/funerais-internacionais.html" },
+        { "@type": "OfferCatalog", "name": "Transladações", "url": "https://arcanjos.pt/transladacoes.html" },
+        { "@type": "OfferCatalog", "name": "Funeral em Vida", "url": "https://arcanjos.pt/funeral-em-vida.html" },
+        { "@type": "OfferCatalog", "name": "Assessoria Documental", "url": "https://arcanjos.pt/assessoria-documental.html" },
+        { "@type": "OfferCatalog", "name": "Cerimónias Personalizadas", "url": "https://arcanjos.pt/cerimonias-personalizadas.html" },
+        { "@type": "OfferCatalog", "name": "Planos Funerários", "url": "https://arcanjos.pt/planos-funerarios.html" }
+      ]
+    },
+    "knowsAbout": [
+      "Funerais", "Cremação", "Tanatopraxia", "Tanatoplastia", "Tanatoestética",
+      "Ornamentação Floral Fúnebre", "Repatriação de Corpos", "Transladação",
+      "Funeral em Vida", "Assessoria Documental Funerária", "Cerimónias Personalizadas"
+    ]
   }
   </script>
 </head>
@@ -106,7 +171,10 @@
   <header class="header" id="header">
     <div class="container header__inner">
       <a href="/" class="header__logo">
-        <img src="img/logo-funeraria-arcanjo--horizontal.png" alt="Funerária Arcanjos" width="220" height="50" decoding="async">
+        <picture>
+          <source srcset="img/logo-funeraria-arcanjo--horizontal.webp" type="image/webp">
+          <img src="img/logo-funeraria-arcanjo--horizontal.png" alt="Funerária Arcanjos" width="220" height="50" decoding="async" fetchpriority="high">
+        </picture>
       </a>
 
       <nav class="nav" id="mainNav">
@@ -186,6 +254,7 @@
     </div>
   </nav>
 
+  <main id="main-content">
   <!-- ============ SECTION 1: HERO (Scroll-Scrub Video) ============ -->
   <div class="hero-wrapper" id="heroWrapper">
     <section class="hero hero--video" id="inicio">
@@ -202,7 +271,10 @@
       <div class="hero__overlay"></div>
       <div class="container hero__content hero-entrance">
         <div class="hero__logo-box">
-          <img src="img/logo-funeraria-arcanjo-branca.png" alt="Funerária Arcanjos" class="hero__logo-img" width="800" height="708" decoding="async">
+          <picture>
+            <source srcset="img/logo-funeraria-arcanjo-branca.webp" type="image/webp">
+            <img src="img/logo-funeraria-arcanjo-branca.png" alt="Funerária Arcanjos" class="hero__logo-img" width="565" height="297" decoding="async">
+          </picture>
         </div>
         <h1 class="hero__title" data-i18n="hero.title">Cuidamos de cada detalhe. Onde quer que a <span class="hero__highlight">despedida</span> aconteça.</h1>
         <p class="hero__subtitle" data-i18n="hero.subtitle">Com dignidade, respeito e proximidade, acompanhamos a sua família em cada momento.</p>
@@ -230,7 +302,7 @@
               </svg>
             </div>
             <div class="hero__footer-text">
-              <h4 class="hero__footer-title" data-i18n="hero.footer.c1_title">Atendimento 24h</h4>
+              <p class="hero__footer-title" data-i18n="hero.footer.c1_title">Atendimento 24h</p>
               <p class="hero__footer-desc" data-i18n="hero.footer.c1_desc">Sempre que precisar</p>
             </div>
           </div>
@@ -246,7 +318,7 @@
               </svg>
             </div>
             <div class="hero__footer-text">
-              <h4 class="hero__footer-title" data-i18n="hero.footer.c2_title">Funerais</h4>
+              <p class="hero__footer-title" data-i18n="hero.footer.c2_title">Funerais</p>
               <p class="hero__footer-desc" data-i18n="hero.footer.c2_desc">Internacionais</p>
             </div>
           </div>
@@ -259,7 +331,7 @@
               </svg>
             </div>
             <div class="hero__footer-text">
-              <h4 class="hero__footer-title" data-i18n="hero.footer.c3_title">Dignidade e Respeito</h4>
+              <p class="hero__footer-title" data-i18n="hero.footer.c3_title">Dignidade e Respeito</p>
               <p class="hero__footer-desc" data-i18n="hero.footer.c3_desc">Em cada detalhe</p>
             </div>
           </div>
@@ -272,7 +344,7 @@
               </svg>
             </div>
             <div class="hero__footer-text">
-              <h4 class="hero__footer-title" data-i18n="hero.footer.c4_title">Onde quer que esteja</h4>
+              <p class="hero__footer-title" data-i18n="hero.footer.c4_title">Onde quer que esteja</p>
               <p class="hero__footer-desc" data-i18n="hero.footer.c4_desc">Estamos consigo</p>
             </div>
           </div>
@@ -318,7 +390,7 @@
         <div class="feature-box">
           <svg class="feature-box__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
           <div class="feature-box__title" data-i18n="solutions.f6.title">Suporte Internacional</div>
-          <div class="feature-box__text" data-i18n="solutions.f6.text">Repatriação e serviços globais.</div>
+          <div class="feature-box__text" data-i18n="solutions.f6.text">Repatriação e Serviços globais.</div>
         </div>
         <div class="feature-box">
           <svg class="feature-box__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.912 5.813h6.124l-4.962 3.563L17 18.189l-5-3.563-5 3.563 1.926-5.813L3.964 8.813h6.124z"/></svg>
@@ -328,7 +400,7 @@
         <div class="feature-box">
           <svg class="feature-box__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12h6"/><path d="M12 9v6"/><path d="M3 12a9 9 0 1018 0 9 9 0 00-18 0z"/></svg>
           <div class="feature-box__title" data-i18n="solutions.f8.title">Planos Personalizados</div>
-          <div class="feature-box__text" data-i18n="solutions.f8.text">Soluções adaptadas às suas necessidades.</div>
+          <div class="feature-box__text" data-i18n="solutions.f8.text">Soluções adaptadas Ã s suas necessidades.</div>
         </div>
       </div>
 
@@ -343,7 +415,10 @@
         
         <!-- Coluna da Imagem (Esquerda) -->
         <div class="internacional__image-box reveal reveal--left">
-          <img src="img/funeraria-internacional-banner.jpg" alt="Funerais Internacionais e Repatriação" class="internacional__image" loading="lazy" decoding="async">
+          <picture>
+            <source srcset="img/funeraria-internacional-banner.webp" type="image/webp">
+            <img src="img/funeraria-internacional-banner.jpg" alt="Funerais Internacionais e Repatriação" class="internacional__image" loading="lazy" decoding="async">
+          </picture>
           <div class="internacional__image-badge">
             <svg class="internacional__badge-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
@@ -386,7 +461,7 @@
             </div>
           </div>
 
-          <a href="funerais-internacionais.html" class="btn btn--primary" data-i18n="internacional.cta">Saber mais sobre este serviço —</a>
+          <a href="funerais-internacionais.html" class="btn btn--primary" data-i18n="internacional.cta">Saber mais sobre este Serviço —</a>
         </div>
 
       </div>
@@ -399,13 +474,16 @@
       <div class="atendimento__content reveal reveal--left">
         <!-- Símbolo Arcanjos no topo do conteúdo -->
         <div class="atendimento__logo">
+          <picture>
+          <source srcset="img/symbol-arcanjo.webp" type="image/webp">
           <img src="img/symbol-arcanjo.png" alt="Símbolo Arcanjos" class="atendimento__logo-img" width="409" height="481" loading="lazy" decoding="async">
+        </picture>
         </div>
         
         <h2 class="atendimento__title" data-i18n="humanized.title_html">ATENDIMENTO<br><span>HUMANIZADO</span></h2>
         <div class="gold-line"><span class="diamond">◆</span></div>
         
-        <p class="atendimento__subtitle" data-i18n="humanized.subtitle">AO SEU LADO EM CADA ETAPA,<br>COM EMPATIA, RESPEITO E DEDICAÇÃO.</p>
+        <p class="atendimento__subtitle" data-i18n="humanized.subtitle">AO SEU LADO EM CADA ETAPA,<br>COM EMPATIA, RESPEITO E DEDICAÇÃƒO.</p>
         
         <div class="atendimento__grid">
           <!-- Item 1: Empatia e Compreensão -->
@@ -448,14 +526,14 @@
             <div class="atendimento__grid-title" data-i18n="humanized.f4">RESPEITO EM<br>CADA DETALHE</div>
           </div>
           
-          <!-- Item 5: Apoio Completo à Família -->
+          <!-- Item 5: Apoio Completo Ã  Família -->
           <div class="atendimento__grid-item border-left">
             <div class="atendimento__grid-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="24" cy="15" r="5"></circle><path d="M14.5 37 C14.5 30 18.5 26.5 24 26.5 C29.5 26.5 33.5 30 33.5 37"></path><circle cx="11.5" cy="18.5" r="3.7"></circle><path d="M5.5 35 C5.5 29.5 8 26.5 11.5 26.5 C12.4 26.5 13.2 26.7 14 27"></path><circle cx="36.5" cy="18.5" r="3.7"></circle><path d="M42.5 35 C42.5 29.5 40 26.5 36.5 26.5 C35.6 26.5 34.8 26.7 34 27"></path>
               </svg>
             </div>
-            <div class="atendimento__grid-title" data-i18n="humanized.f5">APOIO COMPLETO<br>À FAMÍLIA</div>
+            <div class="atendimento__grid-title" data-i18n="humanized.f5">APOIO COMPLETO<br>À FAMÃLIA</div>
           </div>
           
           <!-- Item 6: Confiança que Faz a Diferença -->
@@ -470,7 +548,7 @@
         </div>
         
         <p class="atendimento__quote" data-i18n="humanized.quote">
-          <span class="quote-mark">“</span> Acolher é o nosso propósito.<br>Cuidar é o nosso compromisso. <span class="quote-mark">”</span>
+          <span class="quote-mark">—œ</span> Acolher é o nosso propósito.<br>Cuidar é o nosso compromisso. <span class="quote-mark">—</span>
         </p>
       </div>
     </div>
@@ -490,8 +568,8 @@
       </div>
 
       <p class="services-subtitle reveal reveal--up" data-i18n="services.subtitle">
-        <span class="show-hover">Passe o rato sobre um serviço para o ver em destaque</span>
-        <span class="show-touch">Toque num serviço para o ver em destaque</span>
+        <span class="show-hover">Passe o rato sobre um Serviço para o ver em destaque</span>
+        <span class="show-touch">Toque num Serviço para o ver em destaque</span>
       </p>
 
       <div class="coverflow-stage" id="stage">
@@ -504,7 +582,7 @@
       </div>
 
       <div class="cf-cta-container reveal reveal--up">
-        <a href="https://wa.me/351964945710?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20sobre%20um%20servi%C3%A7o." class="cf-cta" data-i18n="services.cta_button">Falar sobre um serviço —</a>
+        <a href="https://wa.me/351964945710?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20sobre%20um%20servi%C3%A7o." class="cf-cta" data-i18n="services.cta_button">Falar sobre um Serviço —</a>
       </div>
     </div>
   </section>
@@ -515,7 +593,10 @@
       <div class="solucoes__content">
         <!-- Símbolo Arcanjos -->
         <div class="solucoes__logo reveal reveal--up">
+          <picture>
+          <source srcset="img/symbol-arcanjo.webp" type="image/webp">
           <img src="img/symbol-arcanjo.png" alt="Símbolo Arcanjos" class="solucoes__logo-img" width="409" height="481" loading="lazy" decoding="async">
+        </picture>
         </div>
 
         <h2 class="solucoes__title reveal reveal--up" data-i18n="solucoes.title_html">TRANQUILIDADE<br><span>EM CADA ESCOLHA</span></h2>
@@ -562,7 +643,7 @@
               </svg>
             </div>
             <div class="solucoes__grid-label" data-i18n="solucoes.f3.title">PLANOS<br>PERSONALIZADOS</div>
-            <div class="solucoes__grid-text" data-i18n="solucoes.f3.text">Soluções ajustadas às suas necessidades e à sua família.</div>
+            <div class="solucoes__grid-text" data-i18n="solucoes.f3.text">Soluções ajustadas Ã s suas necessidades e Ã  sua família.</div>
           </div>
 
           <!-- Item 4 -->
@@ -624,7 +705,7 @@
               </svg>
             </div>
             <div class="solucoes__grid-label" data-i18n="solucoes.f8.title">ACOLHIMENTO<br>QUE CONFORTA</div>
-            <div class="solucoes__grid-text" data-i18n="solucoes.f8.text">Mais do que um serviço, oferecemos presença e apoio humano.</div>
+            <div class="solucoes__grid-text" data-i18n="solucoes.f8.text">Mais do que um Serviço, oferecemos presença e apoio humano.</div>
           </div>
         </div>
 
@@ -651,8 +732,8 @@
       <!-- Texto Principal (História) -->
       <div class="about__story reveal reveal--up">
         <p data-i18n="about.p1">A Funerária Arcanjos é sinónimo de excelência no atendimento funerário, com 20 anos de experiência dedicados a prestar apoio e cuidado em momentos delicados.</p>
-        <p data-i18n="about.p2">Nascida no Brasil, trouxemos connosco a dedicação e o respeito pela profissão, oferecendo um serviço humanizado e digno.</p>
-        <p data-i18n="about.p3">Atuamos com empatia e profissionalismo, garantindo um acompanhamento ágil, respeitoso e próximo das famílias em todas as etapas deste processo.</p>
+        <p data-i18n="about.p2">Nascida no Brasil, trouxemos connosco a dedicação e o respeito pela profissão, oferecendo um Serviço humanizado e digno.</p>
+        <p data-i18n="about.p3">Atuamos com empatia e profissionalismo, garantindo um acompanhamento ágil, respeitoso e Próximo das famílias em todas as etapas deste processo.</p>
         <p data-i18n="about.p4">O nosso compromisso é disponibilizar soluções completas e personalizadas, sempre com foco no conforto, tranquilidad e bem-estar dos nossos clientes.</p>
         <p data-i18n="about.p5">Na Funerária Arcanjos, cada detalhe importa, porque acreditamos que um atendimento acolhedor faz toda a diferença.</p>
       </div>
@@ -669,7 +750,7 @@
               <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
             </svg>
           </div>
-          <h4 class="value-title" data-i18n="values.item1">Respeito</h4>
+          <h3 class="value-title" data-i18n="values.item1">Respeito</h3>
         </div>
         <!-- Transparência -->
         <div class="value-item">
@@ -679,7 +760,7 @@
               <circle cx="12" cy="12" r="3"></circle>
             </svg>
           </div>
-          <h4 class="value-title" data-i18n="values.item2">Transparência</h4>
+          <h3 class="value-title" data-i18n="values.item2">Transparência</h3>
         </div>
         <!-- Confiança -->
         <div class="value-item">
@@ -689,7 +770,7 @@
               <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
             </svg>
           </div>
-          <h4 class="value-title" data-i18n="values.item3">Confiança</h4>
+          <h3 class="value-title" data-i18n="values.item3">Confiança</h3>
         </div>
         <!-- Seriedade -->
         <div class="value-item">
@@ -701,7 +782,7 @@
               <path d="M4 21h16"></path>
             </svg>
           </div>
-          <h4 class="value-title" data-i18n="values.item4">Seriedade</h4>
+          <h3 class="value-title" data-i18n="values.item4">Seriedade</h3>
         </div>
         <!-- Valorização do Ser Humano -->
         <div class="value-item">
@@ -713,7 +794,7 @@
               <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
             </svg>
           </div>
-          <h4 class="value-title" data-i18n="values.item5">Valorização<br>do Ser Humano</h4>
+          <h3 class="value-title" data-i18n="values.item5">Valorização<br>do Ser Humano</h3>
         </div>
         <!-- Segurança -->
         <div class="value-item">
@@ -722,7 +803,7 @@
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
             </svg>
           </div>
-          <h4 class="value-title" data-i18n="values.item6">Segurança</h4>
+          <h3 class="value-title" data-i18n="values.item6">Segurança</h3>
         </div>
       </div>
 
@@ -737,8 +818,8 @@
           <img src="img/Tatiane Pinheiro.jpg" alt="Tatiane Pinheiro — Gerência" class="team-card__photo" loading="lazy" decoding="async" width="1389" height="1600">
           <h3 class="team-card__name">Tatiane Pinheiro</h3>
           <div class="team-card__role" data-i18n="team.tatiane.role">Gerência</div>
-          <div class="team-specialty" data-i18n="team.tatiane.specialty">Atendimento Humanizado e Apoio às Famílias</div>
-          <p class="team-card__bio" data-i18n="team.tatiane.bio">Com 15 anos de atuação no setor funerário, Tatiane lidera a gerência aliando a sua experiência prática à formação em Psicanálise Clínica (Ibterapias). É especialista em atendimento humanizado e acolhimento emocional, oferecendo um porto seguro e suporte compassivo às famílias nos momentos mais delicados.</p>
+          <div class="team-specialty" data-i18n="team.tatiane.specialty">Atendimento Humanizado e Apoio Ã s Famílias</div>
+          <p class="team-card__bio" data-i18n="team.tatiane.bio">Com 15 anos de atuação no setor funerário, Tatiane lidera a gerência aliando a sua experiência prática Ã  formação em Psicanálise Clínica (Ibterapias). É especialista em atendimento humanizado e acolhimento emocional, oferecendo um porto seguro e suporte compassivo Ã s famílias nos momentos mais delicados.</p>
         </div>
 
         <!-- Responsável Técnico: Marcus Brambilla -->
@@ -777,7 +858,7 @@
 
           <!-- Card de Estatística Dourado -->
           <div class="experiencia__stats-card">
-            <div class="experiencia__stats-badge" data-i18n="experience.card_label_1">JÁ ATENDEMOS MAIS DE</div>
+            <div class="experiencia__stats-badge" data-i18n="experience.card_label_1">JÃ ATENDEMOS MAIS DE</div>
             <div class="experiencia__stats-number">22 MIL</div>
             <div class="experiencia__stats-label-big" data-i18n="experience.card_label_2">ÓBITOS</div>
             <div class="experiencia__stats-footer" data-i18n="experience.card_label_3">COM TOTAL EXPERIÊNCIA</div>
@@ -835,7 +916,7 @@
         <div class="reveal reveal--right" style="display: flex; align-items: center; gap: var(--space-md);">
           <div style="text-align: right;">
             <div style="font-size: 2rem; font-weight: 700; color: var(--charcoal); font-family: var(--font-serif);">4.9</div>
-            <div class="review-card__stars">★★★★★</div>
+            <div class="review-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
             <div style="font-size: 0.75rem; color: var(--text-muted);">Google Reviews</div>
           </div>
         </div>
@@ -889,7 +970,7 @@
 
         <div class="gold-line reveal reveal--up"><span class="diamond">◆</span></div>
 
-        <!-- 5 Ícones com separadores -->
+        <!-- 5 Ãcones com separadores -->
         <div class="agradecimento__values reveal-stagger">
           <div class="agradecimento__value">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -939,6 +1020,64 @@
   </section>
 
 
+  <!-- ============ SECTION 7.5: PERGUNTAS FREQUENTES (FAQ — GEO) ============ -->
+  <section class="section" id="faq" itemscope itemtype="https://schema.org/FAQPage">
+    <div class="container">
+      <div class="text-center reveal reveal--up" style="margin-bottom: var(--space-3xl);">
+        <span class="section-label" data-i18n="faq.label">PERGUNTAS FREQUENTES</span>
+        <h2 class="section-title" data-i18n="faq.title">Dúvidas Comuns</h2>
+        <div class="gold-line"><span class="diamond">◆</span></div>
+      </div>
+
+      <div class="faq-list reveal-stagger">
+
+        <details class="faq-item reveal reveal--up" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <summary class="faq-item__question" itemprop="name" data-i18n="faq.q1">O que fazer quando um familiar falece?</summary>
+          <div class="faq-item__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text" data-i18n="faq.a1">Contacte-nos imediatamente através do +351 964 945 710 (24 horas). A nossa equipa deslocar-se-á ao local para cuidar de todo o processo — desde a remoção e preparação do corpo até à organização da cerimónia fúnebre. Tratamos também de toda a documentação necessária, incluindo a certidão de óbito e os procedimentos legais.</p>
+          </div>
+        </details>
+
+        <details class="faq-item reveal reveal--up" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <summary class="faq-item__question" itemprop="name" data-i18n="faq.q2">Quais os serviços que a Funerária Arcanjos oferece?</summary>
+          <div class="faq-item__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text" data-i18n="faq.a2">Oferecemos serviço funerário completo: organização de funerais, cremação, ornamentação floral, tanatopraxia, tanatoplastia, tanatoestética, transladações nacionais e internacionais, repatriação de corpos, assessoria documental, cerimónias personalizadas e planos funerários pré-pagos. Todos os serviços estão disponíveis 24 horas por dia, 7 dias por semana.</p>
+          </div>
+        </details>
+
+        <details class="faq-item reveal reveal--up" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <summary class="faq-item__question" itemprop="name" data-i18n="faq.q3">É possível planear um funeral com antecedência?</summary>
+          <div class="faq-item__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text" data-i18n="faq.a3">Sim. O nosso serviço de "Funeral em Vida" permite que planeie antecipadamente todos os detalhes da sua despedida — desde o tipo de cerimónia até à ornamentação. Desta forma, alivia o peso emocional e financeiro dos seus familiares, garantindo que os seus desejos são cumpridos.</p>
+          </div>
+        </details>
+
+        <details class="faq-item reveal reveal--up" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <summary class="faq-item__question" itemprop="name" data-i18n="faq.q4">A Funerária Arcanjos realiza funerais internacionais?</summary>
+          <div class="faq-item__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text" data-i18n="faq.a4">Sim. Realizamos repatriação e trasladação de corpos de e para qualquer país do mundo. Coordenamos com embaixadas, consulados e agências funerárias internacionais para garantir o cumprimento de todos os requisitos legais e logísticos, simplificando o processo para a família.</p>
+          </div>
+        </details>
+
+        <details class="faq-item reveal reveal--up" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <summary class="faq-item__question" itemprop="name" data-i18n="faq.q5">Qual a diferença entre tanatopraxia, tanatoplastia e tanatoestética?</summary>
+          <div class="faq-item__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text" data-i18n="faq.a5">A <strong>tanatopraxia</strong> é a técnica de conservação e preparação do corpo através de tratamentos químicos, preservando a aparência natural. A <strong>tanatoplastia</strong> é a restauração e reconstrução facial em casos de trauma ou deterioração. A <strong>tanatoestética</strong> envolve os cuidados estéticos finais — maquiagem, penteado e apresentação — para honrar a memória do falecido com dignidade.</p>
+          </div>
+        </details>
+
+        <details class="faq-item reveal reveal--up" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <summary class="faq-item__question" itemprop="name" data-i18n="faq.q6">Onde fica a Funerária Arcanjos e qual o horário de atendimento?</summary>
+          <div class="faq-item__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text" data-i18n="faq.a6">Estamos localizados na Rua Diogo Gonçalves, 11, 8500-622 Portimão, Portugal. O nosso atendimento funciona <strong>24 horas por dia, 7 dias por semana</strong>, incluindo feriados. Pode contactar-nos a qualquer momento pelo telefone +351 964 945 710 ou pelo email geral@arcanjos.pt.</p>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+
   <!-- ============ SECTION 8: CONTACTO ============ -->
   <section class="section section--dark" id="contacto">
     <div class="container">
@@ -955,7 +1094,7 @@
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
             </div>
             <div>
-              <h4 style="color: var(--cream); margin-bottom: var(--space-xs);" data-i18n="contact.address_label">Morada</h4>
+              <h3 style="color: var(--cream); margin-bottom: var(--space-xs);" data-i18n="contact.address_label">Morada</h3>
               <p style="color: var(--text-light);" data-i18n="contact.address">Rua Diogo Gonçalves, 11<br>8500-622 Portimão, Portugal</p>
             </div>
           </div>
@@ -1002,13 +1141,17 @@
       </div>
     </div>
   </section>
+  </main>
 
   <!-- ============ FOOTER ============ -->
   <footer class="footer" id="footer">
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
-          <img src="img/logo-funeraria-arcanjo-branca.png" alt="Funerária Arcanjos" class="footer__logo-brand" loading="lazy" decoding="async" width="800" height="708">
+          <picture>
+            <source srcset="img/logo-funeraria-arcanjo-branca.webp" type="image/webp">
+            <img src="img/logo-funeraria-arcanjo-branca.png" alt="Funerária Arcanjos" class="footer__logo-brand" loading="lazy" decoding="async" width="565" height="297">
+          </picture>
           <p class="footer__desc" data-i18n="footer.desc">Cuidamos de cada detalhe com dignidade e respeito. Serviço funerário completo em Portugal, disponível 24 horas.</p>
           <div class="footer__social">
             <a href="https://www.facebook.com/profile.php?id=61556403003480" aria-label="Facebook" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
@@ -1049,7 +1192,7 @@
       </div>
 
       <div class="footer__bottom">
-        <p class="footer__copy">© 2026 Funerária Arcanjos — <span data-i18n="footer.rights">Todos os direitos reservados</span></p>
+        <p class="footer__copy">&copy; 2026 Funerária Arcanjos — <span data-i18n="footer.rights">Todos os direitos reservados</span></p>
         <div class="lang-switcher">
           <button class="lang-switcher__btn active" data-lang="pt">PT</button>
           <span class="lang-switcher__sep" style="color: var(--text-muted);">|</span>
@@ -1076,3 +1219,4 @@
   <script src="js/main.js?v=1.1"></script>
 </body>
 </html>
+

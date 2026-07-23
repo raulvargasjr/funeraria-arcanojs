@@ -1,0 +1,21 @@
+# =====================================================
+# FUNERÁRIA ARCANJOS — Admin Folder Protection
+# Redireciona tráfego para o gate PHP.
+# =====================================================
+
+Options -Indexes
+
+# Página de entrada padrão
+DirectoryIndex index.php gate.php
+
+# Bloqueia acesso direto a ficheiros sensíveis
+<FilesMatch "^(auth\.php|\.htpasswd|\.env)$">
+  Order deny,allow
+  Deny from all
+</FilesMatch>
+
+# Redireciona index.html para index.php (se alguém tentar aceder directamente)
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^index\.html$ index.php [R=301,L]
+</IfModule>

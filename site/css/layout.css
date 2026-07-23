@@ -669,21 +669,32 @@
 /* === REVIEWS CAROUSEL === */
 
 .reviews-track {
-  display: flex;
-  gap: var(--space-xl);
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none;
+  overflow: hidden;
   padding: var(--space-md) 0;
-  -ms-overflow-style: none;
 }
 
-.reviews-track::-webkit-scrollbar {
-  display: none;
+.reviews-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
 }
 
-.reviews-track > * {
-  scroll-snap-align: start;
+.reviews-page--next {
+  animation: slideFromRight 0.42s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.reviews-page--prev {
+  animation: slideFromLeft 0.42s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes slideFromRight {
+  from { opacity: 0; transform: translateX(32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideFromLeft {
+  from { opacity: 0; transform: translateX(-32px); }
+  to   { opacity: 1; transform: translateX(0); }
 }
 
 .reviews-nav {
@@ -710,6 +721,37 @@
   background: var(--gold);
   color: var(--white);
   border-color: var(--gold);
+}
+
+.reviews-nav__btn:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+/* Dots de navegação */
+.reviews-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: var(--space-lg);
+}
+
+.reviews-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gold-border);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.25s ease;
+}
+
+.reviews-dot--active {
+  background: var(--gold);
+  width: 24px;
+  border-radius: 4px;
 }
 
 /* === CONTACT SECTION === */
@@ -933,6 +975,7 @@
 .section--atendimento {
   position: relative;
   background-image: url('../img/atendimento-humanizado-banner.jpg');
+  background-image: image-set(url('../img/atendimento-humanizado-banner.webp') type('image/webp'), url('../img/atendimento-humanizado-banner.jpg') type('image/jpeg'));
   background-size: cover;
   background-position: right center;
   background-repeat: no-repeat;
@@ -1071,6 +1114,7 @@
 .section--solucoes {
   position: relative;
   background-image: url('../img/solucoes-banner.jpg');
+  background-image: image-set(url('../img/solucoes-banner.webp') type('image/webp'), url('../img/solucoes-banner.jpg') type('image/jpeg'));
   background-size: cover;
   background-position: right center;
   background-repeat: no-repeat;
@@ -1301,6 +1345,7 @@
 .section--agradecimento {
   position: relative;
   background-image: url('../img/agradecimentos-home.jpg');
+  background-image: image-set(url('../img/agradecimentos-home.webp') type('image/webp'), url('../img/agradecimentos-home.jpg') type('image/jpeg'));
   background-size: cover;
   background-position: right center;
   background-repeat: no-repeat;

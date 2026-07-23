@@ -1,0 +1,91 @@
+# Funerária Arcanjos — Performance & Cache
+# Generated for PageSpeed optimization
+
+# ─── Enable compression ───
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml
+  AddOutputFilterByType DEFLATE text/javascript application/javascript application/x-javascript
+  AddOutputFilterByType DEFLATE application/json application/ld+json
+  AddOutputFilterByType DEFLATE application/xml application/xhtml+xml
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE font/woff2 font/woff font/ttf
+</IfModule>
+
+# ─── Browser cache (Cache-Control) ───
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 month"
+
+  # HTML — revalidar sempre
+  ExpiresByType text/html "access plus 0 seconds"
+
+  # CSS & JS — 1 ano (usamos ?v=X.X para cache-bust)
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType text/javascript "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+
+  # Imagens — 6 meses
+  ExpiresByType image/jpeg "access plus 6 months"
+  ExpiresByType image/png "access plus 6 months"
+  ExpiresByType image/webp "access plus 6 months"
+  ExpiresByType image/svg+xml "access plus 6 months"
+  ExpiresByType image/gif "access plus 6 months"
+  ExpiresByType image/x-icon "access plus 1 year"
+
+  # Fontes — 1 ano
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/ttf "access plus 1 year"
+  ExpiresByType application/font-woff2 "access plus 1 year"
+
+  # Vídeo — 6 meses
+  ExpiresByType video/mp4 "access plus 6 months"
+
+  # JSON (dados dinâmicos) — sem cache longo
+  ExpiresByType application/json "access plus 0 seconds"
+</IfModule>
+
+# ─── Cache-Control headers ───
+<IfModule mod_headers.c>
+  # CSS e JS com versioning — cache imutável
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+
+  # Imagens e vídeo
+  <FilesMatch "\.(jpg|jpeg|png|webp|gif|svg|mp4|ico)$">
+    Header set Cache-Control "public, max-age=15768000"
+  </FilesMatch>
+
+  # Fontes
+  <FilesMatch "\.(woff2|woff|ttf|eot)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+
+  # HTML — sempre revalidar
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+
+  # JSON (dados dinâmicos) — sem cache
+  <FilesMatch "\.json$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+  </FilesMatch>
+
+  # Security headers
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# ─── Keep-Alive ───
+<IfModule mod_headers.c>
+  Header set Connection keep-alive
+</IfModule>
+
+# ─── ETags (desativados — usamos Cache-Control) ───
+<IfModule mod_headers.c>
+  Header unset ETag
+</IfModule>
+FileETag None

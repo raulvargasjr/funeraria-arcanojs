@@ -205,81 +205,119 @@ function initMobileMenu() {
   });
 }
 
-/* === Google Reviews === */
+/* === Google Reviews / Testemunhos === */
 function initReviews() {
-  const track = document.getElementById('reviewsTrack');
+  const track   = document.getElementById('reviewsTrack');
   const prevBtn = document.getElementById('reviewsPrev');
   const nextBtn = document.getElementById('reviewsNext');
-
   if (!track) return;
 
-  // Static reviews data
-  const reviews = [
-    {
-      name: 'Ana Rodrigues',
-      initial: 'A',
-      rating: 5,
-      text: 'Um serviço impecável num momento tão difícil. Toda a equipa foi extraordinariamente profissional e humana. Recomendo sem hesitação.'
-    },
-    {
-      name: 'Carlos Mendes',
-      initial: 'C',
-      rating: 5,
-      text: 'Ficámos muito agradecidos pelo cuidado e atenção dedicados à nossa família. Tudo foi tratado com dignidade e respeito.'
-    },
-    {
-      name: 'Maria Santos',
-      initial: 'M',
-      rating: 5,
-      text: 'Profissionais excecionais. Ajudaram-nos em tudo, desde a documentação até à cerimónia. Eternamente gratos.'
-    },
-    {
-      name: 'João Ferreira',
-      initial: 'J',
-      rating: 5,
-      text: 'Num momento de grande dor, a equipa da Arcanjos fez toda a diferença. Atendimento 24h, disponíveis e presentes.'
-    },
-    {
-      name: 'Sofia Almeida',
-      initial: 'S',
-      rating: 5,
-      text: 'Excelente serviço. A ornamentação floral ficou linda e toda a cerimónia foi conduzida com muito respeito e profissionalismo.'
-    },
-    {
-      name: 'Pedro Costa',
-      initial: 'P',
-      rating: 5,
-      text: 'Recomendo a Funerária Arcanjos a todas as famílias. Transparência, profissionalismo e um calor humano admirável.'
+  /* Constrói um card individual */
+  function buildCard(t) {
+    const full  = '&#9733;'.repeat(t.avaliacao || t.rating || 5);
+    const empty = '&#9734;'.repeat(5 - (t.avaliacao || t.rating || 5));
+    const ini   = t.inicial || t.initial || (t.nome || t.name || '?')[0].toUpperCase();
+    const nome  = t.nome  || t.name  || '';
+    
+    // Procura traduções dinâmicas no translations.json
+    let texto = t.texto || t.text || '';
+    if (translations && translations[currentLang] && translations[currentLang].reviews && translations[currentLang].reviews.items) {
+      const trad = translations[currentLang].reviews.items[t.id];
+      if (trad) texto = trad;
     }
-  ];
-
-  // Render reviews
-  track.innerHTML = reviews.map(review => `
-    <div class="review-card">
-      <div class="review-card__header">
-        <div class="review-card__avatar">${review.initial}</div>
-        <div>
-          <div class="review-card__name">${review.name}</div>
-          <div class="review-card__stars">${'★'.repeat(review.rating)}${'☆'.repeat(5 - review.rating)}</div>
+    
+    return `
+      <div class="review-card">
+        <div class="review-card__header">
+          <div class="review-card__avatar">${ini}</div>
+          <div>
+            <div class="review-card__name">${nome}</div>
+            <div class="review-card__stars">${full}${empty}</div>
+          </div>
         </div>
-      </div>
-      <p class="review-card__text">"${review.text}"</p>
-    </div>
-  `).join('');
-
-  // Carousel navigation
-  if (prevBtn && nextBtn) {
-    const scrollAmount = 360;
-
-    prevBtn.addEventListener('click', () => {
-      track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-    });
-
-    nextBtn.addEventListener('click', () => {
-      track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-    });
+        <p class="review-card__text">&ldquo;${texto}&rdquo;</p>
+      </div>`;
   }
+
+  /* Renderiza num sistema de páginas de 2 cards */
+  function renderPages(reviews) {
+    const ativos  = reviews.filter(r => r.ativo !== false);
+    let   page    = 0;
+    let   dir     = 'next'; // 'next' | 'prev' | 'dot'
+    const perPage = window.innerWidth < 640 ? 1 : 2;
+    const total   = Math.ceil(ativos.length / perPage);
+
+    /* Indicador de página (dots) */
+    let dotsEl = document.getElementById('reviewsDots');
+    if (!dotsEl) {
+      dotsEl = document.createElement('div');
+      dotsEl.id = 'reviewsDots';
+      dotsEl.className = 'reviews-dots';
+      track.parentElement.insertBefore(dotsEl, track.nextSibling);
+    }
+
+    function render() {
+      const slice = ativos.slice(page * perPage, page * perPage + perPage);
+      const animClass = dir === 'prev' ? 'reviews-page--prev' : 'reviews-page--next';
+      track.innerHTML = `<div class="reviews-page ${animClass}">${slice.map(buildCard).join('')}</div>`;
+
+      /* Dots */
+      dotsEl.innerHTML = Array.from({ length: total }, (_, i) =>
+        `<button class="reviews-dot${i === page ? ' reviews-dot--active' : ''}" aria-label="Página ${i+1}" data-p="${i}"></button>`
+      ).join('');
+      dotsEl.querySelectorAll('.reviews-dot').forEach(d =>
+        d.addEventListener('click', () => {
+          dir = +d.dataset.p > page ? 'next' : 'prev';
+          page = +d.dataset.p;
+          render();
+        })
+      );
+
+      if (prevBtn) prevBtn.disabled = page === 0;
+      if (nextBtn) nextBtn.disabled = page === total - 1;
+    }
+
+    if (prevBtn) prevBtn.addEventListener('click', () => { if (page > 0)       { dir = 'prev'; page--; render(); } });
+    if (nextBtn) nextBtn.addEventListener('click', () => { if (page < total-1) { dir = 'next'; page++; render(); } });
+
+    /* Swipe touch */
+    let tx = 0;
+    track.addEventListener('touchstart', e => { tx = e.changedTouches[0].clientX; }, { passive: true });
+    track.addEventListener('touchend',   e => {
+      const diff = tx - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) {
+        if (diff > 0 && page < total-1) { dir = 'next'; page++; render(); }
+        else if (diff < 0 && page > 0)  { dir = 'prev'; page--; render(); }
+      }
+    }, { passive: true });
+
+    /* Auto-avance a cada 6 s */
+    let timer = setInterval(() => { dir = 'next'; page = (page + 1) % total; render(); }, 6000);
+    track.addEventListener('mouseenter', () => clearInterval(timer));
+    track.addEventListener('mouseleave', () => {
+      timer = setInterval(() => { dir = 'next'; page = (page + 1) % total; render(); }, 6000);
+    });
+
+    render();
+  }
+
+  /* Tenta carregar do JSON; fallback para dados estáticos */
+  fetch('data/testemunhos.json')
+    .then(r => r.ok ? r.json() : Promise.reject())
+    .then(renderPages)
+    .catch(() => {
+      /* Fallback estático caso o fetch falhe (ex: file://) */
+      renderPages([
+        { nome:'Ana Rodrigues',  inicial:'A', avaliacao:5, texto:'Um serviço impecável num momento tão difícil. Recomendo sem hesitação.', ativo:true },
+        { nome:'Carlos Mendes',  inicial:'C', avaliacao:5, texto:'Tudo foi tratado com dignidade e respeito.', ativo:true },
+        { nome:'Maria Santos',   inicial:'M', avaliacao:5, texto:'Profissionais excecionais. Eternamente gratos.', ativo:true },
+        { nome:'João Ferreira',  inicial:'J', avaliacao:5, texto:'A equipa da Arcanjos fez toda a diferença. Atendimento 24h.', ativo:true },
+        { nome:'Sofia Almeida',  inicial:'S', avaliacao:5, texto:'Cerimónia conduzida com muito respeito e profissionalismo.', ativo:true },
+        { nome:'Pedro Costa',    inicial:'P', avaliacao:5, texto:'Transparência, profissionalismo e calor humano admirável.', ativo:true }
+      ]);
+    });
 }
+
 
 /* === Smooth Scroll === */
 function initSmoothScroll() {
@@ -487,7 +525,10 @@ async function initI18n() {
 async function fetchTranslations() {
   if (translations) return translations;
   try {
-    const response = await fetch('data/translations.json?v=' + Date.now());
+    // WHY: No Date.now() cache-buster — .htaccess already sets no-cache for JSON.
+    // This allows browser HTTP caching to work (304 Not Modified) instead of
+    // re-downloading 111KB every single page load.
+    const response = await fetch('data/translations.json');
     if (!response.ok) throw new Error('Falha ao carregar as traduções');
     translations = await response.json();
     return translations;
@@ -523,6 +564,11 @@ async function setLanguage(lang) {
     'fr': 'fr-FR'
   };
   document.documentElement.setAttribute('lang', htmlLangMap[lang] || 'pt-PT');
+
+  // Atualiza as avaliações para o novo idioma
+  if (typeof initReviews === 'function') {
+    initReviews();
+  }
 }
 
 function getNestedValue(obj, key) {

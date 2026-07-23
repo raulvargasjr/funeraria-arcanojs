@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="pt-PT" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Óbitos e Homenagens | Funerária Arcanjos — Portugal</title>
+  <meta name="description" content="Homenagens, velórios e cerimónias fúnebres da Funerária Arcanjos. Consulte os óbitos recentes, descarregue o PDF e deixe as suas condolências Ã  família.">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+  <meta name="theme-color" content="#1b1712">
+  <link rel="canonical" href="https://arcanjos.pt/obitos.html">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="img/symbol-arcanjo.png">
+  <link rel="apple-touch-icon" href="img/symbol-arcanjo.png">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="Óbitos e Homenagens | Funerária Arcanjos">
+  <meta property="og:description" content="Consulte os óbitos recentes, descarregue o PDF memorial e deixe as suas condolências.">
+  <meta property="og:url"         content="https://arcanjos.pt/obitos.html">
+  <meta property="og:site_name"   content="Funerária Arcanjos">
+  <meta property="og:image"       content="https://arcanjos.pt/img/banner%20home.jpg">
+  <meta property="og:locale"      content="pt_PT">
+  <meta name="twitter:card"       content="summary_large_image">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- CSS do site -->
+  <link rel="stylesheet" href="css/variables.css?v=1.1">
+  <link rel="stylesheet" href="css/base.css?v=1.1">
+  <link rel="stylesheet" href="css/components.css?v=1.1">
+  <link rel="stylesheet" href="css/layout.css?v=1.1">
+  <link rel="stylesheet" href="css/animations.css?v=1.1">
+  <link rel="stylesheet" href="css/responsive.css?v=1.1">
+
+  <!-- CSS exclusivo desta página -->
+  <style>
+    /* â”€â”€ PAGE HERO â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    .obitos-hero {
+      background: var(--sunset-gradient);
+      background-image:
+        linear-gradient(135deg, #FAF7F2 0%, #F0E6D3 55%, #E8D5B5 100%),
+        url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C5A55A' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      padding: calc(var(--header-height) + 4rem) 0 3.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--gold-border);
+    }
+    .obitos-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 120%, rgba(197,165,90,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .obitos-hero__label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 3.5px;
+      color: var(--gold-dark);
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .obitos-hero__title {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      font-weight: 700;
+      color: var(--charcoal);
+      margin-bottom: 1rem;
+      line-height: 1.15;
+    }
+    .obitos-hero__quote {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--gold-dark);
+      max-width: 520px;
+      margin: 0 auto 0.5rem;
+      line-height: 1.6;
+    }
+    .obitos-hero__quote::before { content: '" '; }
+    .obitos-hero__quote::after  { content: ' "'; }
+
+    /* â”€â”€ FILTROS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    .obitos-filtros {
+      background: var(--white);
+      border-bottom: 1px solid var(--gold-border);
+      padding: 1.25rem 0;
+      position: sticky;
+      top: var(--header-height);
+      z-index: 80;
+      box-shadow: 0 2px 12px rgba(197,165,90,0.06);
+    }
+    .obitos-filtros__inner {
+      display: flex;
+      align-items: center;
+      gap: 0.875rem;
+      flex-wrap: wrap;
+    }
+    .obitos-filtros__label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      margin-right: 0.25rem;
+      white-space: nowrap;
+    }
+    .filter-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.45rem 1rem;
+      border: 1.5px solid var(--gold-border);
+      border-radius: 50px;
+      background: transparent;
+      font-family: var(--font-sans);
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--text-body);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+    .filter-chip:hover { border-color: var(--gold); background: var(--gold-subtle); }
+    .filter-chip.active {
+      border-color: var(--gold);
+      background: var(--gold-glow);
+      color: var(--gold-dark);
+      font-weight: 600;
+    }
+    .filter-chip svg {
+      width: 13px; height: 13px;
+      stroke: currentColor; fill: none; stroke-width: 2;
+      stroke-linecap: round; stroke-linejoin: round;
+    }
+    .filter-select {
+      padding: 0.45rem 2.2rem 0.45rem 0.875rem;
+      border: 1.5px solid var(--gold-border);
+      border-radius: 50px;
+      background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7' viewBox='0 0 10 7'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23A88B3D' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat right 0.7rem center;
+      appearance: none;
+      font-family: var(--font-sans);
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--text-body);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      outline: none;
+    }
+    .filter-select:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(197,165,90,0.12); }
+    .filtros-count {
+      margin-left: auto;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+    .filtros-count strong { color: var(--gold-dark); }
+
+    /* â”€â”€ GRID + CARDS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    .obitos-page {
+      background: var(--warm-bg);
+      min-height: 60vh;
+      padding: 3rem 0 5rem;
+    }
+    #obitosTrack {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    /* â”€â”€ CARD OVERRIDES (versão completa, não compact) â”€ */
+    .obito-card {
+      background: var(--white);
+      border: 1.5px solid var(--gold-border);
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .obito-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(197,165,90,0.14);
+      border-color: var(--gold);
+    }
+    .obito-card__image-wrap {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 3/2;
+      background: var(--warm-bg-alt);
+      flex-shrink: 0;
+    }
+    .obito-card__image,
+    .obito-card__image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    .obito-card:hover .obito-card__image,
+    .obito-card:hover .obito-card__image-wrap img { transform: scale(1.04); }
+    .obito-card__image-wrap svg { width: 100%; height: 100%; }
+
+    .obito-card__badge {
+      position: absolute;
+      top: 0.75rem;
+      left: 0.75rem;
+      background: rgba(197,165,90,0.92);
+      backdrop-filter: blur(6px);
+      color: #fff;
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 20px;
+      letter-spacing: 0.5px;
+    }
+    .obito-card__tipo-badge {
+      position: absolute;
+      top: 0.75rem;
+      right: 0.75rem;
+      background: rgba(250,247,242,0.92);
+      backdrop-filter: blur(6px);
+      color: var(--gold-dark);
+      font-size: 0.68rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 20px;
+      border: 1px solid var(--gold-border);
+    }
+
+    .obito-card__body {
+      padding: 1.375rem 1.5rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .obito-card__divider {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.875rem;
+      color: var(--gold);
+    }
+    .obito-card__divider::before,
+    .obito-card__divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--gold-border);
+    }
+    .obito-card__divider .diamond { font-size: 0.6rem; }
+
+    .obito-card__name {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--charcoal);
+      margin: 0 0 0.3rem;
+      line-height: 1.25;
+    }
+    .obito-card__dates {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--gold-dark);
+      margin-bottom: 0.875rem;
+      letter-spacing: 0.3px;
+    }
+    .obito-card__location,
+    .obito-card__horario {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.4rem;
+      font-size: 0.83rem;
+      color: var(--text-body);
+      margin-bottom: 0.4rem;
+      line-height: 1.45;
+    }
+    .obito-card__location svg,
+    .obito-card__horario svg { flex-shrink: 0; margin-top: 2px; }
+
+    /* Condolências inline */
+    .obito-card__cond-section {
+      margin: 0.875rem 0 0;
+      border-top: 1px solid var(--warm-bg-alt);
+      padding-top: 0.75rem;
+    }
+    .obito-card__cond-toggle {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: none;
+      border: none;
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      padding: 0;
+      transition: color 0.2s;
+    }
+    .obito-card__cond-toggle:hover { color: var(--gold-dark); }
+    .obito-card__cond-toggle svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 2; }
+
+    .obito-card__cond-panel {
+      margin-top: 0.875rem;
+      animation: fadeInUp 0.3s ease;
+    }
+    .obito-card__cond-list { margin-bottom: 1rem; }
+    .obito-card__cond-msg {
+      padding: 0.625rem 0.875rem;
+      background: var(--cream);
+      border-radius: 8px;
+      border-left: 3px solid var(--gold-border);
+      margin-bottom: 0.5rem;
+      font-size: 0.82rem;
+    }
+    .obito-card__cond-msg strong { color: var(--charcoal); font-weight: 600; margin-right: 0.5rem; }
+    .obito-card__cond-msg span  { color: var(--text-muted); font-size: 0.72rem; }
+    .obito-card__cond-msg p     { color: var(--text-body); margin-top: 0.25rem; font-style: italic; }
+    .obito-card__cond-empty {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-style: italic;
+      margin-bottom: 0.75rem;
+    }
+    .obito-card__cond-form-title {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--charcoal);
+      letter-spacing: 0.5px;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
+    .obito-card__cond-form input,
+    .obito-card__cond-form textarea {
+      width: 100%;
+      padding: 0.55rem 0.8rem;
+      border: 1.5px solid var(--warm-bg-alt);
+      border-radius: 8px;
+      background: var(--cream);
+      font-family: var(--font-sans);
+      font-size: 0.82rem;
+      color: var(--charcoal);
+      outline: none;
+      transition: 0.2s ease;
+    }
+    .obito-card__cond-form input:focus,
+    .obito-card__cond-form textarea:focus {
+      border-color: var(--gold);
+      background: var(--white);
+      box-shadow: 0 0 0 3px rgba(197,165,90,0.10);
+    }
+    .obito-card__cond-form textarea { resize: vertical; margin-bottom: 0.4rem; }
+    .obito-card__cond-info {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      margin-bottom: 0;
+    }
+
+    /* Ações (botões do card) */
+    .obito-card__actions {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+      margin-top: auto;
+      padding-top: 1rem;
+      border-top: 1px solid var(--warm-bg-alt);
+    }
+    .obito-card__btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+      padding: 0.6rem 0.875rem;
+      border-radius: 8px;
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1.5px solid transparent;
+      transition: all 0.2s ease;
+      text-decoration: none;
+      white-space: nowrap;
+      line-height: 1;
+      flex: 1;
+    }
+    .obito-card__btn svg { width: 13px; height: 13px; stroke: currentColor; fill: none; stroke-width: 2.5; flex-shrink: 0; }
+
+    .obito-card__btn--primary {
+      background: var(--gold);
+      color: #fff;
+      border-color: var(--gold);
+    }
+    .obito-card__btn--primary:hover { background: var(--gold-light); border-color: var(--gold-light); box-shadow: 0 0 16px rgba(197,165,90,0.25); }
+    .obito-card__btn--primary.obito-card__btn--disabled {
+      background: var(--warm-bg-alt);
+      color: var(--text-muted);
+      border-color: var(--warm-bg-alt);
+      cursor: not-allowed;
+      opacity: 0.7;
+    }
+
+    .obito-card__btn--secondary {
+      background: transparent;
+      color: var(--gold-dark);
+      border-color: var(--gold-border);
+      flex: 0;
+    }
+    .obito-card__btn--secondary:hover { background: var(--gold-subtle); border-color: var(--gold); }
+
+    .obito-card__btn--share {
+      background: transparent;
+      color: var(--text-body);
+      border-color: var(--warm-bg-alt);
+      position: relative;
+      flex: 0;
+    }
+    .obito-card__btn--share:hover { background: var(--warm-bg); border-color: var(--warm-bg-alt); }
+
+    /* Share dropdown */
+    .obito-share-dropdown {
+      position: absolute;
+      bottom: calc(100% + 8px);
+      right: 0;
+      background: var(--white);
+      border: 1.5px solid var(--gold-border);
+      border-radius: 10px;
+      box-shadow: 0 8px 28px rgba(197,165,90,0.14);
+      padding: 0.375rem;
+      min-width: 170px;
+      z-index: 100;
+      display: none;
+      animation: fadeInUp 0.2s ease;
+    }
+    .obito-share-dropdown.open { display: block; }
+    .obito-share-dropdown__item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      width: 100%;
+      padding: 0.6rem 0.875rem;
+      background: none;
+      border: none;
+      border-radius: 8px;
+      font-family: var(--font-sans);
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--charcoal);
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.15s ease;
+    }
+    .obito-share-dropdown__item:hover { background: var(--cream); }
+
+    /* â”€â”€ EMPTY STATE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    .obitos-empty {
+      text-align: center;
+      padding: 5rem 1rem;
+      grid-column: 1 / -1;
+    }
+    .obitos-empty__icon {
+      width: 64px; height: 64px;
+      stroke: var(--text-light); fill: none; stroke-width: 1;
+      margin: 0 auto 1.25rem;
+      display: block;
+    }
+    .obitos-empty h3 {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      color: var(--text-body);
+      margin-bottom: 0.5rem;
+    }
+    .obitos-empty p { color: var(--text-muted); font-size: 0.9rem; }
+
+    /* â”€â”€ MODAL CONDOLÃŠNCIAS (fallback) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    .condolencias-modal {
+      position: fixed;
+      inset: 0;
+      z-index: var(--z-modal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    .condolencias-modal.active { opacity: 1; pointer-events: all; }
+    .condolencias-modal__overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(26,26,26,0.65);
+      backdrop-filter: blur(6px);
+    }
+    .condolencias-modal__box {
+      position: relative;
+      background: var(--white);
+      border: 1.5px solid var(--gold-border);
+      border-radius: 20px;
+      padding: 2.25rem;
+      max-width: 500px;
+      width: 92%;
+      box-shadow: 0 20px 60px rgba(197,165,90,0.18);
+      z-index: 1;
+      max-height: 90vh;
+      overflow-y: auto;
+      animation: fadeInUp 0.35s ease;
+    }
+    .condolencias-modal__close {
+      position: absolute;
+      top: 1rem; right: 1rem;
+      background: var(--warm-bg);
+      border: none;
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      display: flex; align-items: center; justify-content: center;
+      transition: 0.2s ease;
+    }
+    .condolencias-modal__close:hover { background: var(--warm-bg-alt); color: var(--charcoal); }
+    .condolencias-modal__diamond { color: var(--gold); font-size: 0.8rem; margin-bottom: 0.5rem; text-align: center; }
+    .condolencias-modal__title {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--charcoal);
+      margin-bottom: 0.25rem;
+      text-align: center;
+    }
+    .condolencias-modal__subtitle { font-size: 0.85rem; color: var(--text-muted); text-align: center; margin-bottom: 1.25rem; }
+    .condolencias-modal__approved { margin-bottom: 1rem; }
+    .condolencias-modal__msg {
+      padding: 0.625rem 0.875rem;
+      background: var(--cream);
+      border-radius: 8px;
+      border-left: 3px solid var(--gold-border);
+      margin-bottom: 0.5rem;
+      font-size: 0.82rem;
+    }
+    .condolencias-modal__msg strong { color: var(--charcoal); margin-right: 0.5rem; }
+    .condolencias-modal__msg span   { color: var(--text-muted); font-size: 0.72rem; }
+    .condolencias-modal__msg p      { color: var(--text-body); margin-top: 0.25rem; font-style: italic; }
+    .condolencias-modal__info {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin: 0.5rem 0 0.875rem;
+    }
+    .condolencias-modal__submit {
+      width: 100%;
+      padding: 0.8rem;
+      background: var(--gold);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+    .condolencias-modal__submit:hover { background: var(--gold-light); }
+    #condolenciasForm input,
+    #condolenciasForm textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid rgba(197, 165, 90, 0.3);
+      border-radius: 8px;
+      background: #faf7f2;
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      color: var(--charcoal);
+      outline: none;
+      transition: all 0.25s ease;
+      margin-bottom: 0.75rem;
+    }
+    #condolenciasForm input::placeholder,
+    #condolenciasForm textarea::placeholder {
+      color: #b0a89e;
+    }
+    #condolenciasForm input:focus,
+    #condolenciasForm textarea:focus { 
+      border-color: var(--gold); 
+      background: var(--white); 
+      box-shadow: 0 0 0 3px rgba(197, 165, 90, 0.12); 
+    }
+    #condolenciasForm textarea { resize: vertical; min-height: 110px; }
+
+    /* â”€â”€ CTA FINAL â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    .obitos-cta {
+      background: var(--charcoal);
+      padding: 3.5rem 0;
+      text-align: center;
+    }
+    .obitos-cta__title {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      color: var(--cream);
+      margin-bottom: 0.5rem;
+    }
+    .obitos-cta__sub {
+      color: var(--text-light);
+      font-size: 0.9rem;
+      margin-bottom: 1.75rem;
+    }
+    .obitos-cta__actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    /* â”€â”€ LOADING STATE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    .obitos-loading {
+      grid-column: 1/-1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem;
+      gap: 0.875rem;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    .obitos-loading::before {
+      content: '';
+      width: 28px; height: 28px;
+      border: 2.5px solid var(--gold-border);
+      border-top-color: var(--gold);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* â”€â”€ RESPONSIVE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    @media (max-width: 1024px) {
+      #obitosTrack { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      #obitosTrack { grid-template-columns: 1fr; gap: 1.25rem; }
+      .obitos-filtros__inner { gap: 0.5rem; }
+      .filtros-count { display: none; }
+      .obitos-hero { padding: calc(var(--header-height) + 2.5rem) 0 2.5rem; }
+    }
+  </style>
+
+  <!-- Schema.org (ItemList de óbitos) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Óbitos e Homenagens",
+    "description": "Homenagens, velórios e cerimónias fúnebres da Funerária Arcanjos.",
+    "url": "https://arcanjos.pt/obitos.html",
+    "isPartOf": { "@type": "WebSite", "url": "https://arcanjos.pt/" },
+    "publisher": { "@type": "FuneralHome", "name": "Funerária Arcanjos", "url": "https://arcanjos.pt/" }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ============ TOP BAR ============ -->
+  <div class="topbar" id="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__info">
+        <a href="tel:+351964945710" class="topbar__item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          <span data-i18n="topbar.phone">+351 964 945 710</span>
+        </a>
+        <a href="mailto:geral@arcanjos.pt" class="topbar__item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg>
+          <span>geral@arcanjos.pt</span>
+        </a>
+        <span class="topbar__item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span data-i18n="topbar.hours">Atendimento 24 Horas</span>
+        </span>
+      </div>
+      <div class="topbar__right">
+        <div class="topbar__social">
+          <a href="https://www.facebook.com/profile.php?id=61556403003480" aria-label="Facebook" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          <a href="https://www.instagram.com/arcanjosfuneraria" aria-label="Instagram" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+        </div>
+        <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-switcher__btn active" data-lang="pt">PT</button>
+          <span class="lang-switcher__sep">|</span>
+          <button class="lang-switcher__btn" data-lang="es">ES</button>
+          <span class="lang-switcher__sep">|</span>
+          <button class="lang-switcher__btn" data-lang="en">EN</button>
+          <span class="lang-switcher__sep">|</span>
+          <button class="lang-switcher__btn" data-lang="fr">FR</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo">
+        <img src="img/logo-funeraria-arcanjo--horizontal.png" alt="Funerária Arcanjos" width="220" height="50" decoding="async">
+      </a>
+
+      <nav class="nav" id="mainNav">
+        <ul class="nav__list">
+          <li><a href="index.html#inicio" class="nav__link" data-i18n="nav.home">Início</a></li>
+          <li class="nav__item--has-dropdown">
+            <a href="index.html#servicos" class="nav__link" data-i18n="nav.services">Serviços
+              <svg class="nav__arrow" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </a>
+            <ul class="nav__dropdown">
+              <li><a href="assessoria-documental.html" data-i18n="services.items.item10">Assessoria Documental</a></li>
+              <li><a href="funerais.html" data-i18n="services.items.item0">Funerais</a></li>
+              <li><a href="funerais-internacionais.html" data-i18n="services.items.item8">Funerais Internacionais</a></li>
+              <li><a href="funeral-em-vida.html" data-i18n="services.items.item1">Funeral em Vida</a></li>
+              <li><a href="cremacao.html" data-i18n="services.items.item3">Cremação</a></li>
+              <li><a href="cerimonias-personalizadas.html" data-i18n="services.items.item9">Cerimónias Personalizadas</a></li>
+              <li><a href="planos-funerarios.html" data-i18n="services.items.item2">Planos Funerários</a></li>
+              <li><a href="ornamentacao-floral.html" data-i18n="services.items.item5">Ornamentação Floral</a></li>
+              <li><a href="tanatopraxia.html" data-i18n="services.items.item6">Tanatopraxia</a></li>
+              <li><a href="tanatoplastia.html" data-i18n="services.items.item11">Tanatoplastia (Reconstrução Facial)</a></li>
+              <li><a href="tanatoestetica.html" data-i18n="services.items.item12">Tanatoestética</a></li>
+              <li><a href="transladacoes.html" data-i18n="services.items.item7">Transladações</a></li>
+            </ul>
+          </li>
+          <li><a href="index.html#sobre" class="nav__link" data-i18n="nav.about">Quem Somos</a></li>
+          <li><a href="obitos.html" class="nav__link active" data-i18n="nav.obitos">Óbitos</a></li>
+          <li><a href="index.html#avaliacoes" class="nav__link" data-i18n="nav.reviews">Avaliações</a></li>
+          <li><a href="index.html#contacto" class="nav__link" data-i18n="nav.contact">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a href="https://wa.me/351964945710?text=Ol%C3%A1%2C%20preciso%20de%20ajuda." class="btn btn--whatsapp btn--sm header__whatsapp" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="btn__icon"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span>WhatsApp</span>
+        </a>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+        <span class="menu-toggle__bar"></span>
+        <span class="menu-toggle__bar"></span>
+        <span class="menu-toggle__bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav__overlay" id="mobileOverlay"></div>
+  <nav class="mobile-nav" id="mobileNav">
+    <ul class="mobile-nav__list">
+      <li><a href="index.html#inicio" class="mobile-nav__link" data-i18n="nav.home">Início</a></li>
+      <li class="mobile-nav__item--has-dropdown">
+        <a href="#" class="mobile-nav__link mobile-nav__link--dropdown" data-i18n="nav.services">Serviços
+          <svg class="mobile-nav__arrow" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </a>
+        <ul class="mobile-nav__dropdown">
+          <li><a href="assessoria-documental.html">Assessoria Documental</a></li>
+          <li><a href="funerais.html">Funerais</a></li>
+          <li><a href="funerais-internacionais.html">Funerais Internacionais</a></li>
+          <li><a href="funeral-em-vida.html">Funeral em Vida</a></li>
+          <li><a href="cremacao.html">Cremação</a></li>
+          <li><a href="ornamentacao-floral.html">Ornamentação Floral</a></li>
+          <li><a href="tanatopraxia.html">Tanatopraxia</a></li>
+          <li><a href="transladacoes.html">Transladações</a></li>
+        </ul>
+      </li>
+      <li><a href="index.html#sobre" class="mobile-nav__link" data-i18n="nav.about">Quem Somos</a></li>
+      <li><a href="obitos.html" class="mobile-nav__link active" data-i18n="nav.obitos">Óbitos</a></li>
+      <li><a href="index.html#avaliacoes" class="mobile-nav__link" data-i18n="nav.reviews">Avaliações</a></li>
+      <li><a href="index.html#contacto" class="mobile-nav__link" data-i18n="nav.contact">Contacto</a></li>
+    </ul>
+    <div style="margin-top: var(--space-xl);">
+      <a href="https://wa.me/351964945710?text=Ol%C3%A1%2C%20preciso%20de%20ajuda." class="btn btn--whatsapp" style="width:100%;" target="_blank" rel="noopener">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span data-i18n="cta.whatsapp">Fale Connosco</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <section class="obitos-hero" aria-labelledby="obitosHeroTitle">
+    <div class="container">
+      <p class="obitos-hero__label">Funerária Arcanjos — Portugal</p>
+      <h1 class="obitos-hero__title" id="obitosHeroTitle">Homenagens e Velórios</h1>
+      <div class="gold-line" style="margin: 1rem auto;max-width:200px;"><span class="diamond">◆</span></div>
+      <p class="obitos-hero__quote">Com respeito e dignidade, honramos quem partiu e acolhemos quem fica.</p>
+    </div>
+  </section>
+
+  <!-- ============ FILTROS ============ -->
+  <div class="obitos-filtros" id="obitosPage" role="search" aria-label="Filtrar óbitos">
+    <div class="container obitos-filtros__inner">
+      <span class="obitos-filtros__label">Filtrar:</span>
+
+      <button class="filter-chip active" data-filter-tipo="todos" id="filtroTodos" aria-pressed="true">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        Todos
+      </button>
+            <button class="filter-chip" data-filter-tipo="velorio" aria-pressed="false"><svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;display:inline-block;vertical-align:middle;margin-right:4px;"><path d="M12 2v20M5 9h14"/></svg>Velório</button>
+      <button class="filter-chip" data-filter-tipo="cremacao" aria-pressed="false"><svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;display:inline-block;vertical-align:middle;margin-right:4px;"><path d="M12 2c0 0-4 4.5-4 7.5S10 15 12 15s4-3 4-6-4-7.5-4-7.5zM12 22v-3"/></svg>Cremação</button>
+      <button class="filter-chip" data-filter-tipo="missa" aria-pressed="false"><svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;display:inline-block;vertical-align:middle;margin-right:4px;"><path d="M12 22V10M12 2L4 9h16zM9 13h6"/></svg>Missa</button>
+      <button class="filter-chip" data-filter-tipo="privado" aria-pressed="false"><svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;display:inline-block;vertical-align:middle;margin-right:4px;"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>Privado</button>
+
+      <select class="filter-select" id="filtroMesAno" aria-label="Filtrar por mês e ano">
+        <option value="">Todos os meses</option>
+      </select>
+
+      <span class="filtros-count" id="filtrosCount" aria-live="polite"></span>
+    </div>
+  </div>
+
+  <!-- ============ GRID DE ÓBITOS ============ -->
+  <section class="obitos-page" aria-label="Lista de óbitos">
+    <div class="container">
+      <div id="obitosTrack" aria-live="polite">
+        <div class="obitos-loading" aria-label="A carregar óbitos—¦"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA FINAL ============ -->
+  <section class="obitos-cta" aria-label="Contacto">
+    <div class="container">
+      <h2 class="obitos-cta__title">Precisa de Apoio?</h2>
+      <p class="obitos-cta__sub">A nossa equipa está disponível 24 horas, todos os dias. Estamos consigo em cada momento.</p>
+      <div class="obitos-cta__actions">
+        <a href="https://wa.me/351964945710?text=Ol%C3%A1%2C%20preciso%20de%20ajuda." class="btn btn--primary btn--lg" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Fale Connosco
+        </a>
+        <a href="tel:+351964945710" class="btn btn--white btn--lg">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          +351 964 945 710
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="img/logo-funeraria-arcanjo-branca.png" alt="Funerária Arcanjos" class="footer__logo-brand" loading="lazy" decoding="async" width="800" height="708">
+          <p class="footer__desc" data-i18n="footer.desc">Cuidamos de cada detalhe com dignidade e respeito. Serviço funerário completo em Portugal, disponível 24 horas.</p>
+          <div class="footer__social">
+            <a href="https://www.facebook.com/profile.php?id=61556403003480" aria-label="Facebook" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+            <a href="https://www.instagram.com/arcanjosfuneraria" aria-label="Instagram" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer__heading" data-i18n="footer.nav_heading">Navegação</h4>
+          <div class="footer__links">
+            <a href="index.html" class="footer__link" data-i18n="nav.home">Início</a>
+            <a href="index.html#servicos" class="footer__link" data-i18n="nav.services">Serviços</a>
+            <a href="index.html#sobre" class="footer__link" data-i18n="nav.about">Quem Somos</a>
+            <a href="obitos.html" class="footer__link" data-i18n="nav.obitos">Óbitos</a>
+            <a href="index.html#contacto" class="footer__link" data-i18n="nav.contact">Contacto</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer__heading" data-i18n="footer.services_heading">Serviços</h4>
+          <div class="footer__links">
+            <a href="cremacao.html" class="footer__link" data-i18n="services.cremation.title">Cremação</a>
+            <a href="ornamentacao-floral.html" class="footer__link" data-i18n="services.floral.title">Ornamentação Floral</a>
+            <a href="tanatopraxia.html" class="footer__link" data-i18n="services.thanato.title">Tanatopraxia</a>
+            <a href="funeral-em-vida.html" class="footer__link" data-i18n="services.life.title">Funeral em Vida</a>
+            <a href="funerais-internacionais.html" class="footer__link" data-i18n="services.international.title">Funeral Internacional</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer__heading" data-i18n="footer.contact_heading">Contacto</h4>
+          <div class="footer__links">
+            <a href="tel:+351964945710" class="footer__link">+351 964 945 710</a>
+            <a href="mailto:geral@arcanjos.pt" class="footer__link">geral@arcanjos.pt</a>
+            <span class="footer__link" data-i18n="topbar.hours">Atendimento 24 Horas</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2026 Funerária Arcanjos — <span data-i18n="footer.rights">Todos os direitos reservados</span></p>
+        <div class="lang-switcher">
+          <button class="lang-switcher__btn active" data-lang="pt">PT</button>
+          <span class="lang-switcher__sep" style="color:var(--text-muted);">|</span>
+          <button class="lang-switcher__btn" data-lang="es">ES</button>
+          <span class="lang-switcher__sep" style="color:var(--text-muted);">|</span>
+          <button class="lang-switcher__btn" data-lang="en">EN</button>
+          <span class="lang-switcher__sep" style="color:var(--text-muted);">|</span>
+          <button class="lang-switcher__btn" data-lang="fr">FR</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ WHATSAPP FLOAT ============ -->
+  <div class="whatsapp-float">
+    <div class="whatsapp-float__tooltip" data-i18n="whatsapp.tooltip">Precisa de ajuda?</div>
+    <a href="https://wa.me/351964945710?text=Ol%C3%A1%2C%20preciso%20de%20ajuda." class="whatsapp-float__btn" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+  </div>
+
+  <!-- JS principal -->
+  <script src="js/obituarios.js?v=2.0"></script>
+  <script src="js/main.js?v=1.1"></script>
+
+  <!-- Lógica de filtros (inline, simples) -->
+  <script>
+  (function () {
+    'use strict';
+
+    /* Aguarda o obituarios.js carregar e renderizar os cards */
+    function initFiltros() {
+      const track = document.getElementById('obitosTrack');
+      if (!track) return;
+
+      let _allData  = [];
+      let tipoAtivo = 'todos';
+      let mesAno    = '';
+
+      /* â”€â”€ Preenche select de meses a partir dos dados â”€â”€ */
+      function buildMesOptions(data) {
+        const meses = {};
+        data.forEach(o => {
+          const d = o.data_falecimento || (o.ano_falecimento ? o.ano_falecimento + '-01-01' : null);
+          if (!d) return;
+          const [y, m] = d.split('-');
+          const key = `${y}-${m}`;
+          const label = new Date(parseInt(y), parseInt(m) - 1, 1)
+            .toLocaleString('pt-PT', { month: 'long', year: 'numeric' });
+          meses[key] = label.charAt(0).toUpperCase() + label.slice(1);
+        });
+        const sel = document.getElementById('filtroMesAno');
+        if (!sel) return;
+        Object.entries(meses)
+          .sort((a, b) => b[0].localeCompare(a[0]))
+          .forEach(([val, label]) => {
+            const opt = document.createElement('option');
+            opt.value = val; opt.textContent = label;
+            sel.appendChild(opt);
+          });
+      }
+
+      /* â”€â”€ Aplica filtros â”€â”€ */
+      function applyFiltros() {
+        let filtered = _allData.filter(o => {
+          if (tipoAtivo !== 'todos' && o.tipo_cerimonia !== tipoAtivo) return false;
+          if (mesAno) {
+            const d = o.data_falecimento || (o.ano_falecimento ? o.ano_falecimento + '-01' : null);
+            if (!d || !d.startsWith(mesAno)) return false;
+          }
+          return true;
+        });
+
+        /* Contador */
+        const countEl = document.getElementById('filtrosCount');
+        if (countEl) countEl.innerHTML = `<strong>${filtered.length}</strong> resultado${filtered.length !== 1 ? 's' : ''}`;
+
+        /* Re-renderiza apenas o track — chama a função global buildCard via JS */
+        if (filtered.length === 0) {
+          track.innerHTML = `
+            <div class="obitos-empty">
+              <svg class="obitos-empty__icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              <h3>Nenhum resultado</h3>
+              <p>Não há óbitos para os filtros selecionados.<br>
+                 <button onclick="document.getElementById('filtroTodos').click()" style="background:none;border:none;color:var(--gold-dark);cursor:pointer;font-size:inherit;text-decoration:underline;">Limpar filtros</button>
+              </p>
+            </div>`;
+          return;
+        }
+
+        /* Dispara evento para obituarios.js re-renderizar com os dados filtrados */
+        const evt = new CustomEvent('arcanjos:filtrar', { detail: { data: filtered } });
+        document.dispatchEvent(evt);
+      }
+
+      /* â”€â”€ Escuta evento do obituarios.js com os dados carregados â”€â”€ */
+      document.addEventListener('arcanjos:dados', function (e) {
+        _allData = e.detail.data;
+        buildMesOptions(_allData);
+        applyFiltros();
+      });
+
+      /* â”€â”€ Chips de tipo â”€â”€ */
+      document.querySelectorAll('.filter-chip').forEach(chip => {
+        chip.addEventListener('click', () => {
+          document.querySelectorAll('.filter-chip').forEach(c => {
+            c.classList.remove('active');
+            c.setAttribute('aria-pressed', 'false');
+          });
+          chip.classList.add('active');
+          chip.setAttribute('aria-pressed', 'true');
+          tipoAtivo = chip.dataset.filterTipo || 'todos';
+          applyFiltros();
+        });
+      });
+
+      /* â”€â”€ Select mês/ano â”€â”€ */
+      document.getElementById('filtroMesAno')?.addEventListener('change', e => {
+        mesAno = e.target.value;
+        applyFiltros();
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initFiltros);
+    } else {
+      initFiltros();
+    }
+  })();
+  </script>
+</body>
+</html>
+

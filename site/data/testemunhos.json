@@ -1,0 +1,56 @@
+[
+  {
+    "id": "test-001",
+    "nome": "Ana Rodrigues",
+    "inicial": "A",
+    "avaliacao": 5,
+    "texto": "Um serviço impecável num momento tão difícil. Toda a equipa foi extraordinariamente profissional e humana. Recomendo sem hesitação.",
+    "ativo": true,
+    "criado_em": "2024-11-10"
+  },
+  {
+    "id": "test-002",
+    "nome": "Carlos Mendes",
+    "inicial": "C",
+    "avaliacao": 5,
+    "texto": "Ficámos muito agradecidos pelo cuidado e atenção dedicados à nossa família. Tudo foi tratado com dignidade e respeito.",
+    "ativo": true,
+    "criado_em": "2024-12-03"
+  },
+  {
+    "id": "test-003",
+    "nome": "Maria Santos",
+    "inicial": "M",
+    "avaliacao": 5,
+    "texto": "Profissionais excecionais. Ajudaram-nos em tudo, desde a documentação até à cerimónia. Eternamente gratos.",
+    "ativo": true,
+    "criado_em": "2025-01-15"
+  },
+  {
+    "id": "test-004",
+    "nome": "João Ferreira",
+    "inicial": "J",
+    "avaliacao": 5,
+    "texto": "Num momento de grande dor, a equipa da Arcanjos fez toda a diferença. Atendimento 24h, disponíveis e presentes.",
+    "ativo": true,
+    "criado_em": "2025-02-20"
+  },
+  {
+    "id": "test-005",
+    "nome": "Sofia Almeida",
+    "inicial": "S",
+    "avaliacao": 5,
+    "texto": "Excelente serviço. A ornamentação floral ficou linda e toda a cerimónia foi conduzida com muito respeito e profissionalismo.",
+    "ativo": true,
+    "criado_em": "2025-03-08"
+  },
+  {
+    "id": "test-006",
+    "nome": "Pedro Costa",
+    "inicial": "P",
+    "avaliacao": 5,
+    "texto": "Recomendo a Funerária Arcanjos a todas as famílias. Transparência, profissionalismo e um calor humano admirável.",
+    "ativo": true,
+    "criado_em": "2025-04-01"
+  }
+]

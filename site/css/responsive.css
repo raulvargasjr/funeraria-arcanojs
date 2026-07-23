@@ -140,7 +140,8 @@
   .service-card__cta { opacity: 1; transform: none; }
 
   /* Reviews */
-  .review-card { min-width: 280px; }
+  .reviews-page { grid-template-columns: 1fr; }
+
 
   /* Quote */
   .quote { font-size: 1.125rem; padding-left: var(--space-lg); }

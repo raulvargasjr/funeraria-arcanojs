@@ -1,4 +1,48 @@
+# Funerária Arcanjos — robots.txt
+# https://arcanjos.pt
+
 User-agent: *
 Allow: /
 
-Sitemap: https://funerariaarcanjos.pt/sitemap.xml
+# Bloquear acesso ao painel administrativo e dados internos
+Disallow: /admin/
+Disallow: /data/
+
+# ===== AI Crawlers (GEO — Generative Engine Optimization) =====
+# Permitimos explicitamente que motores de IA indexem o site
+# para que o conteúdo seja citado em respostas de IA.
+
+# OpenAI / ChatGPT
+User-agent: GPTBot
+Allow: /
+
+# Anthropic / Claude
+User-agent: Claude-Web
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Google Gemini (usa Googlebot padrão)
+User-agent: Googlebot
+Allow: /
+
+# Microsoft Copilot / Bing Chat
+User-agent: Bingbot
+Allow: /
+
+# Common Crawl (base de treino de muitos LLMs)
+User-agent: CCBot
+Allow: /
+
+# Meta AI
+User-agent: FacebookBot
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot
+Allow: /
+
+# Sitemap
+Sitemap: https://arcanjos.pt/sitemap.xml
